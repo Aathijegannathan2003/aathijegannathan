@@ -1,6 +1,6 @@
 import { MapPin, Clock, ArrowDown } from "lucide-react";
 import { Button } from "./ui/button";
-import profileImg from "@/assets/profile.webp";
+import profileImg from "@/assets/profile.png";
 
 const HeroSection = () => (
   <section id="home" className="min-h-screen flex items-center relative overflow-hidden pt-20">
@@ -49,7 +49,7 @@ const HeroSection = () => (
 
       <div className="flex justify-center" style={{ animationDelay: "0.3s" }}>
         <div className="relative">
-          <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-2 border-primary/30 glow-border animate-float">
+          <div className="w-[360px] h-[360px] md:w-[480px] md:h-[480px] rounded-full overflow-hidden border-2 border-primary/30 animate-float shadow-[0_0_60px_rgba(59,130,246,0.3)]">
             <img
               src={profileImg}
               alt="Aathijegannathan V N - Digital Marketing Executive"
