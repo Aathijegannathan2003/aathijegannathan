@@ -1,0 +1,161 @@
+import { Search, Globe, Megaphone, ExternalLink, TrendingUp, Users, MousePointerClick } from "lucide-react";
+import { useState } from "react";
+import { Button } from "./ui/button";
+
+type Category = "seo" | "web" | "ads";
+
+const categories: { key: Category; label: string; icon: React.ElementType }[] = [
+  { key: "seo", label: "SEO Projects", icon: Search },
+  { key: "web", label: "Web Development", icon: Globe },
+  { key: "ads", label: "Meta Ads", icon: Megaphone },
+];
+
+const projects: Record<Category, {
+  title: string;
+  url?: string;
+  points: string[];
+  metrics?: { label: string; value: string; icon: React.ElementType }[];
+}[]> = {
+  seo: [
+    {
+      title: "CleanWithDB",
+      url: "https://cleanwithdb.co.uk",
+      points: [
+        "Created SEO-optimized landing pages",
+        'Targeted keyword: "best cleaning services in Belfast"',
+        "Improved content structure and performance",
+        "Focused on ranking and traffic generation",
+      ],
+    },
+    {
+      title: "Digitalsiddesh",
+      url: "https://digitalsiddesh.com/",
+      points: [
+        "Built WordPress website using Divi",
+        'Targeted keyword: "best WordPress freelancer in Chennai"',
+        "Optimized for speed, SEO, and lead generation",
+      ],
+    },
+  ],
+  web: [
+    {
+      title: "Labmate Asia",
+      url: "https://labmateasia.com",
+      points: [
+        "Built complete website with SEO-friendly structure",
+        "Optimized pages for search engines",
+        "Improved UI/UX and performance",
+      ],
+    },
+    {
+      title: "WordPress Developer Page",
+      url: "https://digitalsiddesh.com/wordpress-developer-chennai/",
+      points: [
+        "Built a landing page with SEO-friendly structure",
+        "Audited technical SEO",
+        "Mobile friendly design",
+      ],
+    },
+  ],
+  ads: [
+    {
+      title: "Free Class Lead Campaign",
+      points: ["Generated 65+ leads", "High engagement and conversions"],
+      metrics: [
+        { label: "Leads", value: "65+", icon: Users },
+        { label: "CPL", value: "₹6", icon: TrendingUp },
+        { label: "CTR", value: "6.66%", icon: MousePointerClick },
+      ],
+    },
+    {
+      title: "Fertility Lead Generation Campaign",
+      points: ["Generated 32+ leads", "Reach: 25,000+ users"],
+      metrics: [
+        { label: "Leads", value: "32+", icon: Users },
+        { label: "CPL", value: "₹45", icon: TrendingUp },
+        { label: "CTR", value: "1.49%", icon: MousePointerClick },
+      ],
+    },
+  ],
+};
+
+const ProjectsSection = () => {
+  const [active, setActive] = useState<Category>("seo");
+
+  return (
+    <section id="projects" className="py-24 bg-card/50">
+      <div className="container mx-auto px-4">
+        <div className="animate-on-scroll text-center mb-12">
+          <p className="text-primary text-sm font-medium uppercase tracking-wide mb-2">Projects</p>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold">My Work</h2>
+        </div>
+
+        <div className="animate-on-scroll flex justify-center gap-2 mb-10 flex-wrap">
+          {categories.map((c) => (
+            <Button
+              key={c.key}
+              variant={active === c.key ? "default" : "outline"}
+              onClick={() => setActive(c.key)}
+              className={
+                active === c.key
+                  ? "bg-primary text-primary-foreground"
+                  : "border-border text-muted-foreground hover:text-foreground hover:border-primary/50"
+              }
+            >
+              <c.icon size={16} className="mr-2" />
+              {c.label}
+            </Button>
+          ))}
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          {projects[active].map((p, i) => (
+            <div
+              key={p.title}
+              className="animate-on-scroll visible bg-card border border-border rounded-lg p-6 card-hover"
+              style={{ transitionDelay: `${i * 0.1}s` }}
+            >
+              <div className="flex items-center justify-between mb-4">
+                <h3 className="font-heading font-semibold text-lg">{p.title}</h3>
+                {p.url && (
+                  <a
+                    href={p.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:text-primary/80 transition-colors"
+                    aria-label={`Visit ${p.title}`}
+                  >
+                    <ExternalLink size={18} />
+                  </a>
+                )}
+              </div>
+
+              {p.metrics && (
+                <div className="grid grid-cols-3 gap-3 mb-4">
+                  {p.metrics.map((m) => (
+                    <div key={m.label} className="bg-muted rounded-lg p-3 text-center">
+                      <m.icon size={16} className="text-primary mx-auto mb-1" />
+                      <p className="text-lg font-bold font-heading">{m.value}</p>
+                      <p className="text-xs text-muted-foreground">{m.label}</p>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              <ul className="space-y-2">
+                {p.points.map((pt) => (
+                  <li key={pt} className="text-muted-foreground text-sm flex items-start gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" />
+                    {pt}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ProjectsSection;
