@@ -1,6 +1,6 @@
 import { MapPin, Clock, ArrowDown } from "lucide-react";
 import { Button } from "./ui/button";
-import profileImg from "@/assets/profile-placeholder.jpg";
+import profileImg from "@/assets/profile.webp";
 
 const HeroSection = () => (
   <section id="home" className="min-h-screen flex items-center relative overflow-hidden pt-20">
