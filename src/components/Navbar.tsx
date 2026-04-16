@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
-import logoImg from "@/assets/logo.png";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -29,8 +28,8 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between py-4 px-4">
-        <a href="#home">
-          <img src={logoImg} alt="Aathi Logo" className="h-8 w-8" />
+        <a href="#home" className="text-xl font-heading font-bold text-primary">
+          Aathijegannathan
         </a>
 
         {/* Desktop */}

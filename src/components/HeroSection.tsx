@@ -4,12 +4,10 @@ import profileImg from "@/assets/profile-nobg.png";
 
 const skillBadges = [
   { label: "SEO", top: "8%", right: "-10%", delay: "0s" },
-  { label: "Digital Marketing", top: "25%", right: "-18%", delay: "0.5s" },
-  { label: "Google Ads", top: "55%", right: "-14%", delay: "1s" },
+  { label: "Google Ads", top: "45%", right: "-14%", delay: "1s" },
   { label: "Meta Ads", top: "75%", right: "-4%", delay: "1.5s" },
-  { label: "Product Marketing", top: "25%", left: "-18%", delay: "0.3s" },
-  { label: "WordPress Development", top: "50%", left: "-22%", delay: "0.8s" },
-  { label: "Canva", top: "75%", left: "-8%", delay: "1.3s" },
+  { label: "WordPress Development", top: "35%", left: "-22%", delay: "0.8s" },
+  { label: "Canva", top: "70%", left: "-8%", delay: "1.3s" },
 ];
 
 const HeroSection = () => (
@@ -60,7 +58,7 @@ const HeroSection = () => (
       <div className="flex justify-center" style={{ animationDelay: "0.3s" }}>
         <div className="relative">
           {/* Circular border ring with glow */}
-          <div className="w-[360px] h-[360px] md:w-[480px] md:h-[480px] rounded-full overflow-hidden border-2 border-primary/40 animate-float shadow-[0_0_80px_rgba(59,130,246,0.35),0_0_120px_rgba(59,130,246,0.15)]">
+          <div className="w-[290px] h-[290px] md:w-[410px] md:h-[410px] rounded-full overflow-hidden border-2 border-primary/40 animate-float shadow-[0_0_80px_rgba(59,130,246,0.35),0_0_120px_rgba(59,130,246,0.15)]">
             <img
               src={profileImg}
               alt="Aathijegannathan V N - Digital Marketing Executive"
