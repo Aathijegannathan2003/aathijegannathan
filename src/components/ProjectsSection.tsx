@@ -87,7 +87,7 @@ const ProjectsSection = () => {
       <div className="container mx-auto px-4">
         <div className="animate-on-scroll text-center mb-12">
           <p className="text-primary text-sm font-medium uppercase tracking-wide mb-2">Projects</p>
-          <h2 className="text-3xl md:text-4xl font-heading font-bold">My Work</h2>
+          <h2 className="text-4xl md:text-5xl font-heading font-bold">My Work</h2>
         </div>
 
         <div className="animate-on-scroll flex justify-center gap-2 mb-10 flex-wrap">

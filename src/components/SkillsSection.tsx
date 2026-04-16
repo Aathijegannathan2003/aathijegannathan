@@ -31,7 +31,7 @@ const SkillsSection = () => (
     <div className="container mx-auto px-4">
       <div className="animate-on-scroll text-center mb-12">
         <p className="text-primary text-sm font-medium uppercase tracking-wide mb-2">Skills & Tools</p>
-        <h2 className="text-3xl md:text-4xl font-heading font-bold">What I Work With</h2>
+        <h2 className="text-4xl md:text-5xl font-heading font-bold">What I Work With</h2>
       </div>
 
       <div className="mb-14">

@@ -20,7 +20,7 @@ const ContactSection = () => {
       <div className="container mx-auto px-4">
         <div className="animate-on-scroll text-center mb-12">
           <p className="text-primary text-sm font-medium uppercase tracking-wide mb-2">Contact</p>
-          <h2 className="text-3xl md:text-4xl font-heading font-bold">Get In Touch</h2>
+          <h2 className="text-4xl md:text-5xl font-heading font-bold">Get In Touch</h2>
         </div>
 
         <div className="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">

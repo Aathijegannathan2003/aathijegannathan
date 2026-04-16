@@ -32,14 +32,14 @@ const ExperienceSection = () => (
     <div className="container mx-auto px-4">
       <div className="animate-on-scroll text-center mb-12">
         <p className="text-primary text-sm font-medium uppercase tracking-wide mb-2">Experience</p>
-        <h2 className="text-3xl md:text-4xl font-heading font-bold">Where I've Worked</h2>
+        <h2 className="text-4xl md:text-5xl font-heading font-bold">Where I've Worked</h2>
       </div>
 
-      <div className="max-w-3xl mx-auto space-y-8">
+      <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
         {experiences.map((exp, i) => (
           <div
             key={exp.company}
-            className="animate-on-scroll bg-card border border-border rounded-lg p-6 card-hover relative"
+            className="animate-on-scroll bg-card border border-border rounded-lg p-6 card-hover"
             style={{ transitionDelay: `${i * 0.15}s` }}
           >
             <div className="flex items-start gap-4">
