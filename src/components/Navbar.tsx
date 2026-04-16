@@ -39,9 +39,10 @@ const Navbar = () => {
             <a
               key={l.href}
               href={l.href}
-              className="text-sm text-muted-foreground hover:text-primary transition-colors"
+              className="relative text-sm text-muted-foreground hover:text-primary transition-colors py-1 group"
             >
               {l.label}
+              <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full" />
             </a>
           ))}
           <a href="/resume.pdf" download>
