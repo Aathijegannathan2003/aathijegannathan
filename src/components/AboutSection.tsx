@@ -1,10 +1,4 @@
-import { Search, Globe, Megaphone } from "lucide-react";
-
-const highlights = [
-  { icon: Search, title: "SEO Expert", desc: "Improve search rankings & organic traffic" },
-  { icon: Globe, title: "WordPress Dev", desc: "High-performing websites with clean design" },
-  { icon: Megaphone, title: "Paid Ads", desc: "Quality lead generation via Meta & Google Ads" },
-];
+import { GraduationCap, MapPin } from "lucide-react";
 
 const AboutSection = () => (
   <section id="about" className="py-24">
@@ -14,26 +8,33 @@ const AboutSection = () => (
         <h2 className="text-4xl md:text-5xl font-heading font-bold">Who I Am</h2>
       </div>
 
-      <div className="animate-on-scroll max-w-3xl mx-auto text-center mb-16">
-        <p className="text-muted-foreground leading-relaxed text-lg">
-          I specialize in SEO strategies that improve search rankings and drive organic traffic. I also build high-performing WordPress websites with clean design and smooth user experience. I create and manage Meta ad campaigns that generate quality leads and support business growth.
-        </p>
-      </div>
+      <div className="grid md:grid-cols-2 gap-8 items-center max-w-5xl mx-auto">
+        <div className="animate-on-scroll">
+          <p className="text-muted-foreground leading-relaxed text-lg">
+            I'm a Digital Marketing Executive based in Chennai, specializing in SEO and PPC marketing. I have strong hands-on experience in SEO, Google Ads, and Meta Ads, creating and managing campaigns that generate quality leads and improve ROI. I also build responsive WordPress websites with clean design and smooth user experience.
+          </p>
+        </div>
 
-      <div className="grid md:grid-cols-3 gap-6">
-        {highlights.map((h, i) => (
-          <div
-            key={h.title}
-            className="animate-on-scroll bg-card border border-border rounded-lg p-6 text-center card-hover"
-            style={{ transitionDelay: `${i * 0.1}s` }}
-          >
-            <div className="w-14 h-14 mx-auto mb-4 rounded-lg bg-primary/10 flex items-center justify-center">
-              <h.icon className="text-primary" size={28} />
+        <div className="space-y-5">
+          <div className="animate-on-scroll bg-card border border-border rounded-lg p-6 card-hover">
+            <div className="flex items-center gap-2 mb-3">
+              <GraduationCap className="text-primary" size={22} />
+              <h3 className="font-heading font-semibold text-lg">Education</h3>
             </div>
-            <h3 className="font-heading font-semibold text-lg mb-2">{h.title}</h3>
-            <p className="text-muted-foreground text-sm">{h.desc}</p>
+            <p className="text-foreground font-medium">Bachelor of Commerce (Corporate Secretaryship)</p>
+            <p className="text-muted-foreground text-sm mt-1">Government Arts College, Paramakudi</p>
+            <p className="text-muted-foreground text-sm">2020 – 2023</p>
           </div>
-        ))}
+
+          <div className="animate-on-scroll bg-card border border-border rounded-lg p-6 card-hover" style={{ transitionDelay: "0.1s" }}>
+            <div className="flex items-center gap-2 mb-3">
+              <MapPin className="text-primary" size={22} />
+              <h3 className="font-heading font-semibold text-lg">Location</h3>
+            </div>
+            <p className="text-foreground font-medium">Chennai, India</p>
+            <p className="text-muted-foreground text-sm mt-1">Available for remote work</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
