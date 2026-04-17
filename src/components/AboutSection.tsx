@@ -39,8 +39,8 @@ const AboutSection = () => (
                   <h.icon className="text-primary" size={20} />
                 </div>
                 <div>
-                  <h4 className="font-heading font-semibold text-foreground">{h.title}</h4>
-                  <p className="text-muted-foreground text-sm leading-relaxed mt-1">{h.desc}</p>
+                  <h4 className="font-heading font-semibold text-foreground text-[17.5px]">{h.title}</h4>
+                  <p className="text-muted-foreground text-[15.5px] leading-relaxed mt-1">{h.desc}</p>
                 </div>
               </div>
             ))}
