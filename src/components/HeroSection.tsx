@@ -24,8 +24,7 @@ const HeroSection = () => (
           Hello, I'm
         </p>
         <h1 className="text-4xl md:text-6xl font-heading font-bold leading-tight">
-          Aathijegannathan{" "}
-          <span className="text-gradient">V N</span>
+          <span className="text-gradient">Aathijegannathan V N</span>
         </h1>
         <h2 className="text-xl md:text-2xl text-muted-foreground font-heading">
           Digital Marketing Executive
