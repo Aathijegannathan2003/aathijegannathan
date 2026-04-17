@@ -1,4 +1,22 @@
-import { GraduationCap, MapPin } from "lucide-react";
+import { GraduationCap, MapPin, Briefcase, Search, BarChart3, Globe } from "lucide-react";
+
+const highlights = [
+  {
+    icon: Search,
+    title: "SEO & Performance Marketing",
+    desc: "Implementing SEO strategies to improve rankings, organic traffic, and overall online visibility.",
+  },
+  {
+    icon: BarChart3,
+    title: "Google Ads & Meta Ads Campaigns",
+    desc: "Creating and managing data-driven ad campaigns that generate quality leads and maximize ROI.",
+  },
+  {
+    icon: Globe,
+    title: "WordPress Website Development",
+    desc: "Building responsive WordPress websites with clean design, fast performance, and smooth user experience.",
+  },
+];
 
 const AboutSection = () => (
   <section id="about" className="py-24">
@@ -8,14 +26,25 @@ const AboutSection = () => (
         <h2 className="text-4xl md:text-5xl font-heading font-bold">Who I Am</h2>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-8 items-center max-w-5xl mx-auto">
-        <div className="animate-on-scroll space-y-4">
+      <div className="grid md:grid-cols-2 gap-8 items-start max-w-5xl mx-auto">
+        <div className="animate-on-scroll space-y-6">
           <p className="text-muted-foreground leading-relaxed text-lg">
-            I'm a results-driven Digital Marketing Executive based in Chennai, specializing in SEO and performance marketing. I focus on improving online visibility and driving targeted traffic to support business growth.
+            I'm a results-driven <span className="text-primary font-medium">Digital Marketing Executive</span> based in Chennai, specializing in SEO and performance marketing. I focus on improving online visibility and driving targeted traffic to support business growth.
           </p>
-          <p className="text-muted-foreground leading-relaxed text-lg">
-            I have hands-on experience in SEO, along with Google Ads and Meta Ads, creating and managing campaigns that generate quality leads and deliver measurable ROI. I also build responsive WordPress websites with clean design and smooth user experience.
-          </p>
+
+          <div className="space-y-5">
+            {highlights.map((h) => (
+              <div key={h.title} className="flex items-start gap-4">
+                <div className="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                  <h.icon className="text-primary" size={20} />
+                </div>
+                <div>
+                  <h4 className="font-heading font-semibold text-foreground">{h.title}</h4>
+                  <p className="text-muted-foreground text-sm leading-relaxed mt-1">{h.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="space-y-5">
@@ -26,7 +55,7 @@ const AboutSection = () => (
             </div>
             <p className="text-foreground font-medium">Bachelor of Commerce (Corporate Secretaryship)</p>
             <p className="text-muted-foreground text-sm mt-1">Government Arts College, Paramakudi</p>
-            <p className="text-muted-foreground text-sm">2020 – 2023</p>
+            <p className="text-primary text-sm">2020 – 2023</p>
           </div>
 
           <div className="animate-on-scroll bg-card border border-border rounded-lg p-6 card-hover" style={{ transitionDelay: "0.1s" }}>
@@ -35,7 +64,16 @@ const AboutSection = () => (
               <h3 className="font-heading font-semibold text-lg">Location</h3>
             </div>
             <p className="text-foreground font-medium">Chennai, India</p>
-            <p className="text-muted-foreground text-sm mt-1">Available for remote work</p>
+            <p className="text-primary text-sm mt-1">Available for remote work</p>
+          </div>
+
+          <div className="animate-on-scroll bg-card border border-border rounded-lg p-6 card-hover" style={{ transitionDelay: "0.2s" }}>
+            <div className="flex items-center gap-2 mb-3">
+              <Briefcase className="text-primary" size={22} />
+              <h3 className="font-heading font-semibold text-lg">Experience</h3>
+            </div>
+            <p className="text-foreground font-medium">2+ Years Experience</p>
+            <p className="text-primary text-sm mt-1">SEO & Paid Ads</p>
           </div>
         </div>
       </div>
