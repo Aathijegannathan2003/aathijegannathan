@@ -26,13 +26,13 @@ const AboutSection = () => (
         <h2 className="text-4xl md:text-5xl font-heading font-bold">Who Am I</h2>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-8 items-start max-w-5xl mx-auto">
-        <div className="animate-on-scroll space-y-6">
+      <div className="grid md:grid-cols-2 gap-8 items-stretch max-w-5xl mx-auto">
+        <div className="animate-on-scroll flex flex-col justify-between h-full gap-6">
           <p className="text-muted-foreground leading-relaxed text-lg">
             I'm a results-driven <span className="text-primary font-medium">Digital Marketing Executive</span> based in Chennai, specializing in SEO and performance marketing. I focus on improving online visibility and driving targeted traffic to support business growth.
           </p>
 
-          <div className="space-y-5">
+          <div className="flex flex-col justify-between flex-1 gap-6">
             {highlights.map((h) => (
               <div key={h.title} className="flex items-start gap-4">
                 <div className="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
