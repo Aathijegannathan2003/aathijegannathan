@@ -23,7 +23,7 @@ const AboutSection = () => (
     <div className="container mx-auto px-4">
       <div className="animate-on-scroll text-center mb-12">
         <p className="text-primary text-sm font-medium uppercase tracking-wide mb-2">About Me</p>
-        <h2 className="text-4xl md:text-5xl font-heading font-bold">Who I Am</h2>
+        <h2 className="text-4xl md:text-5xl font-heading font-bold">Who Am I</h2>
       </div>
 
       <div className="grid md:grid-cols-2 gap-8 items-start max-w-5xl mx-auto">
