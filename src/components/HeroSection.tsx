@@ -30,7 +30,7 @@ const HeroSection = () => (
           Digital Marketing Executive
         </h2>
         <p className="text-muted-foreground max-w-lg leading-relaxed">
-          Driving organic growth with SEO strategies, building high-performing WordPress websites, and generating quality leads through paid campaigns.
+          Driving organic growth through SEO strategies, managing PPC ad campaigns, building WordPress websites, and handling CRM activities.
         </p>
 
         <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
