@@ -3,13 +3,13 @@ import { Button } from "./ui/button";
 import profileImg from "@/assets/profile-nobg.png";
 
 const skillBadges = [
-  { label: "SEO Strategy Optimization", top: "8%", right: "-18%", delay: "0s" },
+  { label: "Search Engine Optimization", top: "8%", right: "-18%", delay: "0s" },
   { label: "Google Ads Management", top: "28%", right: "-22%", delay: "0.3s" },
-  { label: "Meta Ads Campaign Management", top: "48%", right: "-26%", delay: "0.6s" },
-  { label: "WordPress Website Development", top: "68%", right: "-20%", delay: "0.9s" },
-  { label: "Responsive Web Design", top: "12%", left: "-24%", delay: "0.4s" },
+  { label: "Meta Ads Management", top: "48%", right: "-26%", delay: "0.6s" },
+  { label: "WordPress Development", top: "68%", right: "-20%", delay: "0.9s" },
+  { label: "Responsive Design", top: "12%", left: "-24%", delay: "0.4s" },
   { label: "Landing Page Optimization", top: "40%", left: "-20%", delay: "0.7s" },
-  { label: "Customer Relationship Management", top: "68%", left: "-26%", delay: "1s" },
+  { label: "CRM Management", top: "68%", left: "-26%", delay: "1s" },
 ];
 
 const HeroSection = () => (
