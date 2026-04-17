@@ -3,10 +3,10 @@ import { Button } from "./ui/button";
 import profileImg from "@/assets/profile-nobg.png";
 
 const skillBadges = [
-  { label: "Search Engine Optimization", top: "8%", right: "-18%", delay: "0s" },
-  { label: "Google Ads Management", top: "28%", right: "-22%", delay: "0.3s" },
-  { label: "Meta Ads Management", top: "48%", right: "-26%", delay: "0.6s" },
-  { label: "WordPress Development", top: "68%", right: "-20%", delay: "0.9s" },
+  { label: "Search Engine Optimization", top: "2%", right: "-18%", delay: "0s" },
+  { label: "Google Ads Management", top: "26%", right: "-22%", delay: "0.3s" },
+  { label: "Meta Ads Management", top: "50%", right: "-26%", delay: "0.6s" },
+  { label: "WordPress Development", top: "74%", right: "-20%", delay: "0.9s" },
   { label: "Responsive Design", top: "12%", left: "-24%", delay: "0.4s" },
   { label: "Landing Page Optimization", top: "40%", left: "-20%", delay: "0.7s" },
   { label: "CRM Management", top: "68%", left: "-26%", delay: "1s" },
@@ -24,8 +24,7 @@ const HeroSection = () => (
           Hello, I'm
         </p>
         <h1 className="text-4xl md:text-6xl font-heading font-bold leading-tight">
-          Aathijegannathan{" "}
-          <span className="text-gradient">V N</span>
+          <span className="text-gradient">Aathijegannathan V N</span>
         </h1>
         <h2 className="text-xl md:text-2xl text-muted-foreground font-heading">
           Digital Marketing Executive
