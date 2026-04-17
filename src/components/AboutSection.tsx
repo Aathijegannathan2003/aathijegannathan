@@ -9,9 +9,12 @@ const AboutSection = () => (
       </div>
 
       <div className="grid md:grid-cols-2 gap-8 items-center max-w-5xl mx-auto">
-        <div className="animate-on-scroll">
+        <div className="animate-on-scroll space-y-4">
           <p className="text-muted-foreground leading-relaxed text-lg">
-            I'm a Digital Marketing Executive based in Chennai, specializing in SEO and PPC marketing. I have strong hands-on experience in SEO, Google Ads, and Meta Ads, creating and managing campaigns that generate quality leads and improve ROI. I also build responsive WordPress websites with clean design and smooth user experience.
+            I'm a results-driven Digital Marketing Executive based in Chennai, specializing in SEO and performance marketing. I focus on improving online visibility and driving targeted traffic to support business growth.
+          </p>
+          <p className="text-muted-foreground leading-relaxed text-lg">
+            I have hands-on experience in SEO, along with Google Ads and Meta Ads, creating and managing campaigns that generate quality leads and deliver measurable ROI. I also build responsive WordPress websites with clean design and smooth user experience.
           </p>
         </div>
 
