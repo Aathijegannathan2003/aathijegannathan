@@ -43,7 +43,7 @@ const ExperienceSection = () => (
         {experiences.map((exp, i) => (
           <div
             key={exp.company}
-            className="animate-on-scroll bg-card border border-border rounded-lg p-6 card-hover"
+            className="animate-on-scroll visible bg-card border border-border rounded-lg p-6 card-hover"
             style={{ transitionDelay: `${i * 0.15}s` }}
           >
             <div className="flex items-start gap-4">
