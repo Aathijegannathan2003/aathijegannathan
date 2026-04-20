@@ -4,7 +4,7 @@ const experiences = [
   {
     role: "SEO Analyst",
     company: "FITA Academy",
-    duration: "1.3 Years",
+    duration: "Sep 2024 - Dec 2025",
     points: [
       "Managed 10+ course web pages",
       "Performed on-page SEO (meta title, meta description, alt tags)",
@@ -17,8 +17,8 @@ const experiences = [
   },
   {
     role: "Digital Marketing Executive",
-    company: "Labmate Asia Pvt Ltd",
-    duration: "3 Months",
+    company: "Labmate (Asia) Pvt Ltd",
+    duration: "Jan 2026 - Present",
     points: [
       "Built a WordPress website from scratch to SEO optimization",
       "Created SEO-friendly content and handled on-page optimization",
