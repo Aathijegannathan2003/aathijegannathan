@@ -62,7 +62,7 @@ const HeroSection = () => {
       <div className="flex justify-center" style={{ animationDelay: "0.3s" }}>
         <div className="relative">
           {/* Circular border ring with glow */}
-          <div className="w-[190px] h-[190px] md:w-[310px] md:h-[310px] rounded-full overflow-hidden border-2 border-primary/40 animate-float shadow-[0_0_80px_rgba(59,130,246,0.35),0_0_120px_rgba(59,130,246,0.15)]">
+          <div className="w-[190px] h-[190px] md:w-[410px] md:h-[410px] rounded-full overflow-hidden border-2 border-primary/40 animate-float shadow-[0_0_80px_rgba(59,130,246,0.35),0_0_120px_rgba(59,130,246,0.15)]">
             <img
               src={profileImg}
               alt="Aathijegannathan V N - Digital Marketing Executive"
