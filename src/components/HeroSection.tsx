@@ -3,13 +3,13 @@ import { Button } from "./ui/button";
 import profileImg from "@/assets/profile-nobg.png";
 
 const skillBadges = [
-  { label: "Search Engine Optimization", top: "2%", right: "-18%", delay: "0s" },
-  { label: "Google Ads Management", top: "26%", right: "-22%", delay: "0.3s" },
-  { label: "Meta Ads Management", top: "50%", right: "-26%", delay: "0.6s" },
-  { label: "WordPress Development", top: "74%", right: "-20%", delay: "0.9s" },
-  { label: "Responsive Design", top: "12%", left: "-24%", delay: "0.4s" },
-  { label: "Landing Page Optimization", top: "40%", left: "-20%", delay: "0.7s" },
-  { label: "CRM Management", top: "68%", left: "-26%", delay: "1s" },
+  { label: "Search Engine Optimization", topMobile: "0%", rightMobile: "-12%", top: "2%", right: "-18%", delay: "0s" },
+  { label: "Google Ads Management", topMobile: "22%", rightMobile: "-15%", top: "26%", right: "-22%", delay: "0.3s" },
+  { label: "Meta Ads Management", topMobile: "48%", rightMobile: "-18%", top: "50%", right: "-26%", delay: "0.6s" },
+  { label: "WordPress Development", topMobile: "74%", rightMobile: "-14%", top: "74%", right: "-20%", delay: "0.9s" },
+  { label: "Responsive Design", topMobile: "10%", leftMobile: "-16%", top: "12%", left: "-24%", delay: "0.4s" },
+  { label: "Landing Page Optimization", topMobile: "36%", leftMobile: "-14%", top: "40%", left: "-20%", delay: "0.7s" },
+  { label: "CRM Management", topMobile: "64%", leftMobile: "-18%", top: "68%", left: "-26%", delay: "1s" },
 ];
 
 const HeroSection = () => (
@@ -73,14 +73,18 @@ const HeroSection = () => (
           {skillBadges.map((badge) => (
             <span
               key={badge.label}
-              className="absolute hidden md:flex items-center px-4 py-2 rounded-full bg-card/80 backdrop-blur-sm border border-primary/30 text-xs font-medium text-foreground shadow-[0_4px_20px_rgba(59,130,246,0.2)] animate-float whitespace-nowrap"
+              className="absolute flex items-center px-2 py-1 md:px-4 md:py-2 rounded-full bg-card/80 backdrop-blur-sm border border-primary/30 text-[9px] md:text-xs font-medium text-foreground shadow-[0_4px_20px_rgba(59,130,246,0.2)] animate-float whitespace-nowrap"
               style={{
-                top: badge.top,
-                left: badge.left,
-                right: badge.right,
+                top: `var(--badge-top)`,
+                left: `var(--badge-left)`,
+                right: `var(--badge-right)`,
                 animationDelay: badge.delay,
+                ['--badge-top' as never]: badge.topMobile,
+                ['--badge-left' as never]: badge.leftMobile ?? 'auto',
+                ['--badge-right' as never]: badge.rightMobile ?? 'auto',
               }}
             >
+              <span className="hidden md:inline" style={{ position: 'absolute', inset: 0, display: 'none' }} />
               {badge.label}
             </span>
           ))}
