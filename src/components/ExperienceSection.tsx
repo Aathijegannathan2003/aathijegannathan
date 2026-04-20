@@ -20,8 +20,8 @@ const experiences = [
     company: "Labmate Asia Pvt Ltd",
     duration: "3 Months",
     points: [
-      "Built a WordPress website from scratch and optimized it for SEO",
-      "Created and optimized SEO-friendly content",
+      "Built a WordPress website from scratch to SEO optimization",
+      "Created SEO-friendly content and handled on-page optimization",
       "Managed the company's LinkedIn page",
       "Handled email marketing using Mailchimp",
       "Designed creatives and brochures using Canva",
