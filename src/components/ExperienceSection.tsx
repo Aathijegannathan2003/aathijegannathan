@@ -35,7 +35,7 @@ const ExperienceSection = () => (
         <h2 className="text-4xl md:text-5xl font-heading font-bold">Where I've Worked</h2>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+      <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
         {experiences.map((exp, i) => (
           <div
             key={exp.company}
