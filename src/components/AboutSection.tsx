@@ -26,7 +26,7 @@ const AboutSection = () => (
         <h2 className="text-4xl md:text-5xl font-heading font-bold">Who Am I</h2>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-8 items-stretch max-w-5xl mx-auto">
+      <div className="grid md:grid-cols-2 gap-8 items-stretch max-w-6xl mx-auto">
         <div className="animate-on-scroll flex flex-col justify-between h-full gap-6">
           <p className="text-muted-foreground leading-relaxed text-lg">
             I'm a results-driven <span className="text-primary font-medium">Digital Marketing Executive</span> based in Chennai, specializing in SEO and performance marketing. I focus on improving online visibility and driving targeted traffic to support business growth.
@@ -72,7 +72,7 @@ const AboutSection = () => (
               <Briefcase className="text-primary" size={22} />
               <h3 className="font-heading font-semibold text-lg">Experience</h3>
             </div>
-            <p className="text-foreground font-medium">2+ Years Experience</p>
+            <p className="text-foreground font-medium">1.6+ Years Experience</p>
             <p className="text-primary text-sm mt-1">SEO & Paid Ads</p>
           </div>
         </div>
