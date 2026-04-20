@@ -1,18 +1,21 @@
 import { MapPin, Clock, ArrowDown } from "lucide-react";
 import { Button } from "./ui/button";
+import { useIsMobile } from "@/hooks/use-mobile";
 import profileImg from "@/assets/profile-nobg.png";
 
 const skillBadges = [
-  { label: "Search Engine Optimization", topMobile: "0%", rightMobile: "-12%", top: "2%", right: "-18%", delay: "0s" },
-  { label: "Google Ads Management", topMobile: "22%", rightMobile: "-15%", top: "26%", right: "-22%", delay: "0.3s" },
-  { label: "Meta Ads Management", topMobile: "48%", rightMobile: "-18%", top: "50%", right: "-26%", delay: "0.6s" },
-  { label: "WordPress Development", topMobile: "74%", rightMobile: "-14%", top: "74%", right: "-20%", delay: "0.9s" },
-  { label: "Responsive Design", topMobile: "10%", leftMobile: "-16%", top: "12%", left: "-24%", delay: "0.4s" },
-  { label: "Landing Page Optimization", topMobile: "36%", leftMobile: "-14%", top: "40%", left: "-20%", delay: "0.7s" },
-  { label: "CRM Management", topMobile: "64%", leftMobile: "-18%", top: "68%", left: "-26%", delay: "1s" },
+  { label: "Search Engine Optimization", topMobile: "0%", rightMobile: "-8%", top: "2%", right: "-18%", delay: "0s" },
+  { label: "Google Ads Management", topMobile: "20%", rightMobile: "-10%", top: "26%", right: "-22%", delay: "0.3s" },
+  { label: "Meta Ads Management", topMobile: "44%", rightMobile: "-12%", top: "50%", right: "-26%", delay: "0.6s" },
+  { label: "WordPress Development", topMobile: "70%", rightMobile: "-8%", top: "74%", right: "-20%", delay: "0.9s" },
+  { label: "Responsive Design", topMobile: "8%", leftMobile: "-12%", top: "12%", left: "-24%", delay: "0.4s" },
+  { label: "Landing Page Optimization", topMobile: "32%", leftMobile: "-10%", top: "40%", left: "-20%", delay: "0.7s" },
+  { label: "CRM Management", topMobile: "60%", leftMobile: "-12%", top: "68%", left: "-26%", delay: "1s" },
 ];
 
-const HeroSection = () => (
+const HeroSection = () => {
+  const isMobile = useIsMobile();
+  return (
   <section id="home" className="min-h-screen flex items-center relative overflow-hidden pt-20">
     {/* Gradient orbs */}
     <div className="absolute top-1/4 -left-32 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
@@ -75,16 +78,12 @@ const HeroSection = () => (
               key={badge.label}
               className="absolute flex items-center px-2 py-1 md:px-4 md:py-2 rounded-full bg-card/80 backdrop-blur-sm border border-primary/30 text-[9px] md:text-xs font-medium text-foreground shadow-[0_4px_20px_rgba(59,130,246,0.2)] animate-float whitespace-nowrap"
               style={{
-                top: `var(--badge-top)`,
-                left: `var(--badge-left)`,
-                right: `var(--badge-right)`,
+                top: isMobile ? badge.topMobile : badge.top,
+                left: isMobile ? badge.leftMobile : badge.left,
+                right: isMobile ? badge.rightMobile : badge.right,
                 animationDelay: badge.delay,
-                ['--badge-top' as never]: badge.topMobile,
-                ['--badge-left' as never]: badge.leftMobile ?? 'auto',
-                ['--badge-right' as never]: badge.rightMobile ?? 'auto',
               }}
             >
-              <span className="hidden md:inline" style={{ position: 'absolute', inset: 0, display: 'none' }} />
               {badge.label}
             </span>
           ))}
