@@ -100,6 +100,7 @@ const HeroSection = () => {
       <ArrowDown size={24} />
     </a>
   </section>
-);
+  );
+};
 
 export default HeroSection;
