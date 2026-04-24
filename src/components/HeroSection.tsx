@@ -1,7 +1,7 @@
 import { MapPin, Clock, ArrowDown } from "lucide-react";
 import { Button } from "./ui/button";
 import { useIsMobile } from "@/hooks/use-mobile";
-import profileImg from "@/assets/portfolio_pic.png";
+import profileImg from "@/assets/portfolio_pic-transparent.png";
 
 const skillBadges = [
   { label: "Search Engine Optimization", topMobile: "0%", rightMobile: "-8%", top: "2%", right: "-18%", delay: "0s" },
@@ -62,13 +62,13 @@ const HeroSection = () => {
       <div className="flex justify-center" style={{ animationDelay: "0.3s" }}>
         <div className="relative">
           {/* Circular border ring with glow */}
-          <div className="w-[290px] h-[290px] md:w-[410px] md:h-[410px] rounded-full overflow-hidden border-2 border-primary/40 animate-float shadow-[0_0_80px_rgba(59,130,246,0.35),0_0_120px_rgba(59,130,246,0.15)]">
+          <div className="w-[290px] h-[293px] md:w-[410px] md:h-[413px] rounded-full overflow-hidden border-2 border-primary/40 bg-card animate-float shadow-[0_0_80px_rgba(59,130,246,0.35),0_0_120px_rgba(59,130,246,0.15)]">
             <img
               src={profileImg}
               alt="Aathijegannathan V N - Digital Marketing Executive"
-              width={512}
-              height={512}
-              className="w-full h-full object-cover object-top"
+              width={80}
+              height={100}
+              className="w-full h-full object-contain object-bottom"
             />
           </div>
 
