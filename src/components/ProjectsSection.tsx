@@ -78,7 +78,7 @@ const projects: Record<Category, {
       ],
     },
     {
-      title: "Fertility Lead Generation Campaign",
+      title: "Lead Generation Campaign",
       description:
         "Executed a targeted campaign in a competitive niche, focusing on reaching the right audience and generating quality leads.",
       points: ["Generated 32+ leads"],
