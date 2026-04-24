@@ -1,4 +1,4 @@
-import { Search, Globe, Megaphone, ExternalLink, TrendingUp, Users, MousePointerClick } from "lucide-react";
+import { Search, Globe, Megaphone, ExternalLink, TrendingUp, Users, MousePointerClick, Eye } from "lucide-react";
 import { useState } from "react";
 import { Button } from "./ui/button";
 
@@ -14,26 +14,29 @@ const projects: Record<Category, {
   title: string;
   url?: string;
   points: string[];
+  description?: string;
   metrics?: { label: string; value: string; icon: React.ElementType }[];
 }[]> = {
   seo: [
     {
-      title: "CleanWithDB",
+      title: "CleanWithDB (UK Client)",
       url: "https://cleanwithdb.co.uk",
       points: [
-        "Created SEO-optimized landing pages",
+        "Built and optimized landing pages from scratch",
         'Targeted keyword: "best cleaning services in Belfast"',
-        "Improved content structure and performance",
-        "Focused on ranking and traffic generation",
+        "Improved content structure, internal linking & on-page SEO",
+        "Focused on ranking, organic traffic & lead generation",
+        "Implemented complete SEO process from keyword research to optimization.",
       ],
     },
     {
       title: "Digitalsiddesh",
       url: "https://digitalsiddesh.com/",
       points: [
-        "Built WordPress website using Divi",
+        "Optimized SEO content for WordPress website",
         'Targeted keyword: "best WordPress freelancer in Chennai"',
-        "Optimized for speed, SEO, and lead generation",
+        "Improved content readability & keyword placement",
+        "Enhanced on-page SEO for better search visibility",
       ],
     },
   ],
@@ -42,37 +45,48 @@ const projects: Record<Category, {
       title: "Labmate Asia",
       url: "https://labmateasia.com",
       points: [
-        "Built complete website with SEO-friendly structure",
-        "Optimized pages for search engines",
-        "Improved UI/UX and performance",
+        "Built complete website from scratch using WordPress",
+        "Created SEO-friendly site structure",
+        "Optimized pages for search engines & performance",
+        "Improved UI/UX for better user engagement",
+        "Handled end-to-end website development from design to SEO optimization",
       ],
     },
     {
-      title: "WordPress Developer Page",
+      title: "Digitalsiddesh",
       url: "https://digitalsiddesh.com/wordpress-developer-chennai/",
       points: [
-        "Built a landing page with SEO-friendly structure",
-        "Audited technical SEO",
-        "Mobile friendly design",
+        "Built SEO-friendly landing page",
+        "Performed technical SEO audit",
+        "Improved mobile responsiveness & page structure",
+        "Supported SEO optimization and performance improvements",
       ],
     },
   ],
   ads: [
     {
       title: "Free Class Lead Campaign",
-      points: ["Generated 65+ leads", "High engagement and conversions"],
+      description:
+        "Ran a lead generation campaign with proper audience targeting and ad creatives, resulting in high engagement and low-cost leads.",
+      points: ["Generated 65+ leads"],
       metrics: [
         { label: "Leads", value: "65+", icon: Users },
         { label: "CPL", value: "₹6", icon: TrendingUp },
+        { label: "Impressions", value: "5,406", icon: Eye },
+        { label: "Reach", value: "4,800+", icon: Users },
         { label: "CTR", value: "6.66%", icon: MousePointerClick },
       ],
     },
     {
-      title: "Lead Generation Campaign",
-      points: ["Generated 32+ leads", "Reach: 25,000+ users"],
+      title: "Fertility Lead Generation Campaign",
+      description:
+        "Executed a targeted campaign in a competitive niche, focusing on reaching the right audience and generating quality leads.",
+      points: ["Generated 32+ leads"],
       metrics: [
         { label: "Leads", value: "32+", icon: Users },
         { label: "CPL", value: "₹45", icon: TrendingUp },
+        { label: "Impressions", value: "25,309", icon: Eye },
+        { label: "Reach", value: "16,400+", icon: Users },
         { label: "CTR", value: "1.49%", icon: MousePointerClick },
       ],
     },
@@ -131,7 +145,7 @@ const ProjectsSection = () => {
               </div>
 
               {p.metrics && (
-                <div className="grid grid-cols-3 gap-3 mb-4">
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-4">
                   {p.metrics.map((m) => (
                     <div key={m.label} className="bg-muted rounded-lg p-3 text-center">
                       <m.icon size={16} className="text-primary mx-auto mb-1" />
@@ -150,6 +164,10 @@ const ProjectsSection = () => {
                   </li>
                 ))}
               </ul>
+
+              {p.description && (
+                <p className="mt-4 text-sm text-muted-foreground leading-relaxed">{p.description}</p>
+              )}
             </div>
           ))}
         </div>
