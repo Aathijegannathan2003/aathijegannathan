@@ -68,7 +68,7 @@ const projects: Record<Category, {
       ],
     },
     {
-      title: "Fertility Lead Generation Campaign",
+      title: "Lead Generation Campaign",
       points: ["Generated 32+ leads", "Reach: 25,000+ users"],
       metrics: [
         { label: "Leads", value: "32+", icon: Users },
