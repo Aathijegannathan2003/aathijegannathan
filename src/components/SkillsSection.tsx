@@ -104,8 +104,8 @@ const SkillsSection = () => (
           </div>
         </div>
 
-        {/* Tools - 40% */}
-        <div className="lg:col-span-2 bg-card/80 border border-border rounded-2xl p-6 md:p-7">
+        {/* Tools */}
+        <div className="bg-card/80 border border-border rounded-2xl p-6 md:p-7 flex flex-col h-full">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
               <Wrench className="text-primary" size={18} />
