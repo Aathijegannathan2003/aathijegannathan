@@ -1,6 +1,7 @@
 import {
   Search, Globe, Target, BarChart3, Users, Palette,
-  LineChart, TrendingUp, Mail, Megaphone, BarChart, Wrench
+  LineChart, TrendingUp, Mail, Megaphone, BarChart, Wrench,
+  ChevronRight,
 } from "lucide-react";
 
 const coreSkills = [
@@ -8,106 +9,126 @@ const coreSkills = [
     icon: Search,
     title: "SEO",
     desc: "On-page, Off-page, Technical SEO, Local SEO",
+    color: "from-blue-500 to-blue-600",
+    bar: "bg-blue-500",
   },
   {
     icon: Globe,
     title: "WordPress",
     desc: "Landing Page Optimization, Plugin Installation, Elementor",
+    color: "from-purple-500 to-purple-600",
+    bar: "bg-purple-500",
   },
   {
     icon: Target,
     title: "Meta Ads",
     desc: "Campaign Setup, Ad Management, Lead Generation",
+    color: "from-emerald-500 to-emerald-600",
+    bar: "bg-emerald-500",
   },
   {
     icon: BarChart3,
     title: "Google Ads",
     desc: "Search Campaigns, Campaign Optimization, Keyword Targeting",
+    color: "from-orange-500 to-amber-500",
+    bar: "bg-orange-500",
   },
   {
     icon: Users,
     title: "CRM Management",
     desc: "Customer Data Handling, Lead Management",
+    color: "from-cyan-500 to-teal-500",
+    bar: "bg-cyan-500",
   },
   {
     icon: Palette,
     title: "Canva",
     desc: "Creative Design, Social Media Content, Brochure Design",
+    color: "from-pink-500 to-rose-500",
+    bar: "bg-pink-500",
   },
 ];
 
 const tools = [
-  { icon: BarChart3, label: "Google Ads" },
-  { icon: Megaphone, label: "Meta Ads Manager" },
-  { icon: BarChart, label: "Google Analytics" },
-  { icon: LineChart, label: "Search Console" },
-  { icon: TrendingUp, label: "Ubersuggest" },
-  { icon: Palette, label: "Canva" },
-  { icon: Users, label: "Synergy CRM" },
-  { icon: Mail, label: "Mailchimp" },
+  { icon: BarChart3, label: "Google Ads", color: "text-orange-400 bg-orange-500/10" },
+  { icon: Megaphone, label: "Meta Ads Manager", color: "text-blue-400 bg-blue-500/10" },
+  { icon: BarChart, label: "Google Analytics", color: "text-amber-400 bg-amber-500/10" },
+  { icon: LineChart, label: "Search Console", color: "text-sky-400 bg-sky-500/10" },
+  { icon: TrendingUp, label: "Ubersuggest", color: "text-violet-400 bg-violet-500/10" },
+  { icon: Palette, label: "Canva", color: "text-cyan-400 bg-cyan-500/10" },
+  { icon: Users, label: "Synergy CRM", color: "text-teal-400 bg-teal-500/10" },
+  { icon: Mail, label: "Mailchimp", color: "text-yellow-400 bg-yellow-500/10" },
 ];
 
 const SkillsSection = () => (
   <section id="skills" className="py-24 bg-card/50">
     <div className="container mx-auto px-4">
-      <div className="animate-on-scroll text-center mb-12">
-        <p className="text-primary text-sm font-medium uppercase tracking-wide mb-2">Skills & Tools</p>
-        <h2 className="text-4xl md:text-5xl font-heading font-bold">What I Work With</h2>
+      <div className="text-center mb-14">
+        <div className="flex items-center justify-center gap-3 mb-3">
+          <span className="h-px w-8 bg-primary/60" />
+          <p className="text-primary text-sm font-semibold uppercase tracking-[0.2em]">Skills & Tools</p>
+          <span className="h-px w-8 bg-primary/60" />
+        </div>
+        <h2 className="text-4xl md:text-5xl font-heading font-bold">
+          What I <span className="text-primary">Work</span> With
+        </h2>
+        <p className="text-muted-foreground mt-4 max-w-xl mx-auto">
+          Strategic skills and powerful tools I use to deliver results.
+        </p>
       </div>
 
       <div className="grid lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
         {/* Core Skills - 60% */}
-        <div className="lg:col-span-3">
-          <div className="flex items-center gap-2 mb-6">
-            <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center">
+        <div className="lg:col-span-3 bg-card/80 border border-border rounded-2xl p-6 md:p-7">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
               <Search className="text-primary" size={18} />
             </div>
             <h3 className="text-xl font-heading font-semibold">Core Skills</h3>
           </div>
 
-          <div className="grid sm:grid-cols-2 gap-4">
-            {coreSkills.map((s, i) => (
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+            {coreSkills.map((s) => (
               <div
                 key={s.title}
-                className="animate-on-scroll visible bg-card border border-border rounded-lg p-5 card-hover hover:border-primary/40 transition-colors"
-                style={{ transitionDelay: `${i * 0.05}s` }}
+                className="group relative bg-background/60 border border-border/70 rounded-xl p-4 hover:border-primary/40 hover:-translate-y-1 transition-all duration-300"
               >
-                <div className="flex items-start gap-3">
-                  <div className="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                    <s.icon className="text-primary" size={20} />
-                  </div>
-                  <div>
-                    <h4 className="font-heading font-semibold text-foreground text-base">{s.title}</h4>
-                    <p className="text-muted-foreground text-sm leading-relaxed mt-1">{s.desc}</p>
-                  </div>
+                <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${s.color} flex items-center justify-center mb-3 shadow-lg`}>
+                  <s.icon className="text-white" size={22} />
                 </div>
+                <h4 className="font-heading font-semibold text-foreground text-base mb-1">{s.title}</h4>
+                <p className="text-muted-foreground text-xs leading-relaxed mb-3">{s.desc}</p>
+                <div className={`h-[3px] w-10 rounded-full ${s.bar} group-hover:w-full transition-all duration-500`} />
               </div>
             ))}
           </div>
         </div>
 
         {/* Tools - 40% */}
-        <div className="lg:col-span-2">
-          <div className="flex items-center gap-2 mb-6">
-            <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center">
+        <div className="lg:col-span-2 bg-card/80 border border-border rounded-2xl p-6 md:p-7">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
               <Wrench className="text-primary" size={18} />
             </div>
-            <h3 className="text-xl font-heading font-semibold">Tools</h3>
+            <h3 className="text-xl font-heading font-semibold">Tools I Use</h3>
           </div>
 
-          <div className="bg-card border border-border rounded-lg p-5">
-            <div className="grid grid-cols-2 gap-3">
-              {tools.map((t, i) => (
-                <div
-                  key={t.label}
-                  className="animate-on-scroll visible flex items-center gap-3 px-3 py-3 rounded-md bg-background/50 border border-border/60 hover:border-primary/40 transition-colors"
-                  style={{ transitionDelay: `${i * 0.05}s` }}
-                >
-                  <t.icon className="text-primary shrink-0" size={18} />
-                  <span className="text-sm font-medium">{t.label}</span>
+          <div className="space-y-2.5">
+            {tools.map((t) => (
+              <div
+                key={t.label}
+                className="group flex items-center gap-3 px-3 py-2.5 rounded-lg bg-background/60 border border-border/70 hover:border-primary/40 hover:bg-background transition-all cursor-default"
+              >
+                <div className={`w-9 h-9 rounded-lg flex items-center justify-center ${t.color}`}>
+                  <t.icon size={18} />
                 </div>
-              ))}
-            </div>
+                <span className="text-sm font-medium flex-1">{t.label}</span>
+                <ChevronRight
+                  className="text-muted-foreground group-hover:text-primary group-hover:translate-x-0.5 transition-all"
+                  size={16}
+                />
+              </div>
+            ))}
           </div>
         </div>
       </div>
