@@ -77,9 +77,9 @@ const SkillsSection = () => (
         </p>
       </div>
 
-      <div className="grid lg:grid-cols-100 gap-6 max-w-6xl mx-auto items-stretch" style={{ gridTemplateColumns: '' }}>
+      <div className="grid gap-6 max-w-6xl mx-auto items-stretch lg:[grid-template-columns:67fr_33fr]">
         {/* Core Skills - widened ~7% */}
-        <div className="lg:[grid-column:span_67] bg-card/80 border border-border rounded-2xl p-6 md:p-7 flex flex-col h-full">
+        <div className="bg-card/80 border border-border rounded-2xl p-6 md:p-7 flex flex-col h-full">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
               <Search className="text-primary" size={18} />
