@@ -115,13 +115,13 @@ const SkillsSection = () => (
             {coreSkills.map((s) => (
               <div
                 key={s.title}
-                className="group relative bg-background/60 border border-border/70 rounded-xl p-4 hover:border-primary/40 hover:-translate-y-1 transition-all duration-300 flex flex-col h-full"
+                className="group relative bg-background/60 border border-border/70 rounded-xl p-3 hover:border-primary/40 hover:-translate-y-1 transition-all duration-300 flex flex-col h-full"
               >
-                <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${s.color} flex items-center justify-center mb-3 shadow-lg`}>
-                  <s.icon className="text-white" size={22} />
+                <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${s.color} flex items-center justify-center mb-2 shadow-lg`}>
+                  <s.icon className="text-white" size={18} />
                 </div>
-                <h4 className="font-heading font-semibold text-foreground text-base mb-2 leading-snug">{s.title}</h4>
-                <ul className="space-y-1.5 mb-3 flex-1">
+                <h4 className="font-heading font-semibold text-foreground text-sm mb-1.5 leading-snug">{s.title}</h4>
+                <ul className="space-y-1 mb-2 flex-1">
                   {s.points.map((p) => (
                     <li key={p} className="flex items-start gap-2 text-muted-foreground leading-relaxed" style={{ fontSize: "13px" }}>
                       <span className={`mt-1.5 w-1 h-1 rounded-full ${s.bar} shrink-0`} />
