@@ -111,11 +111,11 @@ const SkillsSection = () => (
             <h3 className="text-xl font-heading font-semibold">Core Skills</h3>
           </div>
 
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 flex-1 auto-rows-fr">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
             {coreSkills.map((s) => (
               <div
                 key={s.title}
-                className="group relative bg-background/60 border border-border/70 rounded-xl p-3 hover:border-primary/40 hover:-translate-y-1 transition-all duration-300 flex flex-col h-full"
+                className="group relative bg-background/60 border border-border/70 rounded-xl p-3 hover:border-primary/40 hover:-translate-y-1 transition-all duration-300 flex flex-col"
               >
                 <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${s.color} flex items-center justify-center mb-2 shadow-lg`}>
                   <s.icon className="text-white" size={18} />
