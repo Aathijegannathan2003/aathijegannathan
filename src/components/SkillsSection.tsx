@@ -69,7 +69,7 @@ const SkillsSection = () => (
             {coreSkills.map((s, i) => (
               <div
                 key={s.title}
-                className="animate-on-scroll bg-card border border-border rounded-lg p-5 card-hover hover:border-primary/40 transition-colors"
+                className="animate-on-scroll visible bg-card border border-border rounded-lg p-5 card-hover hover:border-primary/40 transition-colors"
                 style={{ transitionDelay: `${i * 0.05}s` }}
               >
                 <div className="flex items-start gap-3">
@@ -100,7 +100,7 @@ const SkillsSection = () => (
               {tools.map((t, i) => (
                 <div
                   key={t.label}
-                  className="animate-on-scroll flex items-center gap-3 px-3 py-3 rounded-md bg-background/50 border border-border/60 hover:border-primary/40 transition-colors"
+                  className="animate-on-scroll visible flex items-center gap-3 px-3 py-3 rounded-md bg-background/50 border border-border/60 hover:border-primary/40 transition-colors"
                   style={{ transitionDelay: `${i * 0.05}s` }}
                 >
                   <t.icon className="text-primary shrink-0" size={18} />
