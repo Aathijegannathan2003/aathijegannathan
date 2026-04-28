@@ -65,7 +65,7 @@ const HeroSection = () => {
           <div className="w-[290px] h-[293px] md:w-[410px] md:h-[413px] rounded-full overflow-hidden border-2 border-primary/40 bg-card animate-float shadow-[0_0_80px_rgba(59,130,246,0.35),0_0_120px_rgba(59,130,246,0.15)]">
             <img
               src={profileImg}
-              alt="Aathijegannathan V N - Digital Marketing Executive"
+              alt="Aathijegannathan V N - SEO & Paid Ads Executive"
               width={320}
               height={320}
               className="w-full h-full object-contain object-bottom"
