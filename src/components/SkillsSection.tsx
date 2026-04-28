@@ -7,12 +7,11 @@ import {
 const coreSkills = [
   {
     icon: Search,
-    title: "Search Engine Optimization",
+    title: "Search Engine Optimization (SEO)",
     points: [
-      "On-page optimization",
+      "On-page SEO optimization",
       "Off-page link building",
-      "Technical SEO improvements",
-      "Local SEO targeting",
+      "Technical and local SEO",
     ],
     color: "from-blue-500 to-blue-600",
     bar: "bg-blue-500",
