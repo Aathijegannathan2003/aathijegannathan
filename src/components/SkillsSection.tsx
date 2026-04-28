@@ -123,7 +123,7 @@ const SkillsSection = () => (
                 <h4 className="font-heading font-semibold text-foreground text-base mb-2 leading-snug">{s.title}</h4>
                 <ul className="space-y-1.5 mb-3 flex-1">
                   {s.points.map((p) => (
-                    <li key={p} className="flex items-start gap-2 text-muted-foreground text-xs leading-relaxed">
+                    <li key={p} className="flex items-start gap-2 text-muted-foreground leading-relaxed" style={{ fontSize: "13px" }}>
                       <span className={`mt-1.5 w-1 h-1 rounded-full ${s.bar} shrink-0`} />
                       <span>{p}</span>
                     </li>
