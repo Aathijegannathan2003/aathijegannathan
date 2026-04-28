@@ -30,7 +30,7 @@ const HeroSection = () => {
           <span className="text-gradient">Aathijegannathan V N</span>
         </h1>
         <h2 className="text-xl md:text-2xl text-muted-foreground font-heading">
-          Digital Marketing Executive
+          SEO & Paid Ads Executive
         </h2>
         <p className="text-muted-foreground max-w-lg leading-relaxed">
           Driving organic growth through SEO strategies, managing PPC ad campaigns, building WordPress websites, and handling CRM activities.
