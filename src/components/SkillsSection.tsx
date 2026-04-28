@@ -87,7 +87,7 @@ const SkillsSection = () => (
             <h3 className="text-xl font-heading font-semibold">Core Skills</h3>
           </div>
 
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 flex-1 auto-rows-fr">
             {coreSkills.map((s) => (
               <div
                 key={s.title}
