@@ -7,43 +7,68 @@ import {
 const coreSkills = [
   {
     icon: Search,
-    title: "SEO",
-    desc: "On-page, Off-page, Technical SEO, Local SEO",
+    title: "Search Engine Optimization",
+    points: [
+      "On-page optimization",
+      "Off-page link building",
+      "Technical SEO improvements",
+      "Local SEO targeting",
+    ],
     color: "from-blue-500 to-blue-600",
     bar: "bg-blue-500",
   },
   {
     icon: Globe,
-    title: "WordPress",
-    desc: "Landing Page Optimization, Plugin Installation, Elementor",
+    title: "WordPress Development",
+    points: [
+      "Landing page optimization",
+      "Plugin setup & configuration",
+      "Elementor customization",
+    ],
     color: "from-purple-500 to-purple-600",
     bar: "bg-purple-500",
   },
   {
     icon: Target,
-    title: "Meta Ads",
-    desc: "Campaign Setup, Ad Management, Lead Generation",
+    title: "Meta Ads Manager",
+    points: [
+      "Campaign setup & structure",
+      "Ad management & scaling",
+      "Lead generation strategy",
+    ],
     color: "from-emerald-500 to-emerald-600",
     bar: "bg-emerald-500",
   },
   {
     icon: BarChart3,
     title: "Google Ads",
-    desc: "Search Campaigns, Campaign Optimization, Keyword Targeting",
+    points: [
+      "Search campaign setup",
+      "Campaign optimization",
+      "Keyword targeting strategy",
+    ],
     color: "from-orange-500 to-amber-500",
     bar: "bg-orange-500",
   },
   {
     icon: Users,
     title: "CRM Management",
-    desc: "Customer Data Handling, Lead Management",
+    points: [
+      "Customer data handling",
+      "Regular data updates",
+      "Track leads efficiently",
+    ],
     color: "from-cyan-500 to-teal-500",
     bar: "bg-cyan-500",
   },
   {
     icon: Palette,
     title: "Canva",
-    desc: "Creative Design, Social Media Content, Brochure Design",
+    points: [
+      "Social media creatives",
+      "Marketing design assets",
+      "Brochure design",
+    ],
     color: "from-pink-500 to-rose-500",
     bar: "bg-pink-500",
   },
@@ -53,7 +78,7 @@ const tools = [
   { icon: BarChart3, label: "Google Ads", color: "text-orange-400 bg-orange-500/10" },
   { icon: Megaphone, label: "Meta Ads Manager", color: "text-blue-400 bg-blue-500/10" },
   { icon: BarChart, label: "Google Analytics", color: "text-amber-400 bg-amber-500/10" },
-  { icon: LineChart, label: "Search Console", color: "text-sky-400 bg-sky-500/10" },
+  { icon: LineChart, label: "Google Search Console", color: "text-sky-400 bg-sky-500/10" },
   { icon: TrendingUp, label: "Ubersuggest", color: "text-violet-400 bg-violet-500/10" },
   { icon: Palette, label: "Canva", color: "text-cyan-400 bg-cyan-500/10" },
   { icon: Users, label: "Synergy CRM", color: "text-teal-400 bg-teal-500/10" },
@@ -78,7 +103,7 @@ const SkillsSection = () => (
       </div>
 
       <div className="grid gap-6 max-w-6xl mx-auto items-stretch lg:[grid-template-columns:67fr_33fr]">
-        {/* Core Skills - widened ~7% */}
+        {/* Core Skills */}
         <div className="bg-card/80 border border-border rounded-2xl p-6 md:p-7 flex flex-col h-full">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
@@ -96,8 +121,15 @@ const SkillsSection = () => (
                 <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${s.color} flex items-center justify-center mb-3 shadow-lg`}>
                   <s.icon className="text-white" size={22} />
                 </div>
-                <h4 className="font-heading font-semibold text-foreground text-base mb-1">{s.title}</h4>
-                <p className="text-muted-foreground text-xs leading-relaxed mb-3 flex-1">{s.desc}</p>
+                <h4 className="font-heading font-semibold text-foreground text-base mb-2 leading-snug">{s.title}</h4>
+                <ul className="space-y-1.5 mb-3 flex-1">
+                  {s.points.map((p) => (
+                    <li key={p} className="flex items-start gap-2 text-muted-foreground text-xs leading-relaxed">
+                      <span className={`mt-1.5 w-1 h-1 rounded-full ${s.bar} shrink-0`} />
+                      <span>{p}</span>
+                    </li>
+                  ))}
+                </ul>
                 <div className={`h-[3px] w-10 rounded-full ${s.bar} group-hover:w-full transition-all duration-500 mt-auto`} />
               </div>
             ))}
