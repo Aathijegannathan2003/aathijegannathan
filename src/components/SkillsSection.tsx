@@ -1,28 +1,49 @@
 import {
-  Search, Link, Settings, FileText, PenTool, Globe,
-  Target, BarChart3, Linkedin, Palette,
-  TrendingUp, LineChart, BarChart, Mail
+  Search, Globe, Target, BarChart3, Users, Palette,
+  LineChart, TrendingUp, Mail, Megaphone, BarChart, Wrench
 } from "lucide-react";
 
-const skills = [
-  { icon: Search, label: "On-page SEO" },
-  { icon: Link, label: "Off-page SEO" },
-  { icon: Settings, label: "Technical SEO" },
-  { icon: FileText, label: "Keyword Research" },
-  { icon: PenTool, label: "Blog Optimization" },
-  { icon: Globe, label: "WordPress Creation" },
-  { icon: Target, label: "Meta Ads" },
-  { icon: BarChart3, label: "Google Ads" },
-  { icon: Linkedin, label: "LinkedIn Mgmt" },
-  { icon: Palette, label: "Canva Design" },
+const coreSkills = [
+  {
+    icon: Search,
+    title: "SEO",
+    desc: "On-page, Off-page, Technical SEO, Local SEO",
+  },
+  {
+    icon: Globe,
+    title: "WordPress",
+    desc: "Landing Page Optimization, Plugin Installation, Elementor",
+  },
+  {
+    icon: Target,
+    title: "Meta Ads",
+    desc: "Campaign Setup, Ad Management, Lead Generation",
+  },
+  {
+    icon: BarChart3,
+    title: "Google Ads",
+    desc: "Search Campaigns, Campaign Optimization, Keyword Targeting",
+  },
+  {
+    icon: Users,
+    title: "CRM Management",
+    desc: "Customer Data Handling, Lead Management",
+  },
+  {
+    icon: Palette,
+    title: "Canva",
+    desc: "Creative Design, Social Media Content, Brochure Design",
+  },
 ];
 
 const tools = [
-  { icon: TrendingUp, label: "Ubersuggest" },
-  { icon: LineChart, label: "Search Console" },
+  { icon: BarChart3, label: "Google Ads" },
+  { icon: Megaphone, label: "Meta Ads Manager" },
   { icon: BarChart, label: "Google Analytics" },
+  { icon: LineChart, label: "Search Console" },
+  { icon: TrendingUp, label: "Ubersuggest" },
   { icon: Palette, label: "Canva" },
-  { icon: Target, label: "Meta Ads Manager" },
+  { icon: Users, label: "Synergy CRM" },
   { icon: Mail, label: "Mailchimp" },
 ];
 
@@ -34,35 +55,60 @@ const SkillsSection = () => (
         <h2 className="text-4xl md:text-5xl font-heading font-bold">What I Work With</h2>
       </div>
 
-      <div className="mb-14">
-        <h3 className="animate-on-scroll text-xl font-heading font-semibold mb-6 text-center">Skills</h3>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
-          {skills.map((s, i) => (
-            <div
-              key={s.label}
-              className="animate-on-scroll bg-card border border-border rounded-lg p-4 flex flex-col items-center gap-3 card-hover"
-              style={{ transitionDelay: `${i * 0.05}s` }}
-            >
-              <s.icon className="text-primary" size={24} />
-              <span className="text-sm text-center">{s.label}</span>
+      <div className="grid lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
+        {/* Core Skills - 60% */}
+        <div className="lg:col-span-3">
+          <div className="flex items-center gap-2 mb-6">
+            <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center">
+              <Search className="text-primary" size={18} />
             </div>
-          ))}
-        </div>
-      </div>
+            <h3 className="text-xl font-heading font-semibold">Core Skills</h3>
+          </div>
 
-      <div>
-        <h3 className="animate-on-scroll text-xl font-heading font-semibold mb-6 text-center">Tools</h3>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
-          {tools.map((t, i) => (
-            <div
-              key={t.label}
-              className="animate-on-scroll bg-card border border-border rounded-lg p-4 flex flex-col items-center gap-3 card-hover"
-              style={{ transitionDelay: `${i * 0.05}s` }}
-            >
-              <t.icon className="text-primary" size={24} />
-              <span className="text-sm text-center">{t.label}</span>
+          <div className="grid sm:grid-cols-2 gap-4">
+            {coreSkills.map((s, i) => (
+              <div
+                key={s.title}
+                className="animate-on-scroll bg-card border border-border rounded-lg p-5 card-hover hover:border-primary/40 transition-colors"
+                style={{ transitionDelay: `${i * 0.05}s` }}
+              >
+                <div className="flex items-start gap-3">
+                  <div className="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                    <s.icon className="text-primary" size={20} />
+                  </div>
+                  <div>
+                    <h4 className="font-heading font-semibold text-foreground text-base">{s.title}</h4>
+                    <p className="text-muted-foreground text-sm leading-relaxed mt-1">{s.desc}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Tools - 40% */}
+        <div className="lg:col-span-2">
+          <div className="flex items-center gap-2 mb-6">
+            <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center">
+              <Wrench className="text-primary" size={18} />
             </div>
-          ))}
+            <h3 className="text-xl font-heading font-semibold">Tools</h3>
+          </div>
+
+          <div className="bg-card border border-border rounded-lg p-5">
+            <div className="grid grid-cols-2 gap-3">
+              {tools.map((t, i) => (
+                <div
+                  key={t.label}
+                  className="animate-on-scroll flex items-center gap-3 px-3 py-3 rounded-md bg-background/50 border border-border/60 hover:border-primary/40 transition-colors"
+                  style={{ transitionDelay: `${i * 0.05}s` }}
+                >
+                  <t.icon className="text-primary shrink-0" size={18} />
+                  <span className="text-sm font-medium">{t.label}</span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </div>
