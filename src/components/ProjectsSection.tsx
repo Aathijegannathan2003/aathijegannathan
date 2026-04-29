@@ -4,7 +4,7 @@ import { Button } from "./ui/button";
 
 type Category = "seo" | "web" | "ads";
 
-type Section = { heading: string; items: string[] };
+type Section = { heading: string; items: string[]; icon?: string };
 
 const categories: { key: Category; label: string; icon: React.ElementType }[] = [
   { key: "seo", label: "SEO Projects", icon: Search },
@@ -29,6 +29,7 @@ const projects: Record<Category, {
       sections: [
         {
           heading: "Problem",
+          icon: "⚠️",
           items: [
             "Website had low visibility on Google",
             "No proper keyword targeting",
@@ -37,6 +38,7 @@ const projects: Record<Category, {
         },
         {
           heading: "What I Did",
+          icon: "🛠",
           items: [
             'Performed keyword research and targeted: "best cleaning services in Belfast"',
             "Planned and designed the landing page structure from scratch to final implementation",
@@ -143,7 +145,7 @@ const ProjectsSection = () => {
           ))}
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 mx-auto" style={{ maxWidth: "min(100%, calc(56rem * 1.07))" }}>
           {projects[active].map((p, i) => (
             <div
               key={p.title}
@@ -179,7 +181,7 @@ const ProjectsSection = () => {
 
               {p.goal && (
                 <p className="mb-4 text-sm text-muted-foreground leading-relaxed">
-                  <span className="font-semibold text-foreground">Goal: </span>
+                  <span className="font-semibold text-foreground">🎯 Goal: </span>
                   {p.goal}
                 </p>
               )}
@@ -187,7 +189,10 @@ const ProjectsSection = () => {
               {p.sections?.map((sec) => (
                 <div key={sec.heading} className="mb-4 last:mb-0">
                   <div className="h-px bg-border mb-3" />
-                  <h4 className="font-heading font-semibold text-foreground mb-2">{sec.heading}</h4>
+                  <h4 className="font-heading font-semibold text-foreground mb-2 flex items-center gap-2">
+                    {sec.icon && <span aria-hidden>{sec.icon}</span>}
+                    {sec.heading}
+                  </h4>
                   <ul className="space-y-2">
                     {sec.items.map((it) => (
                       <li key={it} className="text-muted-foreground text-sm flex items-start gap-2">
