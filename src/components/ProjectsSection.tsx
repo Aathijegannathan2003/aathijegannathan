@@ -29,6 +29,7 @@ const projects: Record<Category, {
       sections: [
         {
           heading: "Problem",
+          icon: "⚠️",
           items: [
             "Website had low visibility on Google",
             "No proper keyword targeting",
