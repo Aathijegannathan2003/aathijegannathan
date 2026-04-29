@@ -145,7 +145,7 @@ const ProjectsSection = () => {
           ))}
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 mx-auto" style={{ maxWidth: "min(100%, calc(56rem * 1.07))" }}>
           {projects[active].map((p, i) => (
             <div
               key={p.title}
