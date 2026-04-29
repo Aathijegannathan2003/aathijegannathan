@@ -4,6 +4,8 @@ import { Button } from "./ui/button";
 
 type Category = "seo" | "web" | "ads";
 
+type Section = { heading: string; items: string[] };
+
 const categories: { key: Category; label: string; icon: React.ElementType }[] = [
   { key: "seo", label: "SEO Projects", icon: Search },
   { key: "web", label: "Web Development", icon: Globe },
@@ -15,19 +17,37 @@ const projects: Record<Category, {
   url?: string;
   points: string[];
   description?: string;
+  goal?: string;
+  sections?: Section[];
   metrics?: { label: string; value: string; icon: React.ElementType }[];
 }[]> = {
   seo: [
     {
       title: "CleanWithDB (UK Client)",
       url: "https://cleanwithdb.co.uk",
-      points: [
-        "Built and optimized landing pages from scratch",
-        'Targeted keyword: "best cleaning services in Belfast"',
-        "Improved content structure, internal linking & on-page SEO",
-        "Focused on ranking, organic traffic & lead generation",
-        "Implemented complete SEO process from keyword research to optimization.",
+      goal: "Improve Google ranking and generate organic leads for a cleaning service in Belfast",
+      sections: [
+        {
+          heading: "Problem",
+          items: [
+            "Website had low visibility on Google",
+            "No proper keyword targeting",
+            "Weak on-page SEO structure",
+          ],
+        },
+        {
+          heading: "What I Did",
+          items: [
+            'Performed keyword research and targeted: "best cleaning services in Belfast"',
+            "Planned and designed the landing page structure from scratch to final implementation",
+            "Improved content structure (H1, H2, keyword placement)",
+            "Implemented internal linking strategy and strong CTAs",
+            "Optimized meta tags, images, and URL structure",
+            "Focused on local SEO and user intent",
+          ],
+        },
       ],
+      points: [],
     },
     {
       title: "Digitalsiddesh",
@@ -156,14 +176,38 @@ const ProjectsSection = () => {
                 </div>
               )}
 
-              <ul className="space-y-2">
-                {p.points.map((pt) => (
-                  <li key={pt} className="text-muted-foreground text-sm flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" />
-                    {pt}
-                  </li>
-                ))}
-              </ul>
+              {p.goal && (
+                <p className="mb-4 text-sm text-muted-foreground leading-relaxed">
+                  <span className="font-semibold text-foreground">Goal: </span>
+                  {p.goal}
+                </p>
+              )}
+
+              {p.sections?.map((sec) => (
+                <div key={sec.heading} className="mb-4 last:mb-0">
+                  <div className="h-px bg-border mb-3" />
+                  <h4 className="font-heading font-semibold text-foreground mb-2">{sec.heading}</h4>
+                  <ul className="space-y-2">
+                    {sec.items.map((it) => (
+                      <li key={it} className="text-muted-foreground text-sm flex items-start gap-2">
+                        <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" />
+                        {it}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+
+              {p.points.length > 0 && (
+                <ul className="space-y-2">
+                  {p.points.map((pt) => (
+                    <li key={pt} className="text-muted-foreground text-sm flex items-start gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" />
+                      {pt}
+                    </li>
+                  ))}
+                </ul>
+              )}
 
               {p.description && (
                 <p className="mt-4 text-sm text-muted-foreground leading-relaxed">{p.description}</p>
