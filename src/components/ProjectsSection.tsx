@@ -189,7 +189,10 @@ const ProjectsSection = () => {
               {p.sections?.map((sec) => (
                 <div key={sec.heading} className="mb-4 last:mb-0">
                   <div className="h-px bg-border mb-3" />
-                  <h4 className="font-heading font-semibold text-foreground mb-2">{sec.heading}</h4>
+                  <h4 className="font-heading font-semibold text-foreground mb-2 flex items-center gap-2">
+                    {sec.icon && <span aria-hidden>{sec.icon}</span>}
+                    {sec.heading}
+                  </h4>
                   <ul className="space-y-2">
                     {sec.items.map((it) => (
                       <li key={it} className="text-muted-foreground text-sm flex items-start gap-2">
