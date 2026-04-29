@@ -176,14 +176,38 @@ const ProjectsSection = () => {
                 </div>
               )}
 
-              <ul className="space-y-2">
-                {p.points.map((pt) => (
-                  <li key={pt} className="text-muted-foreground text-sm flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" />
-                    {pt}
-                  </li>
-                ))}
-              </ul>
+              {p.goal && (
+                <p className="mb-4 text-sm text-muted-foreground leading-relaxed">
+                  <span className="font-semibold text-foreground">Goal: </span>
+                  {p.goal}
+                </p>
+              )}
+
+              {p.sections?.map((sec) => (
+                <div key={sec.heading} className="mb-4 last:mb-0">
+                  <div className="h-px bg-border mb-3" />
+                  <h4 className="font-heading font-semibold text-foreground mb-2">{sec.heading}</h4>
+                  <ul className="space-y-2">
+                    {sec.items.map((it) => (
+                      <li key={it} className="text-muted-foreground text-sm flex items-start gap-2">
+                        <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" />
+                        {it}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+
+              {p.points.length > 0 && (
+                <ul className="space-y-2">
+                  {p.points.map((pt) => (
+                    <li key={pt} className="text-muted-foreground text-sm flex items-start gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" />
+                      {pt}
+                    </li>
+                  ))}
+                </ul>
+              )}
 
               {p.description && (
                 <p className="mt-4 text-sm text-muted-foreground leading-relaxed">{p.description}</p>
