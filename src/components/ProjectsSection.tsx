@@ -40,10 +40,11 @@ const projects: Record<Category, {
           items: [
             'Performed keyword research and targeted: "best cleaning services in Belfast"',
             "Planned and designed the landing page structure from scratch to final implementation",
+            "Executed on-page SEO optimization (title tags, meta descriptions, headings)",
             "Improved content structure (H1, H2, keyword placement)",
             "Implemented internal linking strategy and strong CTAs",
-            "Optimized meta tags, images, and URL structure",
-            "Focused on local SEO and user intent",
+            "Focused on local SEO and technical SEO improvements",
+            "Tracked website performance using Google Search Console and Google Analytics",
           ],
         },
       ],
