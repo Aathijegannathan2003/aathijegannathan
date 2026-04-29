@@ -181,7 +181,7 @@ const ProjectsSection = () => {
 
               {p.goal && (
                 <p className="mb-4 text-sm text-muted-foreground leading-relaxed">
-                  <span className="font-semibold text-foreground">Goal: </span>
+                  <span className="font-semibold text-foreground">🎯 Goal: </span>
                   {p.goal}
                 </p>
               )}
