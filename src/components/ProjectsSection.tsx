@@ -4,7 +4,7 @@ import { Button } from "./ui/button";
 
 type Category = "seo" | "web" | "ads";
 
-type Section = { heading: string; items: string[] };
+type Section = { heading: string; items: string[]; icon?: string };
 
 const categories: { key: Category; label: string; icon: React.ElementType }[] = [
   { key: "seo", label: "SEO Projects", icon: Search },
