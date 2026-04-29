@@ -4,6 +4,8 @@ import { Button } from "./ui/button";
 
 type Category = "seo" | "web" | "ads";
 
+type Section = { heading: string; items: string[] };
+
 const categories: { key: Category; label: string; icon: React.ElementType }[] = [
   { key: "seo", label: "SEO Projects", icon: Search },
   { key: "web", label: "Web Development", icon: Globe },
@@ -15,19 +17,37 @@ const projects: Record<Category, {
   url?: string;
   points: string[];
   description?: string;
+  goal?: string;
+  sections?: Section[];
   metrics?: { label: string; value: string; icon: React.ElementType }[];
 }[]> = {
   seo: [
     {
       title: "CleanWithDB (UK Client)",
       url: "https://cleanwithdb.co.uk",
-      points: [
-        "Built and optimized landing pages from scratch",
-        'Targeted keyword: "best cleaning services in Belfast"',
-        "Improved content structure, internal linking & on-page SEO",
-        "Focused on ranking, organic traffic & lead generation",
-        "Implemented complete SEO process from keyword research to optimization.",
+      goal: "Improve Google ranking and generate organic leads for a cleaning service in Belfast",
+      sections: [
+        {
+          heading: "Problem",
+          items: [
+            "Website had low visibility on Google",
+            "No proper keyword targeting",
+            "Weak on-page SEO structure",
+          ],
+        },
+        {
+          heading: "What I Did",
+          items: [
+            'Performed keyword research and targeted: "best cleaning services in Belfast"',
+            "Planned and designed the landing page structure from scratch to final implementation",
+            "Improved content structure (H1, H2, keyword placement)",
+            "Implemented internal linking strategy and strong CTAs",
+            "Optimized meta tags, images, and URL structure",
+            "Focused on local SEO and user intent",
+          ],
+        },
       ],
+      points: [],
     },
     {
       title: "Digitalsiddesh",
