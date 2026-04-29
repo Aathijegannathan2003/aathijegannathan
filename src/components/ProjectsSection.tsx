@@ -38,6 +38,7 @@ const projects: Record<Category, {
         },
         {
           heading: "What I Did",
+          icon: "🛠",
           items: [
             'Performed keyword research and targeted: "best cleaning services in Belfast"',
             "Planned and designed the landing page structure from scratch to final implementation",
