@@ -5,12 +5,12 @@ import profileImg from "@/assets/profile-nobg.png";
 
 const skillBadges = [
   { label: "Search Engine Optimization", topMobile: "0%", rightMobile: "-8%", top: "2%", right: "-18%", delay: "0s" },
-  { label: "Google Ads Management", topMobile: "20%", rightMobile: "-10%", top: "26%", right: "-22%", delay: "0.3s" },
-  { label: "Meta Ads Management", topMobile: "44%", rightMobile: "-12%", top: "50%", right: "-26%", delay: "0.6s" },
-  { label: "WordPress Development", topMobile: "70%", rightMobile: "-8%", top: "74%", right: "-20%", delay: "0.9s" },
-  { label: "Responsive Design", topMobile: "8%", leftMobile: "-12%", top: "12%", left: "-24%", delay: "0.4s" },
-  { label: "Landing Page Optimization", topMobile: "32%", leftMobile: "-10%", top: "40%", left: "-20%", delay: "0.7s" },
-  { label: "CRM Management", topMobile: "60%", leftMobile: "-12%", top: "68%", left: "-26%", delay: "1s" },
+  { label: "Google Ads Management", topMobile: "20%", rightMobile: "-10%", top: "26%", right: "-24%", delay: "0.3s" },
+  { label: "Meta Ads Management", topMobile: "44%", rightMobile: "-12%", top: "50%", right: "-28%", delay: "0.6s" },
+  { label: "WordPress Development", topMobile: "70%", rightMobile: "-8%", top: "74%", right: "-22%", delay: "0.9s" },
+  { label: "Responsive Design", topMobile: "8%", leftMobile: "-12%", top: "8%", left: "-20%", delay: "0.4s" },
+  { label: "Landing Page Optimization", topMobile: "32%", leftMobile: "-10%", top: "38%", left: "-28%", delay: "0.7s" },
+  { label: "CRM Management", topMobile: "60%", leftMobile: "-12%", top: "68%", left: "-22%", delay: "1s" },
 ];
 
 const HeroSection = () => {
@@ -76,7 +76,7 @@ const HeroSection = () => {
           {skillBadges.map((badge) => (
             <span
               key={badge.label}
-              className="absolute flex items-center px-2 py-1 md:px-4 md:py-2 rounded-full bg-card/80 backdrop-blur-sm border border-primary/30 text-[7px] md:text-xs font-medium text-foreground shadow-[0_4px_20px_rgba(59,130,246,0.2)] animate-float whitespace-nowrap"
+              className="absolute flex items-center px-3 py-1.5 md:px-5 md:py-2.5 rounded-full bg-card/80 backdrop-blur-sm border border-primary/30 text-[8px] md:text-sm font-medium text-foreground shadow-[0_4px_20px_rgba(59,130,246,0.2)] animate-float whitespace-nowrap"
               style={{
                 top: isMobile ? badge.topMobile : badge.top,
                 left: isMobile ? badge.leftMobile : badge.left,
