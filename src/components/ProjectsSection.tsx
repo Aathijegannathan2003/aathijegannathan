@@ -67,13 +67,47 @@ const projects: Record<Category, {
     {
       title: "Labmate Asia",
       url: "https://labmateasia.com",
-      points: [
-        "Built complete website from scratch using WordPress",
-        "Created SEO-friendly site structure",
-        "Optimized pages for search engines & performance",
-        "Improved UI/UX for better user engagement",
-        "Handled end-to-end website development from design to SEO optimization",
+      goal: "Design and develop a professional business website to showcase lab equipment products and generate quality inquiries across India",
+      sections: [
+        {
+          heading: "Problem",
+          icon: "⚠️",
+          items: [
+            "No structured or modern website presence",
+            "Difficult for customers to explore products online",
+            "Poor user experience and navigation issues",
+            "No proper lead generation system",
+            "Not optimized for SEO and mobile devices",
+          ],
+        },
+        {
+          heading: "What I Did",
+          icon: "🛠",
+          items: [
+            "Planned and developed the complete website structure from scratch",
+            "Designed a clean, professional UI aligned with the business niche",
+            "Created product-based pages with clear categorization and navigation",
+            "Developed responsive design for mobile, tablet, and desktop",
+            "Implemented enquiry/lead generation forms for customer conversions",
+            "Optimized website speed and performance",
+            "Applied basic on-page SEO (meta tags, headings, URL structure)",
+            "Integrated WhatsApp and call-to-action buttons for quick contact",
+            "Ensured user-friendly navigation for better engagement",
+          ],
+        },
+        {
+          heading: "Result",
+          icon: "📈",
+          items: [
+            "Improved online presence and brand credibility",
+            "Increased customer inquiries through website forms",
+            "Better user engagement and session duration",
+            "Mobile-friendly experience leading to higher reach",
+            "Strong foundation for SEO and digital marketing campaigns",
+          ],
+        },
       ],
+      points: [],
     },
     {
       title: "Digitalsiddesh",
