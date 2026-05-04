@@ -123,9 +123,49 @@ const projects: Record<Category, {
   ads: [
     {
       title: "Free Class Lead Campaign",
-      description:
-        "Ran a lead generation campaign with proper audience targeting and ad creatives, resulting in high engagement and low-cost leads.",
-      points: ["Generated 65+ leads"],
+      goal: "Generate high-quality leads for free demo classes at minimal cost",
+      sections: [
+        {
+          heading: "Challenge",
+          icon: "⚠️",
+          items: [
+            "Limited budget with high competition",
+            "Need to attract relevant students only",
+            "Low initial engagement on ads",
+          ],
+        },
+        {
+          heading: "What I Did",
+          icon: "🛠",
+          items: [
+            "Identified target audience (students & job seekers in Chennai)",
+            "Created scroll-stopping ad creatives and clear CTA messaging",
+            "Set up lead form campaign with optimized questions",
+            "A/B tested creatives and audience segments",
+            "Optimized campaign daily to reduce CPL",
+          ],
+        },
+        {
+          heading: "Results",
+          icon: "📊",
+          items: [
+            "Generated 65+ qualified leads",
+            "Achieved ₹6 cost per lead (very low CPL)",
+            "Reached 4,800+ users with 5,406 impressions",
+            "Maintained 6.66% CTR (high engagement)",
+          ],
+        },
+        {
+          heading: "Impact",
+          icon: "💡",
+          items: [
+            "Delivered cost-effective leads for free class conversions",
+            "Improved brand awareness among targeted audience",
+            "Built a scalable campaign model for future promotions",
+          ],
+        },
+      ],
+      points: [],
       metrics: [
         { label: "Leads", value: "65+", icon: Users },
         { label: "CPL", value: "₹6", icon: TrendingUp },
@@ -136,9 +176,40 @@ const projects: Record<Category, {
     },
     {
       title: "Lead Generation Campaign",
-      description:
-        "Executed a targeted campaign in a competitive niche, focusing on reaching the right audience and generating quality leads.",
-      points: ["Generated 32+ leads"],
+      goal: "Generate consistent and quality leads in a competitive niche",
+      sections: [
+        {
+          heading: "Challenge",
+          icon: "⚠️",
+          items: [
+            "Highly competitive market",
+            "Need to maintain lead quality over quantity",
+            "Higher expected CPL due to niche targeting",
+          ],
+        },
+        {
+          heading: "What I Did",
+          icon: "🛠",
+          items: [
+            "Researched and defined a precise target audience",
+            "Designed high-converting ad creatives and copy",
+            "Implemented funnel-based lead generation strategy",
+            "Optimized placements and bidding strategy",
+            "Monitored performance and refined targeting",
+          ],
+        },
+        {
+          heading: "Results",
+          icon: "📊",
+          items: [
+            "Generated 32+ quality leads",
+            "Achieved ₹45 cost per lead",
+            "Reached 16,400+ users with 25,309 impressions",
+            "Maintained 1.49% CTR",
+          ],
+        },
+      ],
+      points: [],
       metrics: [
         { label: "Leads", value: "32+", icon: Users },
         { label: "CPL", value: "₹45", icon: TrendingUp },
