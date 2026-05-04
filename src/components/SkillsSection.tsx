@@ -101,7 +101,7 @@ const SkillsSection = () => (
         </p>
       </div>
 
-      <div className="grid gap-6 max-w-6xl mx-auto items-stretch lg:[grid-template-columns:67fr_33fr]">
+      <div className="grid gap-6 max-w-6xl mx-auto items-stretch lg:[grid-template-columns:67fr_33fr]" style={{ transform: "translateX(-10px)" }}>
         {/* Core Skills */}
         <div className="bg-card/80 border border-border rounded-2xl p-6 md:p-7 flex flex-col h-full">
           <div className="flex items-center gap-3 mb-6">
