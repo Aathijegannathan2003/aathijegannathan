@@ -76,7 +76,7 @@ const HeroSection = () => {
           {skillBadges.map((badge) => (
             <span
               key={badge.label}
-              className="absolute flex items-center px-2 py-1 md:px-4 md:py-2 rounded-full bg-card/80 backdrop-blur-sm border border-primary/30 text-[7px] md:text-xs font-medium text-foreground shadow-[0_4px_20px_rgba(59,130,246,0.2)] animate-float whitespace-nowrap"
+              className="absolute flex items-center px-3 py-1.5 md:px-5 md:py-2.5 rounded-full bg-card/80 backdrop-blur-sm border border-primary/30 text-[8px] md:text-sm font-medium text-foreground shadow-[0_4px_20px_rgba(59,130,246,0.2)] animate-float whitespace-nowrap"
               style={{
                 top: isMobile ? badge.topMobile : badge.top,
                 left: isMobile ? badge.leftMobile : badge.left,
