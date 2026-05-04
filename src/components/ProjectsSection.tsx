@@ -155,15 +155,6 @@ const projects: Record<Category, {
             "Maintained 6.66% CTR (high engagement)",
           ],
         },
-        {
-          heading: "Impact",
-          icon: "💡",
-          items: [
-            "Delivered cost-effective leads for free class conversions",
-            "Improved brand awareness among targeted audience",
-            "Built a scalable campaign model for future promotions",
-          ],
-        },
       ],
       points: [],
       metrics: [
