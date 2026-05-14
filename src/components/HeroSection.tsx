@@ -68,7 +68,7 @@ const HeroSection = () => {
               alt="Aathijegannathan V N - SEO & Paid Ads Executive"
               width={320}
               height={320}
-              className="w-full h-full object-contain object-bottom"
+              className="w-full h-full object-cover object-center"
             />
           </div>
 
