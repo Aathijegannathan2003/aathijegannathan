@@ -1,7 +1,7 @@
 import { MapPin, Clock, ArrowDown } from "lucide-react";
 import { Button } from "./ui/button";
 import { useIsMobile } from "@/hooks/use-mobile";
-import profileImg from "@/assets/profile-nobg.png";
+import profileImg from "@/assets/profile-hero.png";
 
 const skillBadges = [
   { label: "Search Engine Optimization", topMobile: "0%", rightMobile: "-8%", top: "2%", right: "-18%", delay: "0s" },
@@ -68,7 +68,7 @@ const HeroSection = () => {
               alt="Aathijegannathan V N - SEO & Paid Ads Executive"
               width={320}
               height={320}
-              className="w-full h-full object-contain object-bottom"
+              className="w-full h-full object-cover object-center"
             />
           </div>
 
