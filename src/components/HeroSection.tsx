@@ -60,7 +60,7 @@ const HeroSection = () => {
       </div>
 
       <div className="flex justify-center" style={{ animationDelay: "0.3s" }}>
-        <div className="relative">
+        <div className="relative bg-secondary rounded-3xl p-6 md:p-10">
           {/* Circular border ring with glow */}
           <div className="w-[290px] h-[293px] md:w-[410px] md:h-[413px] rounded-full overflow-hidden border-2 border-primary/40 animate-float shadow-[0_0_80px_rgba(59,130,246,0.35),0_0_120px_rgba(59,130,246,0.15)]" style={{ backgroundColor: "#1d283a" }}>
             <img
