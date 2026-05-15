@@ -81,7 +81,6 @@ const tools = [
   { icon: TrendingUp, label: "Ubersuggest", color: "text-violet-400 bg-violet-500/10" },
   { icon: Palette, label: "Canva", color: "text-cyan-400 bg-cyan-500/10" },
   { icon: Users, label: "Synergy CRM", color: "text-teal-400 bg-teal-500/10" },
-  { icon: Mail, label: "Mailchimp", color: "text-yellow-400 bg-yellow-500/10" },
 ];
 
 const SkillsSection = () => (
