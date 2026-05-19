@@ -209,6 +209,52 @@ const projects: Record<Category, {
         { label: "CTR", value: "1.49%", icon: MousePointerClick },
       ],
     },
+    },
+    {
+      title: "Meta Ads Lead Campaign",
+      goal: "Generate high-quality leads at a lower cost while improving campaign reach, engagement, and conversion performance",
+      sections: [
+        {
+          heading: "Challenge",
+          icon: "⚠️",
+          items: [
+            "Campaign required better audience refinement and cost optimization",
+            "Needed to reduce overall cost per lead while maintaining steady lead volume",
+          ],
+        },
+        {
+          heading: "What I Did",
+          icon: "🛠",
+          items: [
+            "Created and managed Meta Ads campaign structure",
+            "Optimized campaign budget allocation for better performance",
+            "Refined audience targeting based on demographics and interests",
+            "Improved ad delivery and campaign optimization settings",
+            "Monitored campaign metrics such as reach, impressions, and lead cost",
+            "Analyzed ad performance and adjusted strategy for better lead quality",
+            "Conducted continuous performance tracking and optimization",
+          ],
+        },
+        {
+          heading: "Results",
+          icon: "📊",
+          items: [
+            "Generated 42 leads",
+            "Achieved ₹5.55 cost per lead",
+            "Reached 2,911 users",
+            "Delivered 4,049 impressions",
+            "Maintained optimized daily budget performance",
+          ],
+        },
+      ],
+      points: [],
+      metrics: [
+        { label: "Leads", value: "42", icon: Users },
+        { label: "CPL", value: "₹5.55", icon: TrendingUp },
+        { label: "Impressions", value: "4,049", icon: Eye },
+        { label: "Reach", value: "2,911", icon: Users },
+      ],
+    },
   ],
 };
 
