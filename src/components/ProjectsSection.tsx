@@ -209,7 +209,6 @@ const projects: Record<Category, {
         { label: "CTR", value: "1.49%", icon: MousePointerClick },
       ],
     },
-    },
     {
       title: "Meta Ads Lead Campaign",
       goal: "Generate high-quality leads at a lower cost while improving campaign reach, engagement, and conversion performance",
