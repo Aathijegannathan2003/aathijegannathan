@@ -35,8 +35,8 @@ const adProjects: AdProject[] = [
   {
     title: "Free Class Lead Campaign",
     badge: "Lead Generation",
-    industry: "Education Industry",
-    duration: "30 Days",
+    industry: "Health & Wellness Industry",
+    duration: "4 Days",
     type: "Lead Generation",
     goal: "Generate high-quality leads for free demo classes at minimal cost.",
     bannerImage: adsBg1,
@@ -51,14 +51,14 @@ const adProjects: AdProject[] = [
     after: { cpl: "₹6", ctr: "6.66%" },
     challenge: [
       "Limited budget with high competition",
-      "Need to attract relevant students only",
+      "Need to attract relevant audience only",
       "Low initial engagement on ads",
     ],
     whatIDid: [
       "Audience research & targeting",
       "High-converting ad creatives",
       "Lead form optimization",
-      "A/B testing & daily optimization",
+      "Daily optimization & monitoring",
       "Reduced CPL with performance tracking",
     ],
   },
