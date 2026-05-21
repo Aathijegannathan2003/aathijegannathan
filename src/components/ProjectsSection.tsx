@@ -277,8 +277,12 @@ const AdCard = ({ p, i }: { p: AdProject; i: number }) => {
             <h3 className="font-heading font-bold text-2xl text-white drop-shadow mb-2">{p.title}</h3>
             <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-white/85">
               <span className="inline-flex items-center gap-1"><Briefcase size={12} /> {p.industry}</span>
-              <span className="opacity-50">+</span>
-              <span className="inline-flex items-center gap-1"><Calendar size={12} /> {p.duration}</span>
+              {p.duration && (
+                <>
+                  <span className="opacity-50">+</span>
+                  <span className="inline-flex items-center gap-1"><Calendar size={12} /> {p.duration}</span>
+                </>
+              )}
               <span className="opacity-50">+</span>
               <span className="inline-flex items-center gap-1"><Target size={12} /> {p.type}</span>
             </div>
