@@ -477,8 +477,8 @@ const SeoCard = ({ p, i }: { p: SeoProject; i: number }) => {
               </ul>
             </div>
             <div>
-              <h5 className="font-heading font-semibold text-sm mb-2 flex items-center gap-2 text-blue-400">
-                <Wrench size={14} /> Tools & Skills Used
+              <h5 className="font-heading font-semibold text-sm mb-2 text-blue-400">
+                Tools & Skills Used
               </h5>
               <div className="flex flex-wrap gap-1.5">
                 {p.tools.map((t) => (
