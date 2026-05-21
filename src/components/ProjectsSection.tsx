@@ -539,9 +539,15 @@ const ProjectsSection = () => {
               <AdCard key={p.title} p={p} i={i} />
             ))}
           </div>
+        ) : active === "seo" ? (
+          <div className="grid md:grid-cols-2 gap-6 mx-auto" style={{ maxWidth: "min(100%, calc(56rem * 1.07))" }}>
+            {seoProjects.map((p, i) => (
+              <SeoCard key={p.title} p={p} i={i} />
+            ))}
+          </div>
         ) : (
           <div className="grid md:grid-cols-2 gap-6 mx-auto" style={{ maxWidth: "min(100%, calc(56rem * 1.07))" }}>
-            {projects[active].map((p, i) => (
+            {projects.web.map((p, i) => (
               <div
                 key={p.title}
                 className="animate-on-scroll visible bg-card border border-border rounded-lg p-6 card-hover"
