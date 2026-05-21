@@ -190,6 +190,13 @@ const seoProjects: SeoProject[] = [
 ];
 
 const projects: Record<"web", {
+  title: string;
+  url?: string;
+  points: string[];
+  description?: string;
+  goal?: string;
+  sections?: Section[];
+}[]> = {
   web: [
     {
       title: "Labmate Asia",
