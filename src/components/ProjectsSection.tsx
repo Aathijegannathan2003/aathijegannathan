@@ -1,9 +1,10 @@
-import { Search, Globe, Megaphone, ExternalLink, TrendingUp, Users, MousePointerClick, Eye, Target, BarChart3, AlertTriangle, Zap, ArrowRight, ImageIcon, Calendar, Briefcase, IndianRupee, CheckCircle2 } from "lucide-react";
+import { Search, Globe, Megaphone, ExternalLink, TrendingUp, Users, MousePointerClick, Eye, Target, BarChart3, AlertTriangle, Zap, ArrowRight, ImageIcon, Calendar, Briefcase, IndianRupee, CheckCircle2, MapPin, Wrench, KeyRound, Info } from "lucide-react";
 import { useState } from "react";
 import { Button } from "./ui/button";
 import adsBg1 from "@/assets/ads-bg-1.jpg";
 import adsBg2 from "@/assets/ads-bg-2.jpg";
 import adsBg3 from "@/assets/ads-bg-3.jpg";
+import seoBg1 from "@/assets/seo-bg-1.jpg";
 
 type Category = "seo" | "web" | "ads";
 
@@ -139,7 +140,56 @@ const accentMap = {
   },
 };
 
-const projects: Record<Exclude<Category, "ads">, {
+type SeoProject = {
+  title: string;
+  badge: string;
+  niche: string;
+  region: string;
+  goal: string;
+  bannerImage: string;
+  url?: string;
+  status?: string;
+  contributions: string[];
+  keywords: string[];
+  tools: string[];
+};
+
+const seoProjects: SeoProject[] = [
+  {
+    title: "Cleaning Service SEO Landing Page",
+    badge: "SEO PROJECT",
+    niche: "Cleaning Service",
+    region: "Belfast, UK",
+    goal: "Design and optimize an SEO-focused landing page for a cleaning service business targeting local customers in Belfast, UK.",
+    bannerImage: seoBg1,
+    status: "Client website/domain is currently inactive, so the live project is unavailable for public viewing.",
+    contributions: [
+      "Conducted keyword research for local search terms",
+      "Planned the complete landing page structure",
+      "Designed SEO-friendly content hierarchy",
+      "Optimized title tags, meta descriptions, and headings",
+      "Implemented proper keyword placement strategy",
+      "Improved internal linking and call-to-action sections",
+      "Focused on local SEO optimization techniques",
+      "Assisted in technical SEO improvements",
+    ],
+    keywords: [
+      "best cleaning services in Belfast",
+      "Local cleaning service related keywords",
+    ],
+    tools: [
+      "WordPress",
+      "On-Page SEO",
+      "Local SEO",
+      "Technical SEO",
+      "Google Search Console",
+      "Google Analytics",
+      "Keyword Research",
+    ],
+  },
+];
+
+const projects: Record<"web", {
   title: string;
   url?: string;
   points: string[];
@@ -147,48 +197,6 @@ const projects: Record<Exclude<Category, "ads">, {
   goal?: string;
   sections?: Section[];
 }[]> = {
-  seo: [
-    {
-      title: "CleanWithDB (UK Client)",
-      url: "https://cleanwithdb.co.uk",
-      goal: "Improve Google ranking and generate organic leads for a cleaning service in Belfast",
-      sections: [
-        {
-          heading: "Problem",
-          icon: "⚠️",
-          items: [
-            "Website had low visibility on Google",
-            "No proper keyword targeting",
-            "Weak on-page SEO structure",
-          ],
-        },
-        {
-          heading: "What I Did",
-          icon: "🛠",
-          items: [
-            'Performed keyword research and targeted: "best cleaning services in Belfast"',
-            "Planned and designed the landing page structure from scratch to final implementation",
-            "Executed on-page SEO optimization (title tags, meta descriptions, headings)",
-            "Improved content structure (H1, H2, keyword placement)",
-            "Implemented internal linking strategy and strong CTAs",
-            "Focused on local SEO and technical SEO improvements",
-            "Tracked website performance using Google Search Console and Google Analytics",
-          ],
-        },
-      ],
-      points: [],
-    },
-    {
-      title: "Digitalsiddesh",
-      url: "https://digitalsiddesh.com/",
-      points: [
-        "Optimized SEO content for WordPress website",
-        'Targeted keyword: "best WordPress freelancer in Chennai"',
-        "Improved content readability & keyword placement",
-        "Enhanced on-page SEO for better search visibility",
-      ],
-    },
-  ],
   web: [
     {
       title: "Labmate Asia",
@@ -389,6 +397,113 @@ const AdCard = ({ p, i }: { p: AdProject; i: number }) => {
   );
 };
 
+const SeoCard = ({ p, i }: { p: SeoProject; i: number }) => {
+  return (
+    <div
+      className="animate-on-scroll visible bg-card border border-border rounded-2xl overflow-hidden card-hover hover:border-primary/50"
+      style={{ transitionDelay: `${i * 0.1}s` }}
+    >
+      {/* Banner */}
+      <div className="relative h-48 w-full overflow-hidden">
+        <img
+          src={p.bannerImage}
+          alt={`${p.title} banner`}
+          loading="lazy"
+          width={1024}
+          height={512}
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-card" />
+        <div className="relative h-full p-5 flex flex-col justify-between">
+          <div className="flex items-start justify-between">
+            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-semibold border bg-primary/15 text-primary border-primary/30 uppercase tracking-wide">
+              <Search size={12} /> {p.badge}
+            </span>
+            {p.url && (
+              <a href={p.url} target="_blank" rel="noopener noreferrer" className="text-white/90 hover:text-primary transition-colors" aria-label={`Visit ${p.title}`}>
+                <ExternalLink size={16} />
+              </a>
+            )}
+          </div>
+          <div>
+            <h3 className="font-heading font-bold text-2xl text-white drop-shadow mb-2">{p.title}</h3>
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] bg-black/40 border border-white/15 text-white/90"><Briefcase size={11} /> Niche: {p.niche}</span>
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] bg-black/40 border border-white/15 text-white/90"><MapPin size={11} /> Region: {p.region}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="p-5 space-y-5">
+        {/* Goal */}
+        <div className="flex gap-3">
+          <div className="shrink-0 w-10 h-10 rounded-lg flex items-center justify-center bg-primary/15 text-primary">
+            <Target size={18} />
+          </div>
+          <div>
+            <h4 className="font-heading font-semibold text-foreground mb-1">Goal</h4>
+            <p className="text-sm text-muted-foreground leading-relaxed">{p.goal}</p>
+          </div>
+        </div>
+
+        {/* Contributions + Keywords/Tools */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <h5 className="font-heading font-semibold text-sm mb-2 flex items-center gap-2 text-primary">
+              <Zap size={14} /> My Contribution
+            </h5>
+            <ul className="space-y-1.5">
+              {p.contributions.map((it) => (
+                <li key={it} className="text-xs text-muted-foreground flex items-start gap-2">
+                  <CheckCircle2 size={12} className="text-green-500 mt-0.5 shrink-0" />
+                  <span>{it}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="space-y-4">
+            <div>
+              <h5 className="font-heading font-semibold text-sm mb-2 flex items-center gap-2 text-yellow-500">
+                <KeyRound size={14} /> SEO Focus Keywords
+              </h5>
+              <ul className="space-y-1.5">
+                {p.keywords.map((k) => (
+                  <li key={k} className="text-xs text-muted-foreground flex items-start gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-yellow-500 mt-1.5 shrink-0" />
+                    <span>“{k}”</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h5 className="font-heading font-semibold text-sm mb-2 flex items-center gap-2 text-blue-400">
+                <Wrench size={14} /> Tools & Skills Used
+              </h5>
+              <div className="flex flex-wrap gap-1.5">
+                {p.tools.map((t) => (
+                  <span key={t} className="text-[11px] px-2 py-0.5 rounded-md bg-muted/50 border border-border text-muted-foreground">
+                    {t}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {p.status && (
+          <div className="flex items-start gap-2 bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-3">
+            <Info size={14} className="text-yellow-500 mt-0.5 shrink-0" />
+            <p className="text-xs text-muted-foreground leading-relaxed">
+              <span className="font-semibold text-yellow-500">Project Status: </span>{p.status}
+            </p>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
 const ProjectsSection = () => {
   const [active, setActive] = useState<Category>("seo");
 
@@ -424,9 +539,15 @@ const ProjectsSection = () => {
               <AdCard key={p.title} p={p} i={i} />
             ))}
           </div>
+        ) : active === "seo" ? (
+          <div className="grid md:grid-cols-2 gap-6 mx-auto" style={{ maxWidth: "min(100%, calc(56rem * 1.07))" }}>
+            {seoProjects.map((p, i) => (
+              <SeoCard key={p.title} p={p} i={i} />
+            ))}
+          </div>
         ) : (
           <div className="grid md:grid-cols-2 gap-6 mx-auto" style={{ maxWidth: "min(100%, calc(56rem * 1.07))" }}>
-            {projects[active].map((p, i) => (
+            {projects.web.map((p, i) => (
               <div
                 key={p.title}
                 className="animate-on-scroll visible bg-card border border-border rounded-lg p-6 card-hover"
