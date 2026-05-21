@@ -140,56 +140,56 @@ const accentMap = {
   },
 };
 
-const projects: Record<Exclude<Category, "ads">, {
+type SeoProject = {
   title: string;
+  badge: string;
+  niche: string;
+  region: string;
+  goal: string;
+  bannerImage: string;
   url?: string;
-  points: string[];
-  description?: string;
-  goal?: string;
-  sections?: Section[];
-}[]> = {
-  seo: [
-    {
-      title: "CleanWithDB (UK Client)",
-      url: "https://cleanwithdb.co.uk",
-      goal: "Improve Google ranking and generate organic leads for a cleaning service in Belfast",
-      sections: [
-        {
-          heading: "Problem",
-          icon: "⚠️",
-          items: [
-            "Website had low visibility on Google",
-            "No proper keyword targeting",
-            "Weak on-page SEO structure",
-          ],
-        },
-        {
-          heading: "What I Did",
-          icon: "🛠",
-          items: [
-            'Performed keyword research and targeted: "best cleaning services in Belfast"',
-            "Planned and designed the landing page structure from scratch to final implementation",
-            "Executed on-page SEO optimization (title tags, meta descriptions, headings)",
-            "Improved content structure (H1, H2, keyword placement)",
-            "Implemented internal linking strategy and strong CTAs",
-            "Focused on local SEO and technical SEO improvements",
-            "Tracked website performance using Google Search Console and Google Analytics",
-          ],
-        },
-      ],
-      points: [],
-    },
-    {
-      title: "Digitalsiddesh",
-      url: "https://digitalsiddesh.com/",
-      points: [
-        "Optimized SEO content for WordPress website",
-        'Targeted keyword: "best WordPress freelancer in Chennai"',
-        "Improved content readability & keyword placement",
-        "Enhanced on-page SEO for better search visibility",
-      ],
-    },
-  ],
+  status?: string;
+  contributions: string[];
+  keywords: string[];
+  tools: string[];
+};
+
+const seoProjects: SeoProject[] = [
+  {
+    title: "Cleaning Service SEO Landing Page",
+    badge: "SEO PROJECT",
+    niche: "Cleaning Service",
+    region: "Belfast, UK",
+    goal: "Design and optimize an SEO-focused landing page for a cleaning service business targeting local customers in Belfast, UK.",
+    bannerImage: seoBg1,
+    status: "Client website/domain is currently inactive, so the live project is unavailable for public viewing.",
+    contributions: [
+      "Conducted keyword research for local search terms",
+      "Planned the complete landing page structure",
+      "Designed SEO-friendly content hierarchy",
+      "Optimized title tags, meta descriptions, and headings",
+      "Implemented proper keyword placement strategy",
+      "Improved internal linking and call-to-action sections",
+      "Focused on local SEO optimization techniques",
+      "Assisted in technical SEO improvements",
+    ],
+    keywords: [
+      "best cleaning services in Belfast",
+      "Local cleaning service related keywords",
+    ],
+    tools: [
+      "WordPress",
+      "On-Page SEO",
+      "Local SEO",
+      "Technical SEO",
+      "Google Search Console",
+      "Google Analytics",
+      "Keyword Research",
+    ],
+  },
+];
+
+const projects: Record<"web", {
   web: [
     {
       title: "Labmate Asia",
