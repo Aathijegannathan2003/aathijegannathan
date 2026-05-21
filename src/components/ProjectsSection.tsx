@@ -36,7 +36,7 @@ const adProjects: AdProject[] = [
     title: "Free Class Lead Campaign",
     badge: "Lead Generation",
     industry: "Health & Wellness Industry",
-    duration: "4 Days",
+    duration: "",
     type: "Lead Generation",
     goal: "Generate high-quality leads for free demo classes at minimal cost.",
     bannerImage: adsBg1,
@@ -47,8 +47,6 @@ const adProjects: AdProject[] = [
       { label: "Impressions", value: "5,406", icon: Eye },
       { label: "CTR", value: "6.66%", icon: TrendingUp },
     ],
-    before: { cpl: "₹15+", ctr: "2.10%" },
-    after: { cpl: "₹6", ctr: "6.66%" },
     challenge: [
       "Limited budget with high competition",
       "Need to attract relevant audience only",
@@ -65,8 +63,8 @@ const adProjects: AdProject[] = [
   {
     title: "Lead Generation Campaign",
     badge: "Lead Generation",
-    industry: "Real Estate Industry",
-    duration: "45 Days",
+    industry: "Health & Wellness Industry",
+    duration: "",
     type: "Lead Generation",
     goal: "Generate consistent and quality leads in a competitive niche.",
     bannerImage: adsBg2,
@@ -77,8 +75,6 @@ const adProjects: AdProject[] = [
       { label: "Impressions", value: "25,309", icon: Eye },
       { label: "CTR", value: "1.49%", icon: TrendingUp },
     ],
-    before: { cpl: "₹120+", ctr: "0.70%" },
-    after: { cpl: "₹45", ctr: "1.49%" },
     challenge: [
       "Highly competitive market",
       "Need to maintain lead quality",
@@ -95,8 +91,8 @@ const adProjects: AdProject[] = [
   {
     title: "Meta Ads Lead Campaign",
     badge: "Lead Generation",
-    industry: "Service Industry",
-    duration: "30 Days",
+    industry: "Health & Wellness Industry",
+    duration: "",
     type: "Lead Generation",
     goal: "Generate high-quality leads at a lower cost while improving reach, engagement, and conversion performance.",
     bannerImage: adsBg3,
