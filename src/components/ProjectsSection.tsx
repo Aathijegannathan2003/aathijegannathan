@@ -1,9 +1,10 @@
-import { Search, Globe, Megaphone, ExternalLink, TrendingUp, Users, MousePointerClick, Eye, Target, BarChart3, AlertTriangle, Zap, ArrowRight, ImageIcon, Calendar, Briefcase, IndianRupee, CheckCircle2 } from "lucide-react";
+import { Search, Globe, Megaphone, ExternalLink, TrendingUp, Users, MousePointerClick, Eye, Target, BarChart3, AlertTriangle, Zap, ArrowRight, ImageIcon, Calendar, Briefcase, IndianRupee, CheckCircle2, MapPin, Wrench, KeyRound, Info } from "lucide-react";
 import { useState } from "react";
 import { Button } from "./ui/button";
 import adsBg1 from "@/assets/ads-bg-1.jpg";
 import adsBg2 from "@/assets/ads-bg-2.jpg";
 import adsBg3 from "@/assets/ads-bg-3.jpg";
+import seoBg1 from "@/assets/seo-bg-1.jpg";
 
 type Category = "seo" | "web" | "ads";
 
