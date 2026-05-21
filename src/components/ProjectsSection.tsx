@@ -397,6 +397,113 @@ const AdCard = ({ p, i }: { p: AdProject; i: number }) => {
   );
 };
 
+const SeoCard = ({ p, i }: { p: SeoProject; i: number }) => {
+  return (
+    <div
+      className="animate-on-scroll visible bg-card border border-border rounded-2xl overflow-hidden card-hover hover:border-primary/50"
+      style={{ transitionDelay: `${i * 0.1}s` }}
+    >
+      {/* Banner */}
+      <div className="relative h-48 w-full overflow-hidden">
+        <img
+          src={p.bannerImage}
+          alt={`${p.title} banner`}
+          loading="lazy"
+          width={1024}
+          height={512}
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-card" />
+        <div className="relative h-full p-5 flex flex-col justify-between">
+          <div className="flex items-start justify-between">
+            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-semibold border bg-primary/15 text-primary border-primary/30 uppercase tracking-wide">
+              <Search size={12} /> {p.badge}
+            </span>
+            {p.url && (
+              <a href={p.url} target="_blank" rel="noopener noreferrer" className="text-white/90 hover:text-primary transition-colors" aria-label={`Visit ${p.title}`}>
+                <ExternalLink size={16} />
+              </a>
+            )}
+          </div>
+          <div>
+            <h3 className="font-heading font-bold text-2xl text-white drop-shadow mb-2">{p.title}</h3>
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] bg-black/40 border border-white/15 text-white/90"><Briefcase size={11} /> Niche: {p.niche}</span>
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] bg-black/40 border border-white/15 text-white/90"><MapPin size={11} /> Region: {p.region}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="p-5 space-y-5">
+        {/* Goal */}
+        <div className="flex gap-3">
+          <div className="shrink-0 w-10 h-10 rounded-lg flex items-center justify-center bg-primary/15 text-primary">
+            <Target size={18} />
+          </div>
+          <div>
+            <h4 className="font-heading font-semibold text-foreground mb-1">Goal</h4>
+            <p className="text-sm text-muted-foreground leading-relaxed">{p.goal}</p>
+          </div>
+        </div>
+
+        {/* Contributions + Keywords/Tools */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <h5 className="font-heading font-semibold text-sm mb-2 flex items-center gap-2 text-primary">
+              <Zap size={14} /> My Contribution
+            </h5>
+            <ul className="space-y-1.5">
+              {p.contributions.map((it) => (
+                <li key={it} className="text-xs text-muted-foreground flex items-start gap-2">
+                  <CheckCircle2 size={12} className="text-green-500 mt-0.5 shrink-0" />
+                  <span>{it}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="space-y-4">
+            <div>
+              <h5 className="font-heading font-semibold text-sm mb-2 flex items-center gap-2 text-yellow-500">
+                <KeyRound size={14} /> SEO Focus Keywords
+              </h5>
+              <ul className="space-y-1.5">
+                {p.keywords.map((k) => (
+                  <li key={k} className="text-xs text-muted-foreground flex items-start gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-yellow-500 mt-1.5 shrink-0" />
+                    <span>“{k}”</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h5 className="font-heading font-semibold text-sm mb-2 flex items-center gap-2 text-blue-400">
+                <Wrench size={14} /> Tools & Skills Used
+              </h5>
+              <div className="flex flex-wrap gap-1.5">
+                {p.tools.map((t) => (
+                  <span key={t} className="text-[11px] px-2 py-0.5 rounded-md bg-muted/50 border border-border text-muted-foreground">
+                    {t}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {p.status && (
+          <div className="flex items-start gap-2 bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-3">
+            <Info size={14} className="text-yellow-500 mt-0.5 shrink-0" />
+            <p className="text-xs text-muted-foreground leading-relaxed">
+              <span className="font-semibold text-yellow-500">Project Status: </span>{p.status}
+            </p>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
 const ProjectsSection = () => {
   const [active, setActive] = useState<Category>("seo");
 
