@@ -156,7 +156,7 @@ type SeoProject = {
 
 const seoProjects: SeoProject[] = [
   {
-    title: "Cleaning Service SEO Landing Page",
+    title: "SEO & Landing page",
     badge: "SEO PROJECT",
     niche: "Cleaning Service",
     region: "Belfast, UK",
@@ -165,6 +165,7 @@ const seoProjects: SeoProject[] = [
     status: "Client website/domain is currently inactive, so the live project is unavailable for public viewing.",
     contributions: [
       "Conducted keyword research for local search terms",
+      "Built 8+ landing pages fully optimized for SEO",
       "Planned the complete landing page structure",
       "Designed SEO-friendly content hierarchy",
       "Optimized title tags, meta descriptions, and headings",
@@ -178,15 +179,13 @@ const seoProjects: SeoProject[] = [
       "Local cleaning service related keywords",
     ],
     tools: [
-      "WordPress",
       "On-Page SEO",
-      "Local SEO",
-      "Technical SEO",
-      "Google Search Console",
-      "Google Analytics",
+      "Content Optimization",
       "Keyword Research",
+      "Google Search Console",
     ],
   },
+
 ];
 
 const projects: Record<"web", {
