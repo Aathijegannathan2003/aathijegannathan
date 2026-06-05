@@ -17,7 +17,7 @@ const ContactSection = () => {
               <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/30 text-primary text-xs font-medium">
                 <Send size={12} /> LET'S CONNECT
               </span>
-              <p className="text-lg text-foreground/90 leading-relaxed">
+              <p className="text-[15px] text-foreground/90 leading-relaxed">
                 Digital Marketing Executive specializing in SEO, Paid Ads, WordPress, and CRM. Open to full-time opportunities and professional collaborations.
               </p>
               <div className="w-16 h-1 bg-primary rounded-full" />
