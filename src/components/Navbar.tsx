@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
+import resumeAsset from "@/assets/resume.pdf.asset.json";
 
 const navLinks = [
   { label: "Home", href: "#home" },
