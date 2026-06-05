@@ -1,6 +1,7 @@
 import { Mail, Phone, Linkedin, MapPin, Send, ExternalLink, Download } from "lucide-react";
 import { Button } from "./ui/button";
 import profileImg from "@/assets/profile-nobg.png";
+import resumeAsset from "@/assets/resume.pdf.asset.json";
 
 const ContactSection = () => {
   return (
