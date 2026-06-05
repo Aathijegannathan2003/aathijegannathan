@@ -7,7 +7,7 @@ const ContactSection = () => {
     <section id="contact" className="py-24">
       <div className="container mx-auto px-4">
         <div className="animate-on-scroll text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-heading font-bold">Contact Us</h2>
+          <h2 className="text-4xl md:text-5xl font-heading font-bold">Let's Connect</h2>
         </div>
 
         <div className="max-w-5xl mx-auto rounded-2xl border border-border bg-card/40 p-6 md:p-10 backdrop-blur">
@@ -17,10 +17,9 @@ const ContactSection = () => {
               <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/30 text-primary text-xs font-medium">
                 <Send size={12} /> LET'S CONNECT
               </span>
-              <h3 className="text-4xl md:text-5xl font-heading font-bold leading-tight">
-                Let's Work <br />
-                <span className="text-gradient">Together</span>
-              </h3>
+              <p className="text-lg text-foreground/90 leading-relaxed">
+                Digital Marketing Executive specializing in SEO, Paid Ads, WordPress, and CRM. Open to full-time opportunities and professional collaborations.
+              </p>
               <div className="w-16 h-1 bg-primary rounded-full" />
 
               <div className="space-y-3">
