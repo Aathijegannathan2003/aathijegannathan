@@ -1,7 +1,8 @@
-import { MapPin, Clock, ArrowDown } from "lucide-react";
+import { MapPin, Clock, ArrowDown, Download } from "lucide-react";
 import { Button } from "./ui/button";
 import { useIsMobile } from "@/hooks/use-mobile";
 import profileImg from "@/assets/profile-nobg.png";
+import resumeAsset from "@/assets/resume.pdf.asset.json";
 
 const skillBadges = [
   { label: "Search Engine Optimization", topMobile: "0%", rightMobile: "-8%", top: "2%", right: "-18%", delay: "0s" },
@@ -54,6 +55,11 @@ const HeroSection = () => {
           <a href="#contact">
             <Button size="lg" variant="outline" className="border-primary/50 text-foreground hover:bg-primary/10">
               Contact Me
+            </Button>
+          </a>
+          <a href={resumeAsset.url} download="Aathi-Jegannathan-Resume.pdf" target="_blank" rel="noopener noreferrer">
+            <Button size="lg" variant="outline" className="border-primary/50 text-foreground hover:bg-primary/10">
+              <Download size={16} className="mr-2" /> Download Resume
             </Button>
           </a>
         </div>

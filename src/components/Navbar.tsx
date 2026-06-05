@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
+import resumeAsset from "@/assets/resume.pdf.asset.json";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -44,7 +45,7 @@ const Navbar = () => {
               <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full" />
             </a>
           ))}
-          <a href="/resume.pdf" download>
+          <a href={resumeAsset.url} download="Aathi-Jegannathan-Resume.pdf" target="_blank" rel="noopener noreferrer">
             <Button size="sm" className="bg-primary text-primary-foreground hover:bg-primary/80">
               Download CV
             </Button>

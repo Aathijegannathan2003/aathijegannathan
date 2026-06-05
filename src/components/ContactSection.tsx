@@ -1,6 +1,7 @@
 import { Mail, Phone, Linkedin, MapPin, Send, ExternalLink, Download } from "lucide-react";
 import { Button } from "./ui/button";
 import profileImg from "@/assets/profile-nobg.png";
+import resumeAsset from "@/assets/resume.pdf.asset.json";
 
 const ContactSection = () => {
   return (
@@ -96,7 +97,7 @@ const ContactSection = () => {
                 SEO | Paid Ads | WordPress | CRM
               </p>
 
-              <a href="/resume.pdf" download className="w-full">
+              <a href={resumeAsset.url} download="Aathi-Jegannathan-Resume.pdf" target="_blank" rel="noopener noreferrer" className="w-full">
                 <Button variant="outline" className="w-full border-primary/50 text-foreground hover:bg-primary/10">
                   <Download size={16} className="mr-2" /> Download Resume
                 </Button>
