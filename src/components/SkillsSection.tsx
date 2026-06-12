@@ -100,7 +100,7 @@ const SkillsSection = () => (
         </p>
       </div>
 
-      <div className="grid gap-6 mx-auto items-stretch lg:[grid-template-columns:67fr_33fr]" style={{ transform: "translateX(-10px)", maxWidth: "1202px" }}>
+      <div className="grid gap-6 mx-auto items-stretch lg:[grid-template-columns:70fr_30fr]" style={{ transform: "translateX(-10px)", maxWidth: "1340px" }}>
         {/* Core Skills */}
         <div className="bg-card/80 border border-border rounded-2xl p-6 md:p-7 flex flex-col h-full">
           <div className="flex items-center gap-3 mb-6">
@@ -115,7 +115,7 @@ const SkillsSection = () => (
               <div
                 key={s.title}
                 className="group relative bg-background/60 border border-border/70 rounded-xl hover:border-primary/40 hover:-translate-y-1 transition-all duration-300 flex flex-col"
-                style={{ padding: "20px" }}
+                style={{ padding: "26px" }}
               >
                 <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${s.color} flex items-center justify-center mb-2 shadow-lg`}>
                   <s.icon className="text-white" size={18} />
