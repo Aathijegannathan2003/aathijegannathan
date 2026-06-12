@@ -1,6 +1,6 @@
 import {
   Search, Globe, Target, BarChart3, Users, Palette,
-  LineChart, TrendingUp, Megaphone, BarChart, Wrench, MapPin,
+  LineChart, TrendingUp, Megaphone, BarChart, Wrench, MapPin, Mail,
 } from "lucide-react";
 
 const coreSkills = [
