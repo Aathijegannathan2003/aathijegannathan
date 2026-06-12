@@ -98,6 +98,8 @@ const coreSkills = [
 const tools = [
   { icon: BarChart3, label: "Google Ads", color: "text-orange-400 bg-orange-500/10" },
   { icon: Megaphone, label: "Meta Ads Manager", color: "text-blue-400 bg-blue-500/10" },
+  { icon: Globe, label: "WordPress", color: "text-purple-400 bg-purple-500/10" },
+  { icon: Layers, label: "Elementor", color: "text-rose-400 bg-rose-500/10" },
   { icon: BarChart, label: "Google Analytics", color: "text-amber-400 bg-amber-500/10" },
   { icon: LineChart, label: "Google Search Console", color: "text-sky-400 bg-sky-500/10" },
   { icon: MapPin, label: "Google Business Profile", color: "text-emerald-400 bg-emerald-500/10" },
