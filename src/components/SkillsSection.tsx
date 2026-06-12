@@ -1,7 +1,6 @@
 import {
   Search, Globe, Target, BarChart3, Users, Palette,
-  LineChart, TrendingUp, Mail, Megaphone, BarChart, Wrench,
-  ChevronRight,
+  LineChart, TrendingUp, Megaphone, BarChart, Wrench, MapPin,
 } from "lucide-react";
 
 const coreSkills = [
@@ -78,6 +77,7 @@ const tools = [
   { icon: Megaphone, label: "Meta Ads Manager", color: "text-blue-400 bg-blue-500/10" },
   { icon: BarChart, label: "Google Analytics", color: "text-amber-400 bg-amber-500/10" },
   { icon: LineChart, label: "Google Search Console", color: "text-sky-400 bg-sky-500/10" },
+  { icon: MapPin, label: "Google Business Profile", color: "text-emerald-400 bg-emerald-500/10" },
   { icon: TrendingUp, label: "Ubersuggest", color: "text-violet-400 bg-violet-500/10" },
   { icon: Palette, label: "Canva", color: "text-cyan-400 bg-cyan-500/10" },
   { icon: Users, label: "Synergy CRM", color: "text-teal-400 bg-teal-500/10" },
@@ -154,10 +154,6 @@ const SkillsSection = () => (
                   <t.icon size={18} />
                 </div>
                 <span className="text-sm font-medium flex-1">{t.label}</span>
-                <ChevronRight
-                  className="text-muted-foreground group-hover:text-primary group-hover:translate-x-0.5 transition-all"
-                  size={16}
-                />
               </div>
             ))}
           </div>
