@@ -71,6 +71,28 @@ const coreSkills = [
     color: "from-pink-500 to-rose-500",
     bar: "bg-pink-500",
   },
+  {
+    icon: Mail,
+    title: "Email Marketing (Mailchimp)",
+    points: [
+      "Email campaign creation",
+      "Customer email targeting",
+      "Newsletter management",
+    ],
+    color: "from-violet-500 to-purple-500",
+    bar: "bg-violet-500",
+  },
+  {
+    icon: TrendingUp,
+    title: "Google Analytics & Search Console",
+    points: [
+      "Website traffic analysis",
+      "CTR, Clicks, Impressions",
+      "Indexing & Core Web Vitals",
+    ],
+    color: "from-sky-500 to-indigo-500",
+    bar: "bg-sky-500",
+  },
 ];
 
 const tools = [
