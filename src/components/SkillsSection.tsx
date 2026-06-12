@@ -1,6 +1,7 @@
 import {
   Search, Globe, Target, BarChart3, Users, Palette,
   LineChart, TrendingUp, Megaphone, BarChart, Wrench, MapPin, Mail,
+  Layers,
 } from "lucide-react";
 
 const coreSkills = [
@@ -70,11 +71,35 @@ const coreSkills = [
     color: "from-pink-500 to-rose-500",
     bar: "bg-pink-500",
   },
+  {
+    icon: Mail,
+    title: "Email Marketing (Mailchimp)",
+    points: [
+      "Email campaign creation",
+      "Customer email targeting",
+      "Newsletter management",
+    ],
+    color: "from-violet-500 to-purple-500",
+    bar: "bg-violet-500",
+  },
+  {
+    icon: TrendingUp,
+    title: "Google Analytics & Search Console",
+    points: [
+      "Website traffic analysis",
+      "CTR, Clicks, Impressions",
+      "Indexing & Core Web Vitals",
+    ],
+    color: "from-sky-500 to-indigo-500",
+    bar: "bg-sky-500",
+  },
 ];
 
 const tools = [
   { icon: BarChart3, label: "Google Ads", color: "text-orange-400 bg-orange-500/10" },
   { icon: Megaphone, label: "Meta Ads Manager", color: "text-blue-400 bg-blue-500/10" },
+  { icon: Globe, label: "WordPress", color: "text-purple-400 bg-purple-500/10" },
+  { icon: Layers, label: "Elementor", color: "text-rose-400 bg-rose-500/10" },
   { icon: BarChart, label: "Google Analytics", color: "text-amber-400 bg-amber-500/10" },
   { icon: LineChart, label: "Google Search Console", color: "text-sky-400 bg-sky-500/10" },
   { icon: MapPin, label: "Google Business Profile", color: "text-emerald-400 bg-emerald-500/10" },
