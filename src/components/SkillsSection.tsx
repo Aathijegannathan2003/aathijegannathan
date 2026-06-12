@@ -1,6 +1,6 @@
 import {
   Search, Globe, Target, BarChart3, Users, Palette,
-  LineChart, TrendingUp, Megaphone, BarChart, Wrench, MapPin,
+  LineChart, TrendingUp, Megaphone, BarChart, Wrench, MapPin, Mail,
 } from "lucide-react";
 
 const coreSkills = [
@@ -78,8 +78,8 @@ const tools = [
   { icon: BarChart, label: "Google Analytics", color: "text-amber-400 bg-amber-500/10" },
   { icon: LineChart, label: "Google Search Console", color: "text-sky-400 bg-sky-500/10" },
   { icon: MapPin, label: "Google Business Profile", color: "text-emerald-400 bg-emerald-500/10" },
-  { icon: TrendingUp, label: "Ubersuggest", color: "text-violet-400 bg-violet-500/10" },
-  { icon: Palette, label: "Canva", color: "text-cyan-400 bg-cyan-500/10" },
+  { icon: Mail, label: "Mailchimp", color: "text-violet-400 bg-violet-500/10" },
+  { icon: Palette, label: "Canva Pro", color: "text-cyan-400 bg-cyan-500/10" },
   { icon: Users, label: "Synergy CRM", color: "text-teal-400 bg-teal-500/10" },
 ];
 
