@@ -139,7 +139,7 @@ const SkillsSection = () => (
             {coreSkills.map((s) => (
               <div
                 key={s.title}
-                className="group relative bg-background/60 border border-border/70 rounded-xl hover:border-primary/40 hover:-translate-y-1 transition-all duration-300 flex flex-col"
+                className="group relative bg-background/60 border border-border/70 rounded-xl hover:border-primary/40 hover:-translate-y-1 hover-glow transition-all duration-300 flex flex-col"
                 style={{ padding: "26px" }}
               >
                 <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${s.color} flex items-center justify-center mb-2 shadow-lg`}>
@@ -173,7 +173,7 @@ const SkillsSection = () => (
             {tools.map((t) => (
               <div
                 key={t.label}
-                className="group flex items-center gap-3 px-3 py-2.5 rounded-lg bg-background/60 border border-border/70 hover:border-primary/40 hover:bg-background transition-all cursor-default"
+                className="group flex items-center gap-3 px-3 py-2.5 rounded-lg bg-background/60 border border-border/70 hover:border-primary/40 hover:bg-background hover:-translate-y-0.5 hover-glow transition-all cursor-default"
               >
                 <div className={`w-9 h-9 rounded-lg flex items-center justify-center ${t.color}`}>
                   <t.icon size={18} />
