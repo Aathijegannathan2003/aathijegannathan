@@ -83,7 +83,14 @@
   .card-hover {
     @apply transition-all duration-300 hover:border-primary/50 hover:-translate-y-1;
     &:hover {
-      box-shadow: 0 0 30px -10px hsl(var(--glow) / 0.3);
+      box-shadow: 0 20px 50px -12px hsl(var(--glow) / 0.55), 0 8px 24px -8px hsl(var(--glow) / 0.35);
+    }
+  }
+
+  .hover-glow {
+    @apply transition-all duration-300;
+    &:hover {
+      box-shadow: 0 20px 50px -12px hsl(var(--glow) / 0.55), 0 8px 24px -8px hsl(var(--glow) / 0.35);
     }
   }
 }

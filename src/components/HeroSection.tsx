@@ -52,11 +52,6 @@ const HeroSection = () => {
               View My Work
             </Button>
           </a>
-          <a href="#contact">
-            <Button size="lg" variant="outline" className="border-primary/50 text-foreground hover:bg-primary/10">
-              Contact Me
-            </Button>
-          </a>
           <a href={resumeAsset.url} download="Aathi-Jegannathan-Resume.pdf" target="_blank" rel="noopener noreferrer">
             <Button size="lg" variant="outline" className="border-primary/50 text-foreground hover:bg-primary/10">
               <Download size={16} className="mr-2" /> Download Resume
