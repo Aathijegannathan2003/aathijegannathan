@@ -31,7 +31,7 @@ const HeroSection = () => {
           <span className="text-gradient">Aathijegannathan V N</span>
         </h1>
         <h2 className="text-xl md:text-2xl text-muted-foreground font-heading">
-          SEO & Paid Ads Executive
+          SEO | Paid Ads | WordPress | CRM Executive
         </h2>
         <p className="text-muted-foreground max-w-lg leading-relaxed">
           Driving organic growth through SEO strategies, managing PPC ad campaigns, building WordPress websites, and handling CRM activities.
@@ -66,7 +66,7 @@ const HeroSection = () => {
           <div className="w-[290px] h-[293px] md:w-[410px] md:h-[413px] rounded-full overflow-hidden border-2 border-primary/40 animate-float shadow-[0_0_80px_rgba(59,130,246,0.35),0_0_120px_rgba(59,130,246,0.15)]" style={{ backgroundColor: "#1d283a" }}>
             <img
               src={profileImg}
-              alt="Aathijegannathan V N - SEO & Paid Ads Executive"
+              alt="Aathijegannathan V N - SEO | Paid Ads | WordPress | CRM Executive"
               width={320}
               height={320}
               className="w-full h-full object-cover object-top scale-110 translate-y-[18px] translate-x-[8px]"
