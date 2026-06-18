@@ -72,7 +72,7 @@ const AboutSection = () => (
               <Briefcase className="text-primary" size={22} />
               <h3 className="font-heading font-semibold text-lg">Experience</h3>
             </div>
-            <p className="text-foreground font-medium">1.6+ Years Experience</p>
+            <p className="text-foreground font-medium">1.8+ Years Experience</p>
             <p className="text-primary text-sm mt-1">SEO & Paid Ads</p>
           </div>
         </div>
