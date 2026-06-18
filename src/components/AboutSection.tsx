@@ -73,7 +73,7 @@ const AboutSection = () => (
               <h3 className="font-heading font-semibold text-lg">Experience</h3>
             </div>
             <p className="text-foreground font-medium">1.8+ Years Experience</p>
-            <p className="text-primary text-sm mt-1">SEO & Paid Ads</p>
+            <p className="text-primary text-sm mt-1">SEO | Paid Ads | WordPress | CRM</p>
           </div>
         </div>
       </div>
