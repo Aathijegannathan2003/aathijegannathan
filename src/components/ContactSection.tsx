@@ -57,7 +57,7 @@ const ContactSection = () => {
                 </div>
 
                 <a
-                  href="https://in.linkedin.com/in/aathi-jegannathan45"
+                  href="https://www.linkedin.com/in/aathijegannathan-vn/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 p-3 rounded-lg bg-background/40 border border-border hover:border-primary/50 transition-colors group"
@@ -67,7 +67,7 @@ const ContactSection = () => {
                   </div>
                   <div className="flex-1 min-w-0">
                     <p className="text-xs text-muted-foreground">LinkedIn</p>
-                    <p className="text-sm text-foreground truncate">linkedin.com/in/aathi-jegannathan45</p>
+                    <p className="text-sm text-foreground truncate">linkedin.com/in/aathijegannathan-vn</p>
                   </div>
                   <ExternalLink size={16} className="text-primary opacity-0 group-hover:opacity-100 transition-opacity" />
                 </a>
