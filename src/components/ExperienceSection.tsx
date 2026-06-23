@@ -20,21 +20,23 @@ const experiences: Experience[] = [
     icon: "briefcase",
     accent: "primary",
     description:
-      "Leading digital marketing initiatives to improve online visibility, generate quality leads, and drive business growth.",
+      "Created and managed company websites using WordPress with SEO optimization to improve organic traffic. Managed Google Ads campaigns to generate clicks and leads, maintained CRM data, and handled email marketing activities.",
     responsibilities: [
-      "Built a WordPress website from scratch to SEO optimization",
-      "Created SEO-friendly content and handled on-page optimization",
-      "Managed Google Ads and Meta Ads campaigns",
-      "Handled email marketing using Mailchimp",
-      "Managed CRM activities and updated data regularly",
-      "Analyzed performance using GA4, Search Console & reports",
+      "Built and optimized a WordPress website from scratch with SEO best practices",
+      "Created SEO-friendly content and performed on-page SEO optimization",
+      "Planned and optimized Google Search Ads campaigns to generate clicks and leads for product pages",
+      "Handled the company's LinkedIn page and content reposting activities",
+      "Executed email marketing campaigns and customer communication using Mailchimp",
+      "Designed creatives, PDFs, and brochures using Canva Pro",
+      "Maintained CRM activities, created accounts, and updated customer data regularly",
+      "Monitored website traffic and performance using Google Search Console and Analytics",
     ],
   },
   {
-    role: "SEO Analyst (Internship)",
+    role: "SEO Analyst",
     company: "FITA Academy",
     duration: "Sep 2024 – Dec 2025",
-    type: "Internship",
+    type: "Full-time",
     icon: "grad",
     accent: "success",
     description:
@@ -49,6 +51,7 @@ const experiences: Experience[] = [
       "Created and optimized Google Search Ads campaigns & ad copies",
     ],
   },
+
 ];
 
 const ExperienceSection = () => (
