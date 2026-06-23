@@ -59,7 +59,7 @@ const ExperienceSection = () => (
         <h2 className="text-4xl md:text-5xl font-heading font-bold">Where I've Worked</h2>
       </div>
 
-      <div className="relative max-w-6xl mx-auto">
+      <div className="relative max-w-[1400px] mx-auto">
         <div className="absolute left-6 top-2 bottom-2 w-px bg-border hidden md:block" aria-hidden />
 
         <div className="space-y-8">
