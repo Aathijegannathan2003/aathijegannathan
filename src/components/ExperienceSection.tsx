@@ -84,7 +84,7 @@ const ExperienceSection = () => (
                 </div>
 
                 <div className="bg-card border border-border rounded-xl p-6 md:p-8 card-hover">
-                  <div className="grid md:grid-cols-2 gap-6 md:gap-10">
+                  <div className="grid md:grid-cols-[35fr_65fr] gap-6 md:gap-10">
                     <div>
                       <div className="flex items-start justify-between gap-3 mb-2">
                         <h3 className="font-heading font-bold text-xl md:text-2xl">{exp.role}</h3>
