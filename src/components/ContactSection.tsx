@@ -98,7 +98,7 @@ const ContactSection = () => {
               </p>
 
               <a href={resumeAsset.url} download="Aathi-Jegannathan-Resume.pdf" target="_blank" rel="noopener noreferrer" className="w-full">
-                <Button variant="outline" className="w-full border-primary/50 text-foreground hover:bg-primary/10">
+                <Button variant="outline" className="w-full border-primary/50 text-foreground bg-transparent hover:bg-transparent hover:text-muted-foreground">
                   <Download size={16} className="mr-2" /> Download Resume
                 </Button>
               </a>

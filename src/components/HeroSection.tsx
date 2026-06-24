@@ -53,7 +53,7 @@ const HeroSection = () => {
             </Button>
           </a>
           <a href={resumeAsset.url} download="Aathi-Jegannathan-Resume.pdf" target="_blank" rel="noopener noreferrer">
-            <Button size="lg" variant="outline" className="border-primary/50 text-foreground hover:bg-primary/10">
+            <Button size="lg" variant="outline" className="border-primary/50 text-foreground bg-transparent hover:bg-transparent hover:text-muted-foreground">
               <Download size={16} className="mr-2" /> Download Resume
             </Button>
           </a>
