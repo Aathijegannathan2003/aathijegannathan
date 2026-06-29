@@ -384,98 +384,99 @@ const AdCard = ({ p, i }: { p: AdProject; i: number }) => {
   );
 };
 
+const SeoHeading = ({ children }: { children: React.ReactNode }) => (
+  <div className="mb-4">
+    <h4 className="font-heading font-bold text-primary uppercase tracking-wider text-base md:text-lg">
+      {children}
+    </h4>
+    <div className="mt-1.5 h-[2px] w-16 bg-primary/70 rounded-full" />
+  </div>
+);
+
 const SeoCard = ({ p, i }: { p: SeoProject; i: number }) => {
   return (
     <div
-      className="animate-on-scroll visible bg-card border border-border rounded-2xl overflow-hidden card-hover hover:border-primary/50"
+      className="animate-on-scroll visible bg-card border border-border rounded-2xl card-hover hover:border-primary/50 p-6 md:p-10"
       style={{ transitionDelay: `${i * 0.1}s` }}
     >
-      {/* Horizontal layout: image left, content right */}
-      <div className="grid grid-cols-1 md:grid-cols-[2fr_3fr]">
-        {/* Left: Image + Goal + Keywords */}
-        <div className="flex flex-col">
-          <div className="relative h-64 md:h-full min-h-[280px] overflow-hidden">
+      {/* Title */}
+      <div className="mb-8">
+        <h3 className="font-heading font-extrabold uppercase tracking-wide text-2xl md:text-3xl text-foreground">
+          {p.title}
+        </h3>
+        <div className="mt-2 h-[3px] w-28 bg-primary rounded-full" />
+      </div>
+
+      {/* Two columns with divider */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 md:divide-x md:divide-border">
+        {/* LEFT */}
+        <div className="space-y-7">
+          <div className="rounded-xl overflow-hidden border border-border">
             <img
               src={p.bannerImage}
               alt={`${p.title} banner`}
               loading="lazy"
               width={1024}
-              height={768}
-              className="absolute inset-0 w-full h-full object-cover"
+              height={640}
+              className="w-full h-56 md:h-64 object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60" />
-            <div className="relative h-full p-5 flex flex-col justify-between">
-              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-semibold border bg-primary/15 text-primary border-primary/30 uppercase tracking-wide w-fit">
-                <Search size={12} /> {p.badge}
-              </span>
-              <div>
-                <h3 className="font-heading font-bold text-xl md:text-2xl text-white drop-shadow">{p.title}</h3>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Right: Details */}
-        <div className="p-6 md:p-8 space-y-6">
-          {/* Niche & Region */}
-          <div className="space-y-2">
-            <div className="flex items-center gap-2 text-foreground">
-              <span className="text-primary font-heading font-bold text-lg">NICHE</span>
-              <span className="text-muted-foreground">-</span>
-              <span className="font-medium">{p.niche}</span>
-            </div>
-            <div className="flex items-center gap-2 text-foreground">
-              <span className="text-primary font-heading font-bold text-lg">REGION</span>
-              <span className="text-muted-foreground">-</span>
-              <span className="font-medium">{p.region}</span>
-            </div>
           </div>
 
-          {/* Goal */}
           <div>
-            <h4 className="font-heading font-bold text-primary uppercase tracking-wide text-sm mb-2">Goal</h4>
-            <p className="text-sm text-muted-foreground leading-relaxed">{p.goal}</p>
+            <SeoHeading>Goal</SeoHeading>
+            <p className="text-sm md:text-base text-muted-foreground leading-relaxed">{p.goal}</p>
           </div>
 
-          {/* Keywords */}
           <div>
-            <h4 className="font-heading font-bold text-primary uppercase tracking-wide text-sm mb-2">Keywords</h4>
-            <ul className="space-y-1.5">
+            <SeoHeading>Keywords</SeoHeading>
+            <ul className="space-y-2">
               {p.keywords.map((k) => (
-                <li key={k} className="text-sm text-muted-foreground flex items-start gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" />
+                <li key={k} className="text-sm md:text-base text-muted-foreground flex items-start gap-2.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-muted-foreground mt-2 shrink-0" />
                   <span>&ldquo;{k}&rdquo;</span>
                 </li>
               ))}
             </ul>
           </div>
+        </div>
 
-          {/* My Contribution */}
+        {/* RIGHT */}
+        <div className="space-y-7 md:pl-12">
+          <div className="space-y-2">
+            <div className="flex flex-wrap items-baseline gap-2">
+              <span className="text-primary font-heading font-bold uppercase tracking-wide text-lg md:text-xl">Niche</span>
+              <span className="text-muted-foreground">-</span>
+              <span className="font-semibold text-foreground text-lg md:text-xl">{p.niche}</span>
+            </div>
+            <div className="flex flex-wrap items-baseline gap-2">
+              <span className="text-primary font-heading font-bold uppercase tracking-wide text-lg md:text-xl">Region</span>
+              <span className="text-muted-foreground">-</span>
+              <span className="font-semibold text-foreground text-lg md:text-xl">{p.region}</span>
+            </div>
+          </div>
+
           <div>
-            <h4 className="font-heading font-bold text-primary uppercase tracking-wide text-sm mb-3">My Contribution</h4>
-            <ul className="space-y-2">
+            <SeoHeading>My Contribution</SeoHeading>
+            <ul className="space-y-2.5">
               {p.contributions.map((it) => (
-                <li key={it} className="text-sm text-muted-foreground flex items-start gap-2.5">
-                  <CheckCircle2 size={16} className="text-primary mt-0.5 shrink-0" />
+                <li key={it} className="text-sm md:text-base text-muted-foreground flex items-start gap-2.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-muted-foreground mt-2 shrink-0" />
                   <span>{it}</span>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Project Status */}
-          <div className="flex items-start gap-2 bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-3">
-            <Info size={14} className="text-yellow-500 mt-0.5 shrink-0" />
-            <div>
-              <p className="text-xs font-semibold text-yellow-500 uppercase tracking-wide mb-0.5">Project Status</p>
-              <p className="text-xs text-muted-foreground leading-relaxed">{p.status}</p>
-            </div>
+          <div>
+            <SeoHeading>Project Status</SeoHeading>
+            <p className="text-sm md:text-base text-muted-foreground leading-relaxed">{p.status}</p>
           </div>
         </div>
       </div>
     </div>
   );
 };
+
 
 const ProjectsSection = () => {
   const [active, setActive] = useState<Category>("seo");
