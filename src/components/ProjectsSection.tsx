@@ -1,14 +1,12 @@
-import { Search, Globe, Megaphone, ExternalLink, TrendingUp, Users, MousePointerClick, Eye, Target, BarChart3, AlertTriangle, Zap, ArrowRight, ImageIcon, Calendar, Briefcase, IndianRupee, CheckCircle2, MapPin, Wrench, KeyRound, Info } from "lucide-react";
+import { Search, Globe, Megaphone, ExternalLink, TrendingUp, Users, MousePointerClick, Eye, Target, BarChart3, AlertTriangle, Zap, ArrowRight, Briefcase, IndianRupee, CheckCircle2, MapPin, KeyRound, Info } from "lucide-react";
 import { useState } from "react";
 import { Button } from "./ui/button";
 import adsBg1 from "@/assets/ads-bg-1.jpg";
 import adsBg2 from "@/assets/ads-bg-2.jpg";
 import adsBg3 from "@/assets/ads-bg-3.jpg";
-import seoBg1 from "@/assets/seo-bg-1.jpg";
+import seoProjectImg from "@/assets/seo-project-landing.jpg";
 
 type Category = "seo" | "web" | "ads";
-
-type Section = { heading: string; items: string[]; icon?: string };
 
 const categories: { key: Category; label: string; icon: React.ElementType }[] = [
   { key: "seo", label: "SEO Projects", icon: Search },
@@ -147,46 +145,36 @@ type SeoProject = {
   region: string;
   goal: string;
   bannerImage: string;
-  url?: string;
-  status?: string;
+  status: string;
   contributions: string[];
   keywords: string[];
-  tools: string[];
 };
 
 const seoProjects: SeoProject[] = [
   {
-    title: "SEO & Landing page",
+    title: "SEO & Landing Page Project",
     badge: "SEO PROJECT",
     niche: "Cleaning Service",
     region: "Belfast, UK",
     goal: "Design and optimize an SEO-focused landing page for a cleaning service business targeting local customers in Belfast, UK.",
-    bannerImage: seoBg1,
-    status: "Client website/domain is currently inactive, so the live project is unavailable for public viewing.",
+    bannerImage: seoProjectImg,
+    status: "Completed SEO implementation. Client website is currently inactive, so the live project is unavailable for public viewing.",
     contributions: [
-      "Conducted keyword research for local search terms",
-      "Built 8+ landing pages fully optimized for SEO",
-      "Planned the complete landing page structure",
-      "Designed SEO-friendly content hierarchy",
-      "Optimized title tags, meta descriptions, and headings",
-      "Implemented proper keyword placement strategy",
-      "Improved internal linking and call-to-action sections",
-      "Focused on local SEO optimization techniques",
-      "Assisted in technical SEO improvements",
+      "Conducted keyword research for local SEO targeting",
+      "Built and optimized 8+ SEO-friendly landing pages",
+      "Improved on-page SEO (title tags, meta descriptions, headings)",
+      "Implemented keyword placement and internal linking strategies",
+      "Optimized CTAs and content structure for better conversions",
+      "Assisted with local SEO and technical SEO improvements",
     ],
     keywords: [
       "best cleaning services in Belfast",
       "Local cleaning service related keywords",
     ],
-    tools: [
-      "On-Page SEO",
-      "Content Optimization",
-      "Keyword Research",
-      "Google Search Console",
-    ],
   },
-
 ];
+
+type Section = { heading: string; items: string[]; icon?: string };
 
 const projects: Record<"web", {
   title: string;
@@ -402,102 +390,88 @@ const SeoCard = ({ p, i }: { p: SeoProject; i: number }) => {
       className="animate-on-scroll visible bg-card border border-border rounded-2xl overflow-hidden card-hover hover:border-primary/50"
       style={{ transitionDelay: `${i * 0.1}s` }}
     >
-      {/* Banner */}
-      <div className="relative h-48 w-full overflow-hidden">
-        <img
-          src={p.bannerImage}
-          alt={`${p.title} banner`}
-          loading="lazy"
-          width={1024}
-          height={512}
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-card" />
-        <div className="relative h-full p-5 flex flex-col justify-between">
-          <div className="flex items-start justify-between">
-            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-semibold border bg-primary/15 text-primary border-primary/30 uppercase tracking-wide">
-              <Search size={12} /> {p.badge}
-            </span>
-            {p.url && (
-              <a href={p.url} target="_blank" rel="noopener noreferrer" className="text-white/90 hover:text-primary transition-colors" aria-label={`Visit ${p.title}`}>
-                <ExternalLink size={16} />
-              </a>
-            )}
-          </div>
-          <div>
-            <h3 className="font-heading font-bold text-2xl text-white drop-shadow mb-2">{p.title}</h3>
-            <div className="flex flex-wrap items-center gap-2">
-              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] bg-black/40 border border-white/15 text-white/90"><Briefcase size={11} /> Niche: {p.niche}</span>
-              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] bg-black/40 border border-white/15 text-white/90"><MapPin size={11} /> Region: {p.region}</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="p-5 space-y-5">
-        {/* Goal */}
-        <div className="flex gap-3">
-          <div className="shrink-0 w-10 h-10 rounded-lg flex items-center justify-center bg-primary/15 text-primary">
-            <Target size={18} />
-          </div>
-          <div>
-            <h4 className="font-heading font-semibold text-foreground mb-1">Goal</h4>
-            <p className="text-sm text-muted-foreground leading-relaxed">{p.goal}</p>
-          </div>
-        </div>
-
-        {/* Contributions + Keywords/Tools */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div>
-            <h5 className="font-heading font-semibold text-sm mb-2 flex items-center gap-2 text-primary">
-              <Zap size={14} /> My Contribution
-            </h5>
-            <ul className="space-y-1.5">
-              {p.contributions.map((it) => (
-                <li key={it} className="text-xs text-muted-foreground flex items-start gap-2">
-                  <CheckCircle2 size={12} className="text-green-500 mt-0.5 shrink-0" />
-                  <span>{it}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="space-y-4">
-            <div>
-              <h5 className="font-heading font-semibold text-sm mb-2 flex items-center gap-2 text-yellow-500">
-                <KeyRound size={14} /> SEO Focus Keywords
-              </h5>
-              <ul className="space-y-1.5">
-                {p.keywords.map((k) => (
-                  <li key={k} className="text-xs text-muted-foreground flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-yellow-500 mt-1.5 shrink-0" />
-                    <span>“{k}”</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h5 className="font-heading font-semibold text-sm mb-2 text-blue-400">
-                Tools & Skills Used
-              </h5>
-              <div className="flex flex-wrap gap-1.5">
-                {p.tools.map((t) => (
-                  <span key={t} className="text-[11px] px-2 py-0.5 rounded-md bg-muted/50 border border-border text-muted-foreground">
-                    {t}
-                  </span>
-                ))}
+      {/* Horizontal layout: image left, content right */}
+      <div className="grid grid-cols-1 md:grid-cols-[2fr_3fr]">
+        {/* Left: Image + Goal + Keywords */}
+        <div className="flex flex-col">
+          <div className="relative h-64 md:h-full min-h-[280px] overflow-hidden">
+            <img
+              src={p.bannerImage}
+              alt={`${p.title} banner`}
+              loading="lazy"
+              width={1024}
+              height={768}
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60" />
+            <div className="relative h-full p-5 flex flex-col justify-between">
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-semibold border bg-primary/15 text-primary border-primary/30 uppercase tracking-wide w-fit">
+                <Search size={12} /> {p.badge}
+              </span>
+              <div>
+                <h3 className="font-heading font-bold text-xl md:text-2xl text-white drop-shadow">{p.title}</h3>
               </div>
             </div>
           </div>
         </div>
 
-        {p.status && (
+        {/* Right: Details */}
+        <div className="p-6 md:p-8 space-y-6">
+          {/* Niche & Region */}
+          <div className="space-y-2">
+            <div className="flex items-center gap-2 text-foreground">
+              <span className="text-primary font-heading font-bold text-lg">NICHE</span>
+              <span className="text-muted-foreground">-</span>
+              <span className="font-medium">{p.niche}</span>
+            </div>
+            <div className="flex items-center gap-2 text-foreground">
+              <span className="text-primary font-heading font-bold text-lg">REGION</span>
+              <span className="text-muted-foreground">-</span>
+              <span className="font-medium">{p.region}</span>
+            </div>
+          </div>
+
+          {/* Goal */}
+          <div>
+            <h4 className="font-heading font-bold text-primary uppercase tracking-wide text-sm mb-2">Goal</h4>
+            <p className="text-sm text-muted-foreground leading-relaxed">{p.goal}</p>
+          </div>
+
+          {/* Keywords */}
+          <div>
+            <h4 className="font-heading font-bold text-primary uppercase tracking-wide text-sm mb-2">Keywords</h4>
+            <ul className="space-y-1.5">
+              {p.keywords.map((k) => (
+                <li key={k} className="text-sm text-muted-foreground flex items-start gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" />
+                  <span>&ldquo;{k}&rdquo;</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* My Contribution */}
+          <div>
+            <h4 className="font-heading font-bold text-primary uppercase tracking-wide text-sm mb-3">My Contribution</h4>
+            <ul className="space-y-2">
+              {p.contributions.map((it) => (
+                <li key={it} className="text-sm text-muted-foreground flex items-start gap-2.5">
+                  <CheckCircle2 size={16} className="text-primary mt-0.5 shrink-0" />
+                  <span>{it}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Project Status */}
           <div className="flex items-start gap-2 bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-3">
             <Info size={14} className="text-yellow-500 mt-0.5 shrink-0" />
-            <p className="text-xs text-muted-foreground leading-relaxed">
-              <span className="font-semibold text-yellow-500">Project Status: </span>{p.status}
-            </p>
+            <div>
+              <p className="text-xs font-semibold text-yellow-500 uppercase tracking-wide mb-0.5">Project Status</p>
+              <p className="text-xs text-muted-foreground leading-relaxed">{p.status}</p>
+            </div>
           </div>
-        )}
+        </div>
       </div>
     </div>
   );
@@ -539,7 +513,7 @@ const ProjectsSection = () => {
             ))}
           </div>
         ) : active === "seo" ? (
-          <div className="grid md:grid-cols-2 gap-6 mx-auto" style={{ maxWidth: "min(100%, calc(56rem * 1.07))" }}>
+          <div className="mx-auto" style={{ maxWidth: "min(100%, calc(56rem * 1.07))" }}>
             {seoProjects.map((p, i) => (
               <SeoCard key={p.title} p={p} i={i} />
             ))}
