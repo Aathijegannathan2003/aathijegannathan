@@ -396,43 +396,43 @@ const SeoHeading = ({ children }: { children: React.ReactNode }) => (
 const SeoCard = ({ p, i }: { p: SeoProject; i: number }) => {
   return (
     <div
-      className="animate-on-scroll visible bg-card border border-border rounded-2xl card-hover hover:border-primary/50 p-6 md:p-10"
+      className="animate-on-scroll visible bg-card border border-border rounded-2xl card-hover hover:border-primary/50 p-4 md:p-5"
       style={{ transitionDelay: `${i * 0.1}s` }}
     >
       {/* Title */}
-      <div className="mb-8">
-        <h3 className="font-heading font-extrabold uppercase tracking-wide text-2xl md:text-3xl text-foreground">
+      <div className="mb-3">
+        <h3 className="font-heading font-extrabold uppercase tracking-wide text-lg md:text-xl text-foreground">
           {p.title}
         </h3>
-        <div className="mt-2 h-[3px] w-28 bg-primary rounded-full" />
+        <div className="mt-1.5 h-[2px] w-20 bg-primary rounded-full" />
       </div>
 
       {/* Two columns with divider */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 md:divide-x md:divide-border">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 md:divide-x md:divide-border">
         {/* LEFT */}
-        <div className="space-y-7">
-          <div className="rounded-xl overflow-hidden border border-border">
+        <div className="space-y-3 md:pr-6">
+          <div className="rounded-lg overflow-hidden border border-border">
             <img
               src={p.bannerImage}
               alt={`${p.title} banner`}
               loading="lazy"
               width={1024}
-              height={640}
-              className="w-full h-56 md:h-64 object-cover"
+              height={300}
+              className="w-full h-36 object-cover"
             />
           </div>
 
           <div>
             <SeoHeading>Goal</SeoHeading>
-            <p className="text-sm md:text-base text-muted-foreground leading-relaxed">{p.goal}</p>
+            <p className="text-xs text-muted-foreground leading-snug">{p.goal}</p>
           </div>
 
           <div>
             <SeoHeading>Keywords</SeoHeading>
-            <ul className="space-y-2">
+            <ul className="space-y-1">
               {p.keywords.map((k) => (
-                <li key={k} className="text-sm md:text-base text-muted-foreground flex items-start gap-2.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-muted-foreground mt-2 shrink-0" />
+                <li key={k} className="text-xs text-muted-foreground flex items-start gap-1.5">
+                  <span className="w-1 h-1 rounded-full bg-muted-foreground mt-1 shrink-0" />
                   <span>&ldquo;{k}&rdquo;</span>
                 </li>
               ))}
@@ -441,26 +441,26 @@ const SeoCard = ({ p, i }: { p: SeoProject; i: number }) => {
         </div>
 
         {/* RIGHT */}
-        <div className="space-y-7 md:pl-12">
-          <div className="space-y-2">
-            <div className="flex flex-wrap items-baseline gap-2">
-              <span className="text-primary font-heading font-bold uppercase tracking-wide text-lg md:text-xl">Niche</span>
+        <div className="space-y-3 md:pl-6">
+          <div className="space-y-1">
+            <div className="flex flex-wrap items-baseline gap-1">
+              <span className="text-primary font-heading font-bold uppercase tracking-wide text-sm">Niche</span>
               <span className="text-muted-foreground">-</span>
-              <span className="font-semibold text-foreground text-lg md:text-xl">{p.niche}</span>
+              <span className="font-semibold text-foreground text-sm">{p.niche}</span>
             </div>
-            <div className="flex flex-wrap items-baseline gap-2">
-              <span className="text-primary font-heading font-bold uppercase tracking-wide text-lg md:text-xl">Region</span>
+            <div className="flex flex-wrap items-baseline gap-1">
+              <span className="text-primary font-heading font-bold uppercase tracking-wide text-sm">Region</span>
               <span className="text-muted-foreground">-</span>
-              <span className="font-semibold text-foreground text-lg md:text-xl">{p.region}</span>
+              <span className="font-semibold text-foreground text-sm">{p.region}</span>
             </div>
           </div>
 
           <div>
             <SeoHeading>My Contribution</SeoHeading>
-            <ul className="space-y-2.5">
+            <ul className="space-y-1">
               {p.contributions.map((it) => (
-                <li key={it} className="text-sm md:text-base text-muted-foreground flex items-start gap-2.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-muted-foreground mt-2 shrink-0" />
+                <li key={it} className="text-xs text-muted-foreground flex items-start gap-1.5">
+                  <span className="w-1 h-1 rounded-full bg-muted-foreground mt-1 shrink-0" />
                   <span>{it}</span>
                 </li>
               ))}
@@ -469,7 +469,7 @@ const SeoCard = ({ p, i }: { p: SeoProject; i: number }) => {
 
           <div>
             <SeoHeading>Project Status</SeoHeading>
-            <p className="text-sm md:text-base text-muted-foreground leading-relaxed">{p.status}</p>
+            <p className="text-xs text-muted-foreground leading-snug">{p.status}</p>
           </div>
         </div>
       </div>
