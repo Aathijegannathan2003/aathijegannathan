@@ -514,7 +514,7 @@ const ProjectsSection = () => {
             ))}
           </div>
         ) : active === "seo" ? (
-          <div className="mx-auto" style={{ maxWidth: "min(100%, calc(56rem * 1.07))" }}>
+          <div className="w-full">
             {seoProjects.map((p, i) => (
               <SeoCard key={p.title} p={p} i={i} />
             ))}
