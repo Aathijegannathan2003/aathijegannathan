@@ -388,7 +388,7 @@ const AdCard = ({ p, i }: { p: AdProject; i: number }) => {
 
 const SeoHeading = ({ children }: { children: React.ReactNode }) => (
   <div className="mb-2">
-    <h4 className="font-heading font-bold text-primary uppercase tracking-wider text-sm">
+    <h4 className="font-heading font-bold text-primary uppercase tracking-wider text-base">
       {children}
     </h4>
     <div className="mt-1 h-[2px] w-10 bg-primary/70 rounded-full" />
@@ -404,7 +404,7 @@ const SeoCard = ({ p, i }: { p: SeoProject; i: number }) => {
       {/* Title */}
       <div className="mb-4 flex items-center gap-3">
         <div>
-          <h3 className="font-heading font-extrabold uppercase tracking-wide text-xl md:text-2xl text-foreground">
+          <h3 className="font-heading font-extrabold uppercase tracking-wide text-[22px] md:text-[26px] text-foreground">
             {p.title}
           </h3>
           <div className="mt-1.5 h-[2px] w-20 bg-primary rounded-full" />
@@ -459,14 +459,14 @@ const SeoCard = ({ p, i }: { p: SeoProject; i: number }) => {
         <div className="space-y-4 md:pl-6">
           <div className="space-y-1.5">
             <div className="flex flex-wrap items-baseline gap-1">
-              <span className="text-primary font-heading font-bold uppercase tracking-wide text-base">Niche</span>
+              <span className="text-primary font-heading font-bold uppercase tracking-wide text-lg">Niche</span>
               <span className="text-muted-foreground">-</span>
-              <span className="font-semibold text-foreground text-base">{p.niche}</span>
+              <span className="font-semibold text-foreground text-lg">{p.niche}</span>
             </div>
             <div className="flex flex-wrap items-baseline gap-1">
-              <span className="text-primary font-heading font-bold uppercase tracking-wide text-base">Region</span>
+              <span className="text-primary font-heading font-bold uppercase tracking-wide text-lg">Region</span>
               <span className="text-muted-foreground">-</span>
-              <span className="font-semibold text-foreground text-base">{p.region}</span>
+              <span className="font-semibold text-foreground text-lg">{p.region}</span>
             </div>
           </div>
 
@@ -529,7 +529,7 @@ const ProjectsSection = () => {
             ))}
           </div>
         ) : active === "seo" ? (
-          <div className="w-full md:w-3/4 md:mx-auto">
+          <div className="w-full md:w-[83%] md:mx-auto">
             {seoProjects.map((p, i) => (
               <SeoCard key={p.title} p={p} i={i} />
             ))}
