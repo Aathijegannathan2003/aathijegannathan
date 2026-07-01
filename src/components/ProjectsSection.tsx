@@ -148,6 +148,7 @@ type SeoProject = {
   status: string;
   contributions: string[];
   keywords: string[];
+  url?: string;
 };
 
 const seoProjects: SeoProject[] = [
