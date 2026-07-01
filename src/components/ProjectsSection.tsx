@@ -148,6 +148,7 @@ type SeoProject = {
   status: string;
   contributions: string[];
   keywords: string[];
+  url?: string;
 };
 
 const seoProjects: SeoProject[] = [
@@ -158,6 +159,7 @@ const seoProjects: SeoProject[] = [
     region: "Belfast, UK",
     goal: "Design and optimize an SEO-focused landing page for a cleaning service business targeting local customers in Belfast, UK.",
     bannerImage: seoProjectImg,
+    url: "https://cleanwithdb.co.uk/",
     status: "Completed SEO implementation. Client website is currently inactive, so the live project is unavailable for public viewing.",
     contributions: [
       "Conducted keyword research for local SEO targeting",
@@ -385,8 +387,8 @@ const AdCard = ({ p, i }: { p: AdProject; i: number }) => {
 };
 
 const SeoHeading = ({ children }: { children: React.ReactNode }) => (
-  <div className="mb-1.5">
-    <h4 className="font-heading font-bold text-primary uppercase tracking-wider text-xs">
+  <div className="mb-2">
+    <h4 className="font-heading font-bold text-primary uppercase tracking-wider text-sm">
       {children}
     </h4>
     <div className="mt-1 h-[2px] w-10 bg-primary/70 rounded-full" />
@@ -396,22 +398,35 @@ const SeoHeading = ({ children }: { children: React.ReactNode }) => (
 const SeoCard = ({ p, i }: { p: SeoProject; i: number }) => {
   return (
     <div
-      className="animate-on-scroll visible bg-card border border-border rounded-2xl card-hover hover:border-primary/50 p-4 md:p-5"
+      className="animate-on-scroll visible bg-card border border-border rounded-2xl card-hover hover:border-primary/50 p-5 md:p-6"
       style={{ transitionDelay: `${i * 0.1}s` }}
     >
       {/* Title */}
-      <div className="mb-3">
-        <h3 className="font-heading font-extrabold uppercase tracking-wide text-lg md:text-xl text-foreground">
-          {p.title}
-        </h3>
-        <div className="mt-1.5 h-[2px] w-20 bg-primary rounded-full" />
+      <div className="mb-4 flex items-center gap-3">
+        <div>
+          <h3 className="font-heading font-extrabold uppercase tracking-wide text-xl md:text-2xl text-foreground">
+            {p.title}
+          </h3>
+          <div className="mt-1.5 h-[2px] w-20 bg-primary rounded-full" />
+        </div>
+        {p.url && (
+          <a
+            href={p.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:text-primary/80 transition-colors"
+            aria-label={`Visit ${p.title}`}
+          >
+            <ExternalLink size={18} />
+          </a>
+        )}
       </div>
 
       {/* Two columns with divider */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 md:divide-x md:divide-border">
+      <div className="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-4 md:gap-6 md:divide-x md:divide-border">
         {/* LEFT */}
-        <div className="space-y-3 md:pr-6">
-          <div className="rounded-lg overflow-hidden border border-border">
+        <div className="space-y-4 md:pr-6">
+          <div className="rounded-lg overflow-hidden border border-border w-[90%]">
             <img
               src={p.bannerImage}
               alt={`${p.title} banner`}
@@ -424,15 +439,15 @@ const SeoCard = ({ p, i }: { p: SeoProject; i: number }) => {
 
           <div>
             <SeoHeading>Goal</SeoHeading>
-            <p className="text-xs text-muted-foreground leading-snug">{p.goal}</p>
+            <p className="text-sm text-muted-foreground leading-snug">{p.goal}</p>
           </div>
 
           <div>
             <SeoHeading>Keywords</SeoHeading>
-            <ul className="space-y-1">
+            <ul className="space-y-1.5">
               {p.keywords.map((k) => (
-                <li key={k} className="text-xs text-muted-foreground flex items-start gap-1.5">
-                  <span className="w-1 h-1 rounded-full bg-muted-foreground mt-1 shrink-0" />
+                <li key={k} className="text-sm text-muted-foreground flex items-start gap-1.5">
+                  <span className="w-1 h-1 rounded-full bg-muted-foreground mt-1.5 shrink-0" />
                   <span>&ldquo;{k}&rdquo;</span>
                 </li>
               ))}
@@ -441,26 +456,26 @@ const SeoCard = ({ p, i }: { p: SeoProject; i: number }) => {
         </div>
 
         {/* RIGHT */}
-        <div className="space-y-3 md:pl-6">
-          <div className="space-y-1">
+        <div className="space-y-4 md:pl-6">
+          <div className="space-y-1.5">
             <div className="flex flex-wrap items-baseline gap-1">
-              <span className="text-primary font-heading font-bold uppercase tracking-wide text-sm">Niche</span>
+              <span className="text-primary font-heading font-bold uppercase tracking-wide text-base">Niche</span>
               <span className="text-muted-foreground">-</span>
-              <span className="font-semibold text-foreground text-sm">{p.niche}</span>
+              <span className="font-semibold text-foreground text-base">{p.niche}</span>
             </div>
             <div className="flex flex-wrap items-baseline gap-1">
-              <span className="text-primary font-heading font-bold uppercase tracking-wide text-sm">Region</span>
+              <span className="text-primary font-heading font-bold uppercase tracking-wide text-base">Region</span>
               <span className="text-muted-foreground">-</span>
-              <span className="font-semibold text-foreground text-sm">{p.region}</span>
+              <span className="font-semibold text-foreground text-base">{p.region}</span>
             </div>
           </div>
 
           <div>
             <SeoHeading>My Contribution</SeoHeading>
-            <ul className="space-y-1">
+            <ul className="space-y-1.5">
               {p.contributions.map((it) => (
-                <li key={it} className="text-xs text-muted-foreground flex items-start gap-1.5">
-                  <span className="w-1 h-1 rounded-full bg-muted-foreground mt-1 shrink-0" />
+                <li key={it} className="text-sm text-muted-foreground flex items-start gap-1.5">
+                  <span className="w-1 h-1 rounded-full bg-muted-foreground mt-1.5 shrink-0" />
                   <span>{it}</span>
                 </li>
               ))}
@@ -469,7 +484,7 @@ const SeoCard = ({ p, i }: { p: SeoProject; i: number }) => {
 
           <div>
             <SeoHeading>Project Status</SeoHeading>
-            <p className="text-xs text-muted-foreground leading-snug">{p.status}</p>
+            <p className="text-sm text-muted-foreground leading-snug">{p.status}</p>
           </div>
         </div>
       </div>
@@ -514,7 +529,7 @@ const ProjectsSection = () => {
             ))}
           </div>
         ) : active === "seo" ? (
-          <div className="w-full">
+          <div className="w-full md:w-3/4 md:mx-auto">
             {seoProjects.map((p, i) => (
               <SeoCard key={p.title} p={p} i={i} />
             ))}
