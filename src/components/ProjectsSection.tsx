@@ -387,8 +387,8 @@ const AdCard = ({ p, i }: { p: AdProject; i: number }) => {
 };
 
 const SeoHeading = ({ children }: { children: React.ReactNode }) => (
-  <div className="mb-1.5">
-    <h4 className="font-heading font-bold text-primary uppercase tracking-wider text-xs">
+  <div className="mb-2">
+    <h4 className="font-heading font-bold text-primary uppercase tracking-wider text-sm">
       {children}
     </h4>
     <div className="mt-1 h-[2px] w-10 bg-primary/70 rounded-full" />
