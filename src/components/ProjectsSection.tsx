@@ -430,23 +430,22 @@ const SeoCard = ({ p, i }: { p: SeoProject; i: number }) => {
             <img
               src={p.bannerImage}
               alt={`${p.title} banner`}
-              loading="lazy"
               width={1024}
-              height={300}
+              height={768}
               className="w-full h-36 object-cover"
             />
           </div>
 
           <div>
             <SeoHeading>Goal</SeoHeading>
-            <p className="text-sm text-muted-foreground leading-snug">{p.goal}</p>
+            <p className="text-base text-muted-foreground leading-snug">{p.goal}</p>
           </div>
 
           <div>
             <SeoHeading>Keywords</SeoHeading>
             <ul className="space-y-1.5">
               {p.keywords.map((k) => (
-                <li key={k} className="text-sm text-muted-foreground flex items-start gap-1.5">
+                <li key={k} className="text-base text-muted-foreground flex items-start gap-1.5">
                   <span className="w-1 h-1 rounded-full bg-muted-foreground mt-1.5 shrink-0" />
                   <span>&ldquo;{k}&rdquo;</span>
                 </li>
@@ -474,7 +473,7 @@ const SeoCard = ({ p, i }: { p: SeoProject; i: number }) => {
             <SeoHeading>My Contribution</SeoHeading>
             <ul className="space-y-1.5">
               {p.contributions.map((it) => (
-                <li key={it} className="text-sm text-muted-foreground flex items-start gap-1.5">
+                <li key={it} className="text-base text-muted-foreground flex items-start gap-1.5">
                   <span className="w-1 h-1 rounded-full bg-muted-foreground mt-1.5 shrink-0" />
                   <span>{it}</span>
                 </li>
@@ -484,7 +483,7 @@ const SeoCard = ({ p, i }: { p: SeoProject; i: number }) => {
 
           <div>
             <SeoHeading>Project Status</SeoHeading>
-            <p className="text-sm text-muted-foreground leading-snug">{p.status}</p>
+            <p className="text-base text-muted-foreground leading-snug">{p.status}</p>
           </div>
         </div>
       </div>
