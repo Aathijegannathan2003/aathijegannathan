@@ -159,6 +159,7 @@ const seoProjects: SeoProject[] = [
     region: "Belfast, UK",
     goal: "Design and optimize an SEO-focused landing page for a cleaning service business targeting local customers in Belfast, UK.",
     bannerImage: seoProjectImg,
+    url: "https://cleanwithdb.co.uk/",
     status: "Completed SEO implementation. Client website is currently inactive, so the live project is unavailable for public viewing.",
     contributions: [
       "Conducted keyword research for local SEO targeting",
