@@ -529,7 +529,7 @@ const ProjectsSection = () => {
             ))}
           </div>
         ) : active === "seo" ? (
-          <div className="w-full">
+          <div className="w-full md:w-3/4 md:mx-auto">
             {seoProjects.map((p, i) => (
               <SeoCard key={p.title} p={p} i={i} />
             ))}
