@@ -69,7 +69,7 @@ const HeroSection = () => {
               alt="Aathijegannathan V N - SEO | Paid Ads | WordPress | CRM Executive"
               width={320}
               height={320}
-              className="w-full h-full object-cover object-top scale-[1.2] translate-y-[10px] translate-x-[6px]"
+              className="w-full h-full object-cover object-top scale-[1.35] translate-y-[5px] translate-x-[4px]"
             />
           </div>
 
