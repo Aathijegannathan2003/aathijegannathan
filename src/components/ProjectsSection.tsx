@@ -229,6 +229,34 @@ const adProjects: AdProject[] = [
   },
 ];
 
+const googleAdsProjects: GoogleAdsProject[] = [
+  {
+    title: "Google Ads Search Campaign",
+    industry: "Education & Training",
+    type: "Search Ads",
+    goal: "Drive high-intent leads for professional certification courses through targeted search ads on Google.",
+    bannerImage: adsBg1,
+    metrics: [
+      { label: "Leads", value: "80+", icon: Users },
+      { label: "Cost Per Lead", value: "₹28", icon: IndianRupee },
+      { label: "Impressions", value: "18,500", icon: Eye },
+      { label: "CTR", value: "4.85%", icon: TrendingUp },
+    ],
+    challenge: [
+      "High competition on course-related keywords",
+      "Need to improve quality score and reduce CPC",
+      "Limited budget requiring precise targeting",
+    ],
+    whatIDid: [
+      "Built keyword-focused Search campaigns",
+      "Optimized ad copy with strong CTAs",
+      "Improved Quality Score through landing page relevance",
+      "Set up conversion tracking and negative keywords",
+      "Daily bid adjustments and budget monitoring",
+    ],
+  },
+];
+
 /* ---------- Shared UI ---------- */
 
 const SeoHeading = ({ children }: { children: React.ReactNode }) => (
@@ -412,6 +440,44 @@ const AdCard = ({ p, i }: { p: AdProject; i: number }) => (
   </CardShell>
 );
 
+const GoogleAdsCard = ({ p, i }: { p: GoogleAdsProject; i: number }) => (
+  <CardShell title={p.title} i={i}>
+    <div className="space-y-4 md:pr-6">
+      <Banner src={p.bannerImage} alt={`${p.title} banner`} />
+      <div>
+        <SeoHeading>Goal</SeoHeading>
+        <p className="text-base text-muted-foreground leading-snug">{p.goal}</p>
+      </div>
+      <div>
+        <SeoHeading>Results</SeoHeading>
+        <div className="grid grid-cols-2 gap-2">
+          {p.metrics.map((m) => (
+            <div key={m.label} className="bg-muted/40 border border-border rounded-lg p-2.5 text-center">
+              <m.icon size={16} className="text-primary mx-auto mb-1" />
+              <p className="text-base font-bold font-heading leading-tight">{m.value}</p>
+              <p className="text-[11px] text-muted-foreground mt-0.5 leading-tight">{m.label}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+    <div className="space-y-4 md:pl-6">
+      <div className="space-y-1.5">
+        <MetaRow label="Industry" value={p.industry} />
+        <MetaRow label="Type" value={p.type} />
+      </div>
+      <div>
+        <SeoHeading>What I Did</SeoHeading>
+        <BulletList items={p.whatIDid} />
+      </div>
+      <div>
+        <SeoHeading>Challenge</SeoHeading>
+        <BulletList items={p.challenge} />
+      </div>
+    </div>
+  </CardShell>
+);
+
 /* ---------- Section ---------- */
 
 const ProjectsSection = () => {
@@ -447,6 +513,7 @@ const ProjectsSection = () => {
           {active === "seo" && seoProjects.map((p, i) => <SeoCard key={p.title} p={p} i={i} />)}
           {active === "web" && webProjects.map((p, i) => <WebCard key={p.title} p={p} i={i} />)}
           {active === "ads" && adProjects.map((p, i) => <AdCard key={p.title} p={p} i={i} />)}
+          {active === "googleAds" && googleAdsProjects.map((p, i) => <GoogleAdsCard key={p.title} p={p} i={i} />)}
         </div>
       </div>
     </section>
