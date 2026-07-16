@@ -470,14 +470,23 @@ const GoogleAdsCard = ({ p, i }: { p: GoogleAdsProject; i: number }) => (
       <div className="space-y-1.5">
         <MetaRow label="Industry" value={p.industry} />
         <MetaRow label="Type" value={p.type} />
+        {p.product && <MetaRow label="Product" value={p.product} />}
+      </div>
+      <div>
+        <SeoHeading>Campaign Details</SeoHeading>
+        <div className="space-y-1.5">
+          {p.campaignDetails.map((d) => (
+            <MetaRow key={d.label} label={d.label} value={d.value} />
+          ))}
+        </div>
       </div>
       <div>
         <SeoHeading>What I Did</SeoHeading>
         <BulletList items={p.whatIDid} />
       </div>
       <div>
-        <SeoHeading>Challenge</SeoHeading>
-        <BulletList items={p.challenge} />
+        <SeoHeading>Note</SeoHeading>
+        <p className="text-base text-muted-foreground leading-snug">{p.note}</p>
       </div>
     </div>
   </CardShell>
