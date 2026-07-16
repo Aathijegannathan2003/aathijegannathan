@@ -1,4 +1,4 @@
-import { Search, Globe, Megaphone, ExternalLink, Users, Eye, TrendingUp, MousePointerClick, IndianRupee } from "lucide-react";
+import { Search, Globe, Megaphone, ExternalLink, Users, Eye, TrendingUp, MousePointerClick, IndianRupee, Target } from "lucide-react";
 import { useState } from "react";
 import { Button } from "./ui/button";
 import adsBg1 from "@/assets/ads-bg-1.jpg";
@@ -8,12 +8,13 @@ import seoProjectImg from "@/assets/seo-project-landing.jpg";
 import webLabmateImg from "@/assets/web-labmate.jpg";
 import webDigitalsiddeshImg from "@/assets/web-digitalsiddesh.jpg";
 
-type Category = "seo" | "web" | "ads";
+type Category = "seo" | "web" | "ads" | "googleAds";
 
 const categories: { key: Category; label: string; icon: React.ElementType }[] = [
   { key: "seo", label: "SEO Projects", icon: Search },
   { key: "web", label: "Web Development", icon: Globe },
   { key: "ads", label: "Meta Ads", icon: Megaphone },
+  { key: "googleAds", label: "Google Ads", icon: Target },
 ];
 
 /* ---------- Types ---------- */
@@ -43,6 +44,17 @@ type WebProject = {
 };
 
 type AdProject = {
+  title: string;
+  industry: string;
+  type: string;
+  goal: string;
+  bannerImage: string;
+  metrics: { label: string; value: string; icon: React.ElementType }[];
+  challenge: string[];
+  whatIDid: string[];
+};
+
+type GoogleAdsProject = {
   title: string;
   industry: string;
   type: string;
