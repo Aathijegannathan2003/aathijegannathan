@@ -59,10 +59,12 @@ type GoogleAdsProject = {
   industry: string;
   type: string;
   goal: string;
+  product?: string;
   bannerImage: string;
   metrics: { label: string; value: string; icon: React.ElementType }[];
-  challenge: string[];
+  campaignDetails: { label: string; value: string }[];
   whatIDid: string[];
+  note: string;
 };
 
 /* ---------- Data ---------- */
@@ -231,29 +233,32 @@ const adProjects: AdProject[] = [
 
 const googleAdsProjects: GoogleAdsProject[] = [
   {
-    title: "Google Ads Search Campaign",
-    industry: "Education & Training",
-    type: "Search Ads",
-    goal: "Drive high-intent leads for professional certification courses through targeted search ads on Google.",
+    title: "Google Search Ads Campaign",
+    industry: "Laboratory & Life Science",
+    type: "Google Search Campaign",
+    goal: "Generate qualified clicks and leads for laboratory products.",
+    product: "Colony counting machine",
     bannerImage: adsBg1,
     metrics: [
-      { label: "Leads", value: "80+", icon: Users },
-      { label: "Cost Per Lead", value: "₹28", icon: IndianRupee },
-      { label: "Impressions", value: "18,500", icon: Eye },
-      { label: "CTR", value: "4.85%", icon: TrendingUp },
+      { label: "Clicks", value: "80", icon: MousePointerClick },
+      { label: "Impressions", value: "1,000+", icon: Eye },
+      { label: "Avg. CPC", value: "₹64.77", icon: IndianRupee },
+      { label: "Total Spend", value: "₹5.18K", icon: IndianRupee },
+      { label: "Qualified Leads", value: "2", icon: Users },
     ],
-    challenge: [
-      "High competition on course-related keywords",
-      "Need to improve quality score and reduce CPC",
-      "Limited budget requiring precise targeting",
+    campaignDetails: [
+      { label: "Budget", value: "₹5,000" },
+      { label: "Duration", value: "June – July 2026" },
     ],
     whatIDid: [
-      "Built keyword-focused Search campaigns",
-      "Optimized ad copy with strong CTAs",
-      "Improved Quality Score through landing page relevance",
-      "Set up conversion tracking and negative keywords",
-      "Daily bid adjustments and budget monitoring",
+      "Conducted keyword research for high-intent search terms.",
+      "Created and optimized Google Search Ads campaign.",
+      "Wrote compelling ad copies to improve CTR.",
+      "Added negative keywords to reduce irrelevant traffic.",
+      "Optimized bidding strategy and campaign settings.",
+      "Continuously monitored and improved campaign performance.",
     ],
+    note: "Improved campaign performance through continuous optimization and keyword refinement.",
   },
 ];
 
@@ -465,14 +470,23 @@ const GoogleAdsCard = ({ p, i }: { p: GoogleAdsProject; i: number }) => (
       <div className="space-y-1.5">
         <MetaRow label="Industry" value={p.industry} />
         <MetaRow label="Type" value={p.type} />
+        {p.product && <MetaRow label="Product" value={p.product} />}
+      </div>
+      <div>
+        <SeoHeading>Campaign Details</SeoHeading>
+        <div className="space-y-1.5">
+          {p.campaignDetails.map((d) => (
+            <MetaRow key={d.label} label={d.label} value={d.value} />
+          ))}
+        </div>
       </div>
       <div>
         <SeoHeading>What I Did</SeoHeading>
         <BulletList items={p.whatIDid} />
       </div>
       <div>
-        <SeoHeading>Challenge</SeoHeading>
-        <BulletList items={p.challenge} />
+        <SeoHeading>Note</SeoHeading>
+        <p className="text-base text-muted-foreground leading-snug">{p.note}</p>
       </div>
     </div>
   </CardShell>
