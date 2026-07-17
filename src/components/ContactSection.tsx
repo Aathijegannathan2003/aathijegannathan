@@ -80,7 +80,7 @@ const ContactSection = () => {
                 <img
                   src={profileImg}
                   alt="Aathijegannathan VN"
-                  className="w-full h-full object-cover object-top scale-110 translate-y-[10px]"
+                  className="w-full h-full object-cover object-top scale-[1.25] translate-y-[22px] translate-x-[1px]"
                 />
               </div>
 
