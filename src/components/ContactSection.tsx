@@ -76,13 +76,13 @@ const ContactSection = () => {
 
             {/* Right: Profile card */}
             <div className="animate-on-scroll flex flex-col items-center text-center space-y-4 p-6 rounded-xl bg-background/40 border border-border card-hover">
-              <div className="w-[290px] h-[293px] md:w-[410px] md:h-[413px] rounded-full overflow-hidden border-2 border-primary/40 animate-float shadow-[0_0_80px_rgba(59,130,246,0.35),0_0_120px_rgba(59,130,246,0.15)]" style={{ backgroundColor: "#1d283a" }}>
+              <div className="w-[220px] h-[220px] rounded-full overflow-hidden border-2 border-primary/40 animate-float shadow-[0_0_80px_rgba(59,130,246,0.35),0_0_120px_rgba(59,130,246,0.15)]" style={{ backgroundColor: "#1d283a" }}>
                 <img
                   src={profileImg}
                   alt="Aathijegannathan VN"
                   width={320}
                   height={320}
-                  className="w-full h-full object-cover object-top scale-[1.25] translate-y-[43px] translate-x-[2px]"
+                  className="w-full h-full object-cover object-top scale-[1.25] translate-y-[23px] translate-x-[1px]"
                 />
               </div>
 
