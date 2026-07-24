@@ -93,7 +93,7 @@ const SkillsSection = () => (
         </p>
       </div>
 
-      <div className="grid gap-6 mx-auto items-stretch lg:[grid-template-columns:70fr_30fr]" style={{ transform: "translateX(-10px)", maxWidth: "1340px" }}>
+      <div className="grid gap-6 mx-auto items-stretch lg:[grid-template-columns:70fr_30fr]" style={{ transform: "translateX(-10px)", maxWidth: "1320px" }}>
         {/* Core Skills */}
         <div className="bg-card/80 border border-border rounded-2xl p-6 md:p-8 flex flex-col h-full">
           <div className="flex items-center gap-3 mb-2">
@@ -106,36 +106,28 @@ const SkillsSection = () => (
             </div>
           </div>
 
-          <div className="relative mt-4">
-            {/* Vertical timeline line */}
-            <div className="absolute left-[22px] top-4 bottom-4 w-px bg-border" />
-
-            <div className="space-y-5">
-              {coreSkills.map((s) => (
-                <div
-                  key={s.title}
-                  className="group relative flex items-start gap-5 pl-1 hover-glow transition-all duration-300 rounded-xl p-2 -ml-2"
-                >
-                  {/* Icon + dot */}
-                  <div className="relative shrink-0 z-10">
-                    <div className={`w-11 h-11 rounded-xl bg-gradient-to-br ${s.gradient} flex items-center justify-center shadow-lg`}>
-                      <s.icon className="text-white" size={20} />
-                    </div>
-                    <div className={`absolute top-1/2 -right-2 w-2 h-2 rounded-full ${s.dot} ring-4 ring-card/80 transform -translate-y-1/2 translate-x-1/2`} />
-                  </div>
-
-                  {/* Content */}
-                  <div className="flex-1 pt-0.5">
-                    <h4 className={`font-heading font-semibold mb-1 ${s.textColor}`} style={{ fontSize: "17px" }}>
-                      {s.title}
-                    </h4>
-                    <p className="text-muted-foreground leading-relaxed" style={{ fontSize: "14px" }}>
-                      {s.desc}
-                    </p>
-                  </div>
+          <div className="space-y-4 mt-4">
+            {coreSkills.map((s) => (
+              <div
+                key={s.title}
+                className="group flex items-start gap-4 p-4 rounded-xl bg-card/80 border border-white/10 hover:border-primary/40 hover-glow transition-all duration-300"
+              >
+                {/* Icon */}
+                <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${s.gradient} p-1.5 flex items-center justify-center shadow-lg shrink-0`}>
+                  <s.icon className="text-white" size={18} />
                 </div>
-              ))}
-            </div>
+
+                {/* Content */}
+                <div className="flex-1">
+                  <h4 className={`font-heading font-semibold mb-1 ${s.textColor}`} style={{ fontSize: "17px" }}>
+                    {s.title}
+                  </h4>
+                  <p className="text-muted-foreground leading-relaxed" style={{ fontSize: "14px" }}>
+                    {s.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 
