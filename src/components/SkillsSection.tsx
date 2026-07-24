@@ -11,7 +11,6 @@ const coreSkills = [
     desc: "Implement on-page, technical, and local SEO strategies to improve search visibility, rankings, and organic website traffic.",
     gradient: "from-blue-500 to-blue-600",
     textColor: "text-blue-400",
-    dot: "bg-blue-400",
   },
   {
     icon: BarChart3,
@@ -19,7 +18,6 @@ const coreSkills = [
     desc: "Plan and optimize Google Ads campaigns to drive website traffic and generate leads through keyword research, ad copy, bidding, and performance analysis.",
     gradient: "from-orange-500 to-amber-500",
     textColor: "text-orange-400",
-    dot: "bg-orange-400",
   },
   {
     icon: Megaphone,
@@ -27,7 +25,6 @@ const coreSkills = [
     desc: "Create and optimize Meta Ads campaigns to generate leads through audience targeting, budget management, ad copy, and performance analysis.",
     gradient: "from-emerald-500 to-teal-500",
     textColor: "text-emerald-400",
-    dot: "bg-emerald-400",
   },
   {
     icon: Globe,
@@ -35,7 +32,6 @@ const coreSkills = [
     desc: "Build and customize responsive WordPress websites and landing pages using Elementor, with a focus on SEO-friendly structure and content optimization.",
     gradient: "from-purple-500 to-purple-600",
     textColor: "text-purple-400",
-    dot: "bg-purple-400",
   },
   {
     icon: Users,
@@ -43,7 +39,6 @@ const coreSkills = [
     desc: "Manage customer and lead data, maintain accurate records, track interactions, and support regular CRM activities for effective follow-up.",
     gradient: "from-cyan-500 to-teal-500",
     textColor: "text-cyan-400",
-    dot: "bg-cyan-400",
   },
   {
     icon: Mail,
@@ -51,7 +46,6 @@ const coreSkills = [
     desc: "Create and optimize basic email campaigns using Mailchimp to communicate with customers and support engagement and conversions.",
     gradient: "from-violet-500 to-purple-500",
     textColor: "text-violet-400",
-    dot: "bg-violet-400",
   },
   {
     icon: LineChart,
@@ -59,7 +53,6 @@ const coreSkills = [
     desc: "Analyze website performance, traffic, user behavior, clicks, impressions, keywords, indexing, and other important SEO metrics.",
     gradient: "from-sky-500 to-indigo-500",
     textColor: "text-sky-400",
-    dot: "bg-sky-400",
   },
   {
     icon: Palette,
@@ -67,7 +60,6 @@ const coreSkills = [
     desc: "Design professional social media creatives, brochures, PDFs, banners, and other marketing materials using Canva Pro.",
     gradient: "from-pink-500 to-rose-500",
     textColor: "text-pink-400",
-    dot: "bg-pink-400",
   },
 ];
 
