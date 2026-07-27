@@ -276,7 +276,7 @@ const SeoHeading = ({ children }: { children: React.ReactNode }) => (
 const BulletList = ({ items }: { items: string[] }) => (
   <ul className="space-y-1.5">
     {items.map((it) => (
-      <li key={it} className="text-base text-muted-foreground flex items-start gap-1.5">
+      <li key={it} className="text-[14px] text-muted-foreground flex items-start gap-1.5">
         <span className="w-1 h-1 rounded-full bg-muted-foreground mt-1.5 shrink-0" />
         <span>{it}</span>
       </li>
@@ -346,13 +346,13 @@ const SeoCard = ({ p, i }: { p: SeoProject; i: number }) => (
       <Banner src={p.bannerImage} alt={`${p.title} banner`} />
       <div>
         <SeoHeading>Goal</SeoHeading>
-        <p className="text-base text-muted-foreground leading-snug">{p.goal}</p>
+        <p className="text-[14px] text-muted-foreground leading-snug">{p.goal}</p>
       </div>
       <div>
         <SeoHeading>Keywords</SeoHeading>
         <ul className="space-y-1.5">
           {p.keywords.map((k) => (
-            <li key={k} className="text-base text-muted-foreground flex items-start gap-1.5">
+            <li key={k} className="text-[14px] text-muted-foreground flex items-start gap-1.5">
               <span className="w-1 h-1 rounded-full bg-muted-foreground mt-1.5 shrink-0" />
               <span>&ldquo;{k}&rdquo;</span>
             </li>
@@ -371,7 +371,7 @@ const SeoCard = ({ p, i }: { p: SeoProject; i: number }) => (
       </div>
       <div>
         <SeoHeading>Project Status</SeoHeading>
-        <p className="text-base text-muted-foreground leading-snug">{p.status}</p>
+        <p className="text-[14px] text-muted-foreground leading-snug">{p.status}</p>
       </div>
     </div>
   </CardShell>
@@ -383,7 +383,7 @@ const WebCard = ({ p, i }: { p: WebProject; i: number }) => (
       <Banner src={p.bannerImage} alt={`${p.title} banner`} />
       <div>
         <SeoHeading>Goal</SeoHeading>
-        <p className="text-base text-muted-foreground leading-snug">{p.goal}</p>
+        <p className="text-[14px] text-muted-foreground leading-snug">{p.goal}</p>
       </div>
       <div>
         <SeoHeading>Problem</SeoHeading>
@@ -413,7 +413,7 @@ const AdCard = ({ p, i }: { p: AdProject; i: number }) => (
       <Banner src={p.bannerImage} alt={`${p.title} banner`} />
       <div>
         <SeoHeading>Goal</SeoHeading>
-        <p className="text-base text-muted-foreground leading-snug">{p.goal}</p>
+        <p className="text-[14px] text-muted-foreground leading-snug">{p.goal}</p>
       </div>
       <div>
         <SeoHeading>Results</SeoHeading>
@@ -451,7 +451,7 @@ const GoogleAdsCard = ({ p, i }: { p: GoogleAdsProject; i: number }) => (
       <Banner src={p.bannerImage} alt={`${p.title} banner`} />
       <div>
         <SeoHeading>Goal</SeoHeading>
-        <p className="text-base text-muted-foreground leading-snug">{p.goal}</p>
+        <p className="text-[14px] text-muted-foreground leading-snug">{p.goal}</p>
       </div>
       <div>
         <SeoHeading>Results</SeoHeading>
@@ -486,7 +486,7 @@ const GoogleAdsCard = ({ p, i }: { p: GoogleAdsProject; i: number }) => (
       </div>
       <div>
         <SeoHeading>Note</SeoHeading>
-        <p className="text-base text-muted-foreground leading-snug">{p.note}</p>
+        <p className="text-[14px] text-muted-foreground leading-snug">{p.note}</p>
       </div>
     </div>
   </CardShell>
