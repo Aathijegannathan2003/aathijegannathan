@@ -266,7 +266,7 @@ const googleAdsProjects: GoogleAdsProject[] = [
 
 const SeoHeading = ({ children }: { children: React.ReactNode }) => (
   <div className="mb-2">
-    <h4 className="font-heading font-bold text-primary uppercase tracking-wider text-base">
+    <h4 className="font-heading font-semibold text-primary tracking-normal text-base">
       {children}
     </h4>
     <div className="mt-1 h-[2px] w-10 bg-primary/70 rounded-full" />
@@ -301,7 +301,7 @@ const CardShell = ({
   >
     <div className="mb-4 flex items-center gap-3">
       <div>
-        <h3 className="font-heading font-extrabold uppercase tracking-wide text-[22px] md:text-[26px] text-foreground">
+        <h3 className="font-heading font-bold tracking-normal text-[22px] md:text-[26px] text-foreground">
           {title}
         </h3>
         <div className="mt-1.5 h-[2px] w-20 bg-primary rounded-full" />
@@ -332,7 +332,7 @@ const Banner = ({ src, alt }: { src: string; alt: string }) => (
 
 const MetaRow = ({ label, value }: { label: string; value: string }) => (
   <div className="flex flex-wrap items-baseline gap-1">
-    <span className="text-primary font-heading font-bold uppercase tracking-wide text-lg">{label}</span>
+    <span className="text-primary font-heading font-semibold tracking-normal text-lg">{label}</span>
     <span className="text-muted-foreground">-</span>
     <span className="font-semibold text-foreground text-lg">{value}</span>
   </div>
