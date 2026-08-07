@@ -500,30 +500,33 @@ const ProjectsSection = () => {
   const [active, setActive] = useState<Category>("seo");
 
   return (
-    <section id="projects" className="py-24 bg-card/50">
+    <section id="projects" className="py-16 md:py-24 bg-card/50">
       <div className="container mx-auto px-4">
-        <div className="animate-on-scroll text-center mb-12">
+        <div className="animate-on-scroll text-center mb-10 md:mb-12">
           <p className="text-primary text-sm font-medium uppercase tracking-wide mb-2">Projects</p>
-          <h2 className="text-4xl md:text-5xl font-heading font-bold">My Work</h2>
+          <h2 className="text-3xl md:text-5xl font-heading font-bold">My Work</h2>
         </div>
 
-        <div className="animate-on-scroll flex justify-center gap-2 mb-10 flex-wrap">
+        <div className="animate-on-scroll grid grid-cols-2 sm:flex sm:justify-center gap-2 mb-8 md:mb-10 sm:flex-wrap">
           {categories.map((c) => (
             <Button
               key={c.key}
+              size="sm"
               variant={active === c.key ? "default" : "outline"}
               onClick={() => setActive(c.key)}
               className={
-                active === c.key
+                "w-full sm:w-auto sm:size-default text-xs sm:text-sm " +
+                (active === c.key
                   ? "bg-primary text-primary-foreground"
-                  : "border-border text-muted-foreground hover:text-foreground hover:border-primary/50"
+                  : "border-border text-muted-foreground hover:text-foreground hover:border-primary/50")
               }
             >
-              <c.icon size={16} className="mr-2" />
+              <c.icon size={14} className="mr-1.5 sm:mr-2 shrink-0" />
               {c.label}
             </Button>
           ))}
         </div>
+
 
         <div className="w-full md:w-[83%] md:mx-auto space-y-6">
           {active === "seo" && seoProjects.map((p, i) => <SeoCard key={p.title} p={p} i={i} />)}
