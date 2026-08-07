@@ -112,7 +112,6 @@ const SkillsSection = () => (
               <div
                 key={s.title}
                 className="group flex items-start gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl bg-card/80 border border-white/10 hover:border-primary/40 hover-glow transition-all duration-300"
-
               >
                 {/* Icon */}
                 <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${s.gradient} p-1.5 flex items-center justify-center shadow-lg shrink-0`}>
@@ -120,14 +119,15 @@ const SkillsSection = () => (
                 </div>
 
                 {/* Content */}
-                <div className="flex-1">
-                  <h4 className={`font-heading font-semibold mb-1 ${s.textColor}`} style={{ fontSize: "17px" }}>
+                <div className="flex-1 min-w-0">
+                  <h4 className={`font-heading font-semibold mb-1 text-[15px] md:text-[17px] ${s.textColor}`}>
                     {s.title}
                   </h4>
-                  <p className="text-muted-foreground leading-relaxed" style={{ fontSize: "14px" }}>
+                  <p className="text-muted-foreground leading-relaxed text-[13.5px] md:text-[14px]">
                     {s.desc}
                   </p>
                 </div>
+
               </div>
             ))}
           </div>
