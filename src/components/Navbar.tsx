@@ -29,9 +29,10 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between py-4 px-4">
-        <a href="#home" className="text-xl font-heading font-bold text-primary">
+        <a href="#home" className="text-lg sm:text-xl font-heading font-bold text-primary truncate max-w-[70%]">
           Aathijegannathan
         </a>
+
 
         {/* Desktop */}
         <div className="hidden md:flex items-center gap-8">
@@ -71,8 +72,21 @@ const Navbar = () => {
               {l.label}
             </a>
           ))}
+          <a
+            href={resumeAsset.url}
+            download="Aathi-Jegannathan-Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setOpen(false)}
+            className="block mt-3"
+          >
+            <Button size="sm" className="w-full bg-primary text-primary-foreground hover:bg-primary/80">
+              Download CV
+            </Button>
+          </a>
         </div>
       )}
+
     </nav>
   );
 };

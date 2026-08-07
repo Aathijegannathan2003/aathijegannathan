@@ -296,16 +296,17 @@ const CardShell = ({
   children: React.ReactNode;
 }) => (
   <div
-    className="animate-on-scroll visible bg-card border border-border rounded-2xl card-hover hover:border-primary/50 p-5 md:p-6"
+    className="animate-on-scroll visible bg-card border border-border rounded-2xl card-hover hover:border-primary/50 p-4 sm:p-5 md:p-6"
     style={{ transitionDelay: `${i * 0.1}s` }}
   >
-    <div className="mb-4 flex items-center gap-3">
+    <div className="mb-4 flex items-center gap-3 flex-wrap">
       <div>
-        <h3 className="font-heading font-bold tracking-normal text-[22px] md:text-[26px] text-foreground">
+        <h3 className="font-heading font-bold tracking-normal text-[19px] sm:text-[22px] md:text-[26px] text-foreground break-words">
           {title}
         </h3>
         <div className="mt-1.5 h-[2px] w-20 bg-primary rounded-full" />
       </div>
+
       {url && (
         <a
           href={url}
@@ -325,18 +326,19 @@ const CardShell = ({
 );
 
 const Banner = ({ src, alt }: { src: string; alt: string }) => (
-  <div className="rounded-lg overflow-hidden border border-border w-[90%]">
-    <img src={src} alt={alt} width={1024} height={768} loading="lazy" className="w-full h-36 object-cover" />
+  <div className="rounded-lg overflow-hidden border border-border w-full md:w-[90%]">
+    <img src={src} alt={alt} width={1024} height={768} loading="lazy" className="w-full h-40 md:h-36 object-cover" />
   </div>
 );
 
 const MetaRow = ({ label, value }: { label: string; value: string }) => (
   <div className="flex flex-wrap items-baseline gap-1">
-    <span className="text-primary font-heading font-semibold tracking-normal text-lg">{label}</span>
+    <span className="text-primary font-heading font-semibold tracking-normal text-base md:text-lg">{label}</span>
     <span className="text-muted-foreground">-</span>
-    <span className="font-semibold text-foreground text-lg">{value}</span>
+    <span className="font-semibold text-foreground text-base md:text-lg break-words">{value}</span>
   </div>
 );
+
 
 /* ---------- Cards ---------- */
 
@@ -498,30 +500,33 @@ const ProjectsSection = () => {
   const [active, setActive] = useState<Category>("seo");
 
   return (
-    <section id="projects" className="py-24 bg-card/50">
+    <section id="projects" className="py-16 md:py-24 bg-card/50">
       <div className="container mx-auto px-4">
-        <div className="animate-on-scroll text-center mb-12">
+        <div className="animate-on-scroll text-center mb-10 md:mb-12">
           <p className="text-primary text-sm font-medium uppercase tracking-wide mb-2">Projects</p>
-          <h2 className="text-4xl md:text-5xl font-heading font-bold">My Work</h2>
+          <h2 className="text-3xl md:text-5xl font-heading font-bold">My Work</h2>
         </div>
 
-        <div className="animate-on-scroll flex justify-center gap-2 mb-10 flex-wrap">
+        <div className="animate-on-scroll grid grid-cols-2 sm:flex sm:justify-center gap-2 mb-8 md:mb-10 sm:flex-wrap">
           {categories.map((c) => (
             <Button
               key={c.key}
+              size="sm"
               variant={active === c.key ? "default" : "outline"}
               onClick={() => setActive(c.key)}
               className={
-                active === c.key
+                "w-full sm:w-auto sm:size-default text-xs sm:text-sm " +
+                (active === c.key
                   ? "bg-primary text-primary-foreground"
-                  : "border-border text-muted-foreground hover:text-foreground hover:border-primary/50"
+                  : "border-border text-muted-foreground hover:text-foreground hover:border-primary/50")
               }
             >
-              <c.icon size={16} className="mr-2" />
+              <c.icon size={14} className="mr-1.5 sm:mr-2 shrink-0" />
               {c.label}
             </Button>
           ))}
         </div>
+
 
         <div className="w-full md:w-[83%] md:mx-auto space-y-6">
           {active === "seo" && seoProjects.map((p, i) => <SeoCard key={p.title} p={p} i={i} />)}

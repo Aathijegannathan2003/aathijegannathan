@@ -19,18 +19,19 @@ const highlights = [
 ];
 
 const AboutSection = () => (
-  <section id="about" className="py-24">
+  <section id="about" className="py-16 md:py-24">
     <div className="container mx-auto px-4">
-      <div className="animate-on-scroll text-center mb-12">
+      <div className="animate-on-scroll text-center mb-10 md:mb-12">
         <p className="text-primary text-sm font-medium uppercase tracking-wide mb-2">About Me</p>
-        <h2 className="text-4xl md:text-5xl font-heading font-bold">Who Am I</h2>
+        <h2 className="text-3xl md:text-5xl font-heading font-bold">Who Am I</h2>
       </div>
 
       <div className="grid md:grid-cols-2 gap-8 items-stretch max-w-6xl mx-auto">
         <div className="animate-on-scroll flex flex-col justify-between h-full gap-6">
-          <p className="text-muted-foreground leading-relaxed text-lg">
+          <p className="text-muted-foreground leading-relaxed text-base md:text-lg">
             I am a results-driven <span className="text-primary font-medium">Digital Marketing Specialist</span> based in Chennai, specializing in SEO and performance marketing. I focus on improving online visibility and driving targeted traffic to generate leads and support business growth.
           </p>
+
 
           <div className="flex flex-col justify-between flex-1 gap-6">
             {highlights.map((h) => (
@@ -38,10 +39,11 @@ const AboutSection = () => (
                 <div className="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
                   <h.icon className="text-primary" size={20} />
                 </div>
-                <div>
-                  <h4 className="font-heading font-semibold text-foreground text-[17.5px]">{h.title}</h4>
-                  <p className="text-muted-foreground text-[15.5px] leading-relaxed mt-1">{h.desc}</p>
+                <div className="min-w-0">
+                  <h4 className="font-heading font-semibold text-foreground text-[16px] md:text-[17.5px]">{h.title}</h4>
+                  <p className="text-muted-foreground text-[14.5px] md:text-[15.5px] leading-relaxed mt-1">{h.desc}</p>
                 </div>
+
               </div>
             ))}
           </div>
