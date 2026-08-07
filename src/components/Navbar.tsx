@@ -29,9 +29,10 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between py-4 px-4">
-        <a href="#home" className="text-xl font-heading font-bold text-primary">
+        <a href="#home" className="text-lg sm:text-xl font-heading font-bold text-primary truncate max-w-[70%]">
           Aathijegannathan
         </a>
+
 
         {/* Desktop */}
         <div className="hidden md:flex items-center gap-8">

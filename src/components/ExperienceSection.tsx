@@ -55,11 +55,12 @@ const experiences: Experience[] = [
 ];
 
 const ExperienceSection = () => (
-  <section id="experience" className="py-24">
+  <section id="experience" className="py-16 md:py-24">
     <div className="container mx-auto px-4">
-      <div className="animate-on-scroll text-center mb-12">
+      <div className="animate-on-scroll text-center mb-10 md:mb-12">
         <p className="text-primary text-sm font-medium uppercase tracking-wide mb-2">Experience</p>
-        <h2 className="text-4xl md:text-5xl font-heading font-bold">Where I've Worked</h2>
+        <h2 className="text-3xl md:text-5xl font-heading font-bold">Where I've Worked</h2>
+
       </div>
 
       <div className="relative max-w-[1120px] mx-auto">
@@ -86,11 +87,12 @@ const ExperienceSection = () => (
                   <Icon className={accentText} size={20} />
                 </div>
 
-                <div className="bg-card border border-border rounded-xl p-6 md:p-8 card-hover">
+                <div className="bg-card border border-border rounded-xl p-4 sm:p-6 md:p-8 card-hover">
                   <div className="grid md:grid-cols-[35fr_65fr] gap-6 md:gap-10">
                     <div>
                       <div className="flex items-start justify-between gap-3 mb-2">
-                        <h3 className="font-heading font-bold text-xl md:text-2xl">{exp.role}</h3>
+                        <h3 className="font-heading font-bold text-lg sm:text-xl md:text-2xl">{exp.role}</h3>
+
                         <span className={`md:hidden text-xs font-medium px-3 py-1 rounded-full ${badgeBg}`}>
                           {exp.type}
                         </span>

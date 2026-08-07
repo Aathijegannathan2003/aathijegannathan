@@ -5,14 +5,15 @@ import resumeAsset from "@/assets/resume.pdf.asset.json";
 
 const ContactSection = () => {
   return (
-    <section id="contact" className="py-24">
+    <section id="contact" className="py-16 md:py-24">
       <div className="container mx-auto px-4">
-        <div className="animate-on-scroll text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-heading font-bold">Let's Connect</h2>
+        <div className="animate-on-scroll text-center mb-10 md:mb-12">
+          <h2 className="text-3xl md:text-5xl font-heading font-bold">Let's Connect</h2>
         </div>
 
-        <div className="max-w-5xl mx-auto rounded-2xl border border-border bg-card/40 p-6 md:p-10 backdrop-blur">
-          <div className="grid md:grid-cols-2 gap-10 items-center">
+        <div className="max-w-5xl mx-auto rounded-2xl border border-border bg-card/40 p-4 sm:p-6 md:p-10 backdrop-blur">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-10 items-center">
+
             {/* Left: Info */}
             <div className="animate-on-scroll space-y-6">
               <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/30 text-primary text-xs font-medium">
@@ -75,8 +76,9 @@ const ContactSection = () => {
             </div>
 
             {/* Right: Profile card */}
-            <div className="animate-on-scroll flex flex-col items-center text-center space-y-4 p-6 rounded-xl bg-background/40 border border-border card-hover">
-              <div className="w-[220px] h-[220px] rounded-full overflow-hidden border-2 border-primary/40 animate-float shadow-[0_0_80px_rgba(59,130,246,0.35),0_0_120px_rgba(59,130,246,0.15)]" style={{ backgroundColor: "#1d283a" }}>
+            <div className="animate-on-scroll flex flex-col items-center text-center space-y-4 p-4 sm:p-6 rounded-xl bg-background/40 border border-border card-hover">
+              <div className="w-[180px] h-[180px] sm:w-[220px] sm:h-[220px] rounded-full overflow-hidden border-2 border-primary/40 animate-float shadow-[0_0_80px_rgba(59,130,246,0.35),0_0_120px_rgba(59,130,246,0.15)]" style={{ backgroundColor: "#1d283a" }}>
+
                 <img
                   src={profileImg}
                   alt="Aathijegannathan VN"

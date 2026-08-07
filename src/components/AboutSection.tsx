@@ -39,10 +39,11 @@ const AboutSection = () => (
                 <div className="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
                   <h.icon className="text-primary" size={20} />
                 </div>
-                <div>
-                  <h4 className="font-heading font-semibold text-foreground text-[17.5px]">{h.title}</h4>
-                  <p className="text-muted-foreground text-[15.5px] leading-relaxed mt-1">{h.desc}</p>
+                <div className="min-w-0">
+                  <h4 className="font-heading font-semibold text-foreground text-[16px] md:text-[17.5px]">{h.title}</h4>
+                  <p className="text-muted-foreground text-[14.5px] md:text-[15.5px] leading-relaxed mt-1">{h.desc}</p>
                 </div>
+
               </div>
             ))}
           </div>
