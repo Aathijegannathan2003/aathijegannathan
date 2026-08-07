@@ -111,7 +111,8 @@ const SkillsSection = () => (
             {coreSkills.map((s) => (
               <div
                 key={s.title}
-                className="group flex items-start gap-4 p-4 rounded-xl bg-card/80 border border-white/10 hover:border-primary/40 hover-glow transition-all duration-300"
+                className="group flex items-start gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl bg-card/80 border border-white/10 hover:border-primary/40 hover-glow transition-all duration-300"
+
               >
                 {/* Icon */}
                 <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${s.gradient} p-1.5 flex items-center justify-center shadow-lg shrink-0`}>
