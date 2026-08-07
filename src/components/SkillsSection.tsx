@@ -77,25 +77,26 @@ const tools = [
 ];
 
 const SkillsSection = () => (
-  <section id="skills" className="py-24 bg-card/50">
+  <section id="skills" className="py-16 md:py-24 bg-card/50">
     <div className="container mx-auto px-4">
-      <div className="text-center mb-14">
+      <div className="text-center mb-10 md:mb-14">
         <div className="flex items-center justify-center gap-3 mb-3">
           <span className="h-px w-8 bg-primary/60" />
-          <p className="text-primary text-sm font-semibold uppercase tracking-[0.2em]">Skills & Tools</p>
+          <p className="text-primary text-xs md:text-sm font-semibold uppercase tracking-[0.2em]">Skills & Tools</p>
           <span className="h-px w-8 bg-primary/60" />
         </div>
-        <h2 className="text-4xl md:text-5xl font-heading font-bold">
+        <h2 className="text-3xl md:text-5xl font-heading font-bold">
           What I <span className="text-primary">Work</span> With
         </h2>
-        <p className="text-muted-foreground mt-4 max-w-xl mx-auto">
+        <p className="text-muted-foreground mt-4 max-w-xl mx-auto text-[15px] md:text-base">
           Strategic skills and powerful tools I use to deliver results.
         </p>
       </div>
 
-      <div className="grid gap-6 mx-auto items-stretch lg:[grid-template-columns:70fr_30fr]" style={{ transform: "translateX(-10px)", maxWidth: "1320px" }}>
+      <div className="grid gap-6 mx-auto items-stretch lg:[grid-template-columns:70fr_30fr] lg:-translate-x-[10px]" style={{ maxWidth: "1320px" }}>
         {/* Core Skills */}
-        <div className="bg-card/80 border border-border rounded-2xl p-6 md:p-8 flex flex-col h-full">
+        <div className="bg-card/80 border border-border rounded-2xl p-4 sm:p-6 md:p-8 flex flex-col h-full">
+
           <div className="flex items-center gap-3 mb-2">
             <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
               <Search className="text-primary" size={18} />
