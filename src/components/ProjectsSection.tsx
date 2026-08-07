@@ -296,16 +296,17 @@ const CardShell = ({
   children: React.ReactNode;
 }) => (
   <div
-    className="animate-on-scroll visible bg-card border border-border rounded-2xl card-hover hover:border-primary/50 p-5 md:p-6"
+    className="animate-on-scroll visible bg-card border border-border rounded-2xl card-hover hover:border-primary/50 p-4 sm:p-5 md:p-6"
     style={{ transitionDelay: `${i * 0.1}s` }}
   >
-    <div className="mb-4 flex items-center gap-3">
+    <div className="mb-4 flex items-center gap-3 flex-wrap">
       <div>
-        <h3 className="font-heading font-bold tracking-normal text-[22px] md:text-[26px] text-foreground">
+        <h3 className="font-heading font-bold tracking-normal text-[19px] sm:text-[22px] md:text-[26px] text-foreground break-words">
           {title}
         </h3>
         <div className="mt-1.5 h-[2px] w-20 bg-primary rounded-full" />
       </div>
+
       {url && (
         <a
           href={url}
