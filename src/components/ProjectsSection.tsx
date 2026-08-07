@@ -325,18 +325,19 @@ const CardShell = ({
 );
 
 const Banner = ({ src, alt }: { src: string; alt: string }) => (
-  <div className="rounded-lg overflow-hidden border border-border w-[90%]">
-    <img src={src} alt={alt} width={1024} height={768} loading="lazy" className="w-full h-36 object-cover" />
+  <div className="rounded-lg overflow-hidden border border-border w-full md:w-[90%]">
+    <img src={src} alt={alt} width={1024} height={768} loading="lazy" className="w-full h-40 md:h-36 object-cover" />
   </div>
 );
 
 const MetaRow = ({ label, value }: { label: string; value: string }) => (
   <div className="flex flex-wrap items-baseline gap-1">
-    <span className="text-primary font-heading font-semibold tracking-normal text-lg">{label}</span>
+    <span className="text-primary font-heading font-semibold tracking-normal text-base md:text-lg">{label}</span>
     <span className="text-muted-foreground">-</span>
-    <span className="font-semibold text-foreground text-lg">{value}</span>
+    <span className="font-semibold text-foreground text-base md:text-lg break-words">{value}</span>
   </div>
 );
+
 
 /* ---------- Cards ---------- */
 
