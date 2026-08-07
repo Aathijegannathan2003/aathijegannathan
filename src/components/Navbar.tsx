@@ -72,8 +72,21 @@ const Navbar = () => {
               {l.label}
             </a>
           ))}
+          <a
+            href={resumeAsset.url}
+            download="Aathi-Jegannathan-Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setOpen(false)}
+            className="block mt-3"
+          >
+            <Button size="sm" className="w-full bg-primary text-primary-foreground hover:bg-primary/80">
+              Download CV
+            </Button>
+          </a>
         </div>
       )}
+
     </nav>
   );
 };
