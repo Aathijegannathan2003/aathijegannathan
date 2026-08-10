@@ -15,7 +15,7 @@ const ContactSection = () => {
           <div className="grid md:grid-cols-2 gap-8 md:gap-10 items-center">
 
             {/* Left: Info */}
-            <div className="animate-on-scroll space-y-6">
+            <div className="animate-on-scroll space-y-6 min-w-0">
               <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/30 text-primary text-xs font-medium">
                 <Send size={12} /> LET'S CONNECT
               </span>
