@@ -15,15 +15,14 @@ const skillBadges = [
 ];
 
 const HeroSection = () => {
-  const isMobile = useIsMobile();
   return (
-  <section id="home" className="min-h-screen flex items-center relative overflow-hidden pt-24 md:pt-20 md:-mt-[30px]">
+  <section id="home" className="min-h-[auto] lg:min-h-screen flex items-center relative overflow-hidden pt-24 pb-12 lg:pt-20 lg:pb-0 lg:-mt-[30px]">
     {/* Gradient orbs */}
     <div className="absolute top-1/4 -left-32 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
     <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
 
-    <div className="container mx-auto px-4 grid md:grid-cols-2 gap-10 md:gap-12 items-center">
-      <div className="space-y-5 md:space-y-6 animate-fade-in order-2 md:order-1">
+    <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+      <div className="space-y-4 sm:space-y-5 lg:space-y-6 animate-fade-in order-2 lg:order-1">
         <p className="text-primary font-medium tracking-wide uppercase text-sm">
           Hello, I'm
         </p>
