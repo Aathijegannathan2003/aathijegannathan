@@ -75,7 +75,7 @@ const HeroSection = () => {
           {skillBadges.map((badge) => (
             <span
               key={badge.label}
-              className="absolute hidden lg:flex items-center px-5 py-2.5 rounded-full bg-card/80 backdrop-blur-sm border border-primary/30 text-sm font-medium text-foreground shadow-[0_4px_20px_rgba(59,130,246,0.2)] animate-float whitespace-nowrap"
+              className="absolute hidden xl:flex items-center px-5 py-2.5 rounded-full bg-card/80 backdrop-blur-sm border border-primary/30 text-sm font-medium text-foreground shadow-[0_4px_20px_rgba(59,130,246,0.2)] animate-float whitespace-nowrap"
               style={{
                 top: badge.top,
                 left: badge.left,
@@ -91,7 +91,7 @@ const HeroSection = () => {
         </div>
 
         {/* Mobile skill chips */}
-        <div className="lg:hidden mt-6 flex flex-wrap justify-center gap-2">
+        <div className="xl:hidden mt-6 flex flex-wrap justify-center gap-2">
           {skillBadges.map((badge) => (
             <span
               key={badge.label}
