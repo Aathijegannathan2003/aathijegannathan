@@ -319,15 +319,15 @@ const CardShell = ({
         </a>
       )}
     </div>
-    <div className="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-4 md:gap-6 md:divide-x md:divide-border">
+    <div className="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-4 lg:gap-6 lg:divide-x lg:divide-border">
       {children}
     </div>
   </div>
 );
 
 const Banner = ({ src, alt }: { src: string; alt: string }) => (
-  <div className="rounded-lg overflow-hidden border border-border w-full md:w-[90%]">
-    <img src={src} alt={alt} width={1024} height={768} loading="lazy" className="w-full h-40 md:h-36 object-cover" />
+  <div className="rounded-lg overflow-hidden border border-border w-full lg:w-[90%]">
+    <img src={src} alt={alt} width={1024} height={768} loading="lazy" className="w-full h-40 sm:h-48 lg:h-36 object-cover" />
   </div>
 );
 
@@ -344,7 +344,7 @@ const MetaRow = ({ label, value }: { label: string; value: string }) => (
 
 const SeoCard = ({ p, i }: { p: SeoProject; i: number }) => (
   <CardShell title={p.title} url={p.url} i={i}>
-    <div className="space-y-4 md:pr-6">
+    <div className="space-y-4 lg:pr-6">
       <Banner src={p.bannerImage} alt={`${p.title} banner`} />
       <div>
         <SeoHeading>Goal</SeoHeading>
@@ -362,7 +362,7 @@ const SeoCard = ({ p, i }: { p: SeoProject; i: number }) => (
         </ul>
       </div>
     </div>
-    <div className="space-y-4 md:pl-6">
+    <div className="space-y-4 lg:pl-6">
       <div className="space-y-1.5">
         <MetaRow label="Niche" value={p.niche} />
         <MetaRow label="Region" value={p.region} />
@@ -381,7 +381,7 @@ const SeoCard = ({ p, i }: { p: SeoProject; i: number }) => (
 
 const WebCard = ({ p, i }: { p: WebProject; i: number }) => (
   <CardShell title={p.title} url={p.url} i={i}>
-    <div className="space-y-4 md:pr-6">
+    <div className="space-y-4 lg:pr-6">
       <Banner src={p.bannerImage} alt={`${p.title} banner`} />
       <div>
         <SeoHeading>Goal</SeoHeading>
@@ -392,7 +392,7 @@ const WebCard = ({ p, i }: { p: WebProject; i: number }) => (
         <BulletList items={p.problem} />
       </div>
     </div>
-    <div className="space-y-4 md:pl-6">
+    <div className="space-y-4 lg:pl-6">
       <div className="space-y-1.5">
         <MetaRow label="Niche" value={p.niche} />
         <MetaRow label="Region" value={p.region} />
@@ -411,7 +411,7 @@ const WebCard = ({ p, i }: { p: WebProject; i: number }) => (
 
 const AdCard = ({ p, i }: { p: AdProject; i: number }) => (
   <CardShell title={p.title} i={i}>
-    <div className="space-y-4 md:pr-6">
+    <div className="space-y-4 lg:pr-6">
       <Banner src={p.bannerImage} alt={`${p.title} banner`} />
       <div>
         <SeoHeading>Goal</SeoHeading>
@@ -430,7 +430,7 @@ const AdCard = ({ p, i }: { p: AdProject; i: number }) => (
         </div>
       </div>
     </div>
-    <div className="space-y-4 md:pl-6">
+    <div className="space-y-4 lg:pl-6">
       <div className="space-y-1.5">
         <MetaRow label="Industry" value={p.industry} />
         <MetaRow label="Type" value={p.type} />
@@ -449,7 +449,7 @@ const AdCard = ({ p, i }: { p: AdProject; i: number }) => (
 
 const GoogleAdsCard = ({ p, i }: { p: GoogleAdsProject; i: number }) => (
   <CardShell title={p.title} i={i}>
-    <div className="space-y-4 md:pr-6">
+    <div className="space-y-4 lg:pr-6">
       <Banner src={p.bannerImage} alt={`${p.title} banner`} />
       <div>
         <SeoHeading>Goal</SeoHeading>
@@ -468,7 +468,7 @@ const GoogleAdsCard = ({ p, i }: { p: GoogleAdsProject; i: number }) => (
         </div>
       </div>
     </div>
-    <div className="space-y-4 md:pl-6">
+    <div className="space-y-4 lg:pl-6">
       <div className="space-y-1.5">
         <MetaRow label="Industry" value={p.industry} />
         <MetaRow label="Type" value={p.type} />
@@ -528,7 +528,7 @@ const ProjectsSection = () => {
         </div>
 
 
-        <div className="w-full md:w-[83%] md:mx-auto space-y-6">
+        <div className="w-full lg:w-[83%] lg:mx-auto space-y-6">
           {active === "seo" && seoProjects.map((p, i) => <SeoCard key={p.title} p={p} i={i} />)}
           {active === "web" && webProjects.map((p, i) => <WebCard key={p.title} p={p} i={i} />)}
           {active === "ads" && adProjects.map((p, i) => <AdCard key={p.title} p={p} i={i} />)}

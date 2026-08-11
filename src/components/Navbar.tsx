@@ -35,7 +35,7 @@ const Navbar = () => {
 
 
         {/* Desktop */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-8">
           {navLinks.map((l) => (
             <a
               key={l.href}
@@ -54,14 +54,14 @@ const Navbar = () => {
         </div>
 
         {/* Mobile toggle */}
-        <button className="md:hidden text-foreground" onClick={() => setOpen(!open)}>
+        <button className="lg:hidden text-foreground" onClick={() => setOpen(!open)}>
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden bg-background/95 backdrop-blur-md border-b border-border px-4 pb-4">
+        <div className="lg:hidden bg-background/95 backdrop-blur-md border-b border-border px-4 pb-4">
           {navLinks.map((l) => (
             <a
               key={l.href}
