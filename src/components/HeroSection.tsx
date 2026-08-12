@@ -33,7 +33,7 @@ const HeroSection = () => {
     <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
 
     <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-      <div className="space-y-4 sm:space-y-5 lg:space-y-6 animate-fade-in order-2 lg:order-1">
+      <div className="space-y-4 sm:space-y-5 lg:space-y-6 animate-fade-in order-1">
         <p className="text-primary font-medium tracking-wide uppercase text-sm">
           Hello, I'm
         </p>
@@ -70,7 +70,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="flex flex-col items-center order-1 lg:order-2" style={{ animationDelay: "0.3s" }}>
+      <div className="flex flex-col items-center order-2" style={{ animationDelay: "0.3s" }}>
         {/* Mobile/tablet arc wrapper */}
         <div className="relative w-full max-w-[360px] xl:max-w-none xl:w-auto mx-auto flex justify-center py-6 xl:py-0">
           {/* Decorative ring (mobile) */}
