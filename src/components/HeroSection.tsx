@@ -71,23 +71,47 @@ const HeroSection = () => {
       </div>
 
       <div className="flex flex-col items-center order-1 lg:order-2" style={{ animationDelay: "0.3s" }}>
-        <div className="relative">
-          {/* Circular border ring with glow */}
-          <div className="w-[210px] h-[212px] min-[420px]:w-[250px] min-[420px]:h-[252px] sm:w-[300px] sm:h-[303px] lg:w-[410px] lg:h-[413px] rounded-full overflow-hidden border-2 border-primary/40 animate-float shadow-[0_0_80px_rgba(59,130,246,0.35),0_0_120px_rgba(59,130,246,0.15)]" style={{ backgroundColor: "#1d283a" }}>
-            <img
-              src={profileImg}
-              alt="Aathijegannathan V N - SEO | Paid Ads | WordPress | CRM Executive"
-              width={320}
-              height={320}
-              className="w-full h-full object-cover object-top scale-[1.25] translate-y-[22px] sm:translate-y-[30px] lg:translate-y-[43px] translate-x-[2px]"
-            />
+        {/* Mobile/tablet arc wrapper */}
+        <div className="relative w-full max-w-[360px] xl:max-w-none xl:w-auto mx-auto flex justify-center py-6 xl:py-0">
+          {/* Decorative ring (mobile) */}
+          <div className="xl:hidden absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[270px] h-[270px] min-[420px]:w-[300px] min-[420px]:h-[300px] rounded-full border border-primary/15" />
+
+          <div className="relative">
+            {/* Circular border ring with glow */}
+            <div className="w-[210px] h-[212px] min-[420px]:w-[250px] min-[420px]:h-[252px] sm:w-[300px] sm:h-[303px] lg:w-[410px] lg:h-[413px] rounded-full overflow-hidden border-2 border-primary/40 animate-float shadow-[0_0_80px_rgba(59,130,246,0.35),0_0_120px_rgba(59,130,246,0.15)]" style={{ backgroundColor: "#1d283a" }}>
+              <img
+                src={profileImg}
+                alt="Aathijegannathan V N - SEO | Paid Ads | WordPress | CRM Executive"
+                width={320}
+                height={320}
+                className="w-full h-full object-cover object-top scale-[1.25] translate-y-[22px] sm:translate-y-[30px] lg:translate-y-[43px] translate-x-[2px]"
+              />
+            </div>
+
+            {/* Floating skill badges (desktop only) */}
+            {skillBadges.map((badge) => (
+              <span
+                key={badge.label}
+                className="absolute hidden xl:flex items-center px-5 py-2.5 rounded-full bg-card/80 backdrop-blur-sm border border-primary/30 text-sm font-medium text-foreground shadow-[0_4px_20px_rgba(59,130,246,0.2)] animate-float whitespace-nowrap"
+                style={{
+                  top: badge.top,
+                  left: badge.left,
+                  right: badge.right,
+                  animationDelay: badge.delay,
+                }}
+              >
+                {badge.label}
+              </span>
+            ))}
+
+            <div className="absolute -bottom-2 -right-2 w-20 h-20 bg-primary/20 rounded-full blur-xl" />
           </div>
 
-          {/* Floating skill badges (desktop only) */}
-          {skillBadges.map((badge) => (
+          {/* Floating skill badges (mobile / tablet) */}
+          {mobileBadges.map((badge) => (
             <span
               key={badge.label}
-              className="absolute hidden xl:flex items-center px-5 py-2.5 rounded-full bg-card/80 backdrop-blur-sm border border-primary/30 text-sm font-medium text-foreground shadow-[0_4px_20px_rgba(59,130,246,0.2)] animate-float whitespace-nowrap"
+              className="absolute xl:hidden flex items-center px-2.5 py-1.5 rounded-md bg-card/90 backdrop-blur-sm border border-primary/25 text-[9px] min-[420px]:text-[10px] font-medium text-foreground shadow-[0_4px_14px_rgba(0,0,0,0.4)] animate-float whitespace-nowrap"
               style={{
                 top: badge.top,
                 left: badge.left,
@@ -98,22 +122,17 @@ const HeroSection = () => {
               {badge.label}
             </span>
           ))}
-
-          <div className="absolute -bottom-2 -right-2 w-20 h-20 bg-primary/20 rounded-full blur-xl" />
         </div>
 
-        {/* Mobile skill chips */}
-        <div className="xl:hidden mt-6 flex flex-wrap justify-center gap-2">
-          {skillBadges.map((badge) => (
-            <span
-              key={badge.label}
-              className="px-3 py-1.5 rounded-full bg-card/80 border border-primary/30 text-[11px] font-medium text-foreground"
-            >
-              {badge.label}
-            </span>
-          ))}
-        </div>
+        <a
+          href="#about"
+          className="xl:hidden mt-2 text-muted-foreground/70 animate-bounce"
+          aria-label="Scroll to about section"
+        >
+          <ArrowDown size={20} />
+        </a>
       </div>
+
     </div>
 
     <a
