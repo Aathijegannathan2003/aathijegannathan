@@ -4,14 +4,26 @@ import profileImg from "@/assets/profile-nobg.png";
 import resumeAsset from "@/assets/resume.pdf.asset.json";
 
 const skillBadges = [
-  { label: "Search Engine Optimization", topMobile: "0%", rightMobile: "-8%", top: "2%", right: "-18%", delay: "0s" },
-  { label: "Google Ads Management", topMobile: "20%", rightMobile: "-10%", top: "26%", right: "-24%", delay: "0.3s" },
-  { label: "Meta Ads Management", topMobile: "44%", rightMobile: "-12%", top: "50%", right: "-28%", delay: "0.6s" },
-  { label: "WordPress Development", topMobile: "70%", rightMobile: "-8%", top: "74%", right: "-22%", delay: "0.9s" },
-  { label: "Responsive Design", topMobile: "8%", leftMobile: "-12%", top: "8%", left: "-20%", delay: "0.4s" },
-  { label: "Landing Page Optimization", topMobile: "32%", leftMobile: "-10%", top: "38%", left: "-28%", delay: "0.7s" },
-  { label: "CRM Management", topMobile: "60%", leftMobile: "-12%", top: "68%", left: "-22%", delay: "1s" },
+  { label: "Search Engine Optimization", top: "2%", right: "-18%", delay: "0s" },
+  { label: "Google Ads Management", top: "26%", right: "-24%", delay: "0.3s" },
+  { label: "Meta Ads Management", top: "50%", right: "-28%", delay: "0.6s" },
+  { label: "WordPress Development", top: "74%", right: "-22%", delay: "0.9s" },
+  { label: "Responsive Design", top: "8%", left: "-20%", delay: "0.4s" },
+  { label: "Landing Page Optimization", top: "38%", left: "-28%", delay: "0.7s" },
+  { label: "CRM Management", top: "68%", left: "-22%", delay: "1s" },
 ];
+
+// Mobile arc layout (300px - 550px), matching the reference design
+const mobileBadges = [
+  { label: "Search Engine Optimization", top: "4%", right: "0%", delay: "0s" },
+  { label: "Google Ads Management", top: "24%", right: "-1%", delay: "0.3s" },
+  { label: "Meta Ads Management", top: "46%", right: "0%", delay: "0.6s" },
+  { label: "WordPress Development", top: "68%", right: "-1%", delay: "0.9s" },
+  { label: "Responsive Design", top: "12%", left: "0%", delay: "0.4s" },
+  { label: "Landing Page Optimization", top: "33%", left: "-1%", delay: "0.7s" },
+  { label: "CRM Management", top: "58%", left: "0%", delay: "1s" },
+];
+
 
 const HeroSection = () => {
   return (
