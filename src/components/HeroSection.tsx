@@ -52,7 +52,7 @@ const HeroSection = () => {
             <MapPin size={16} className="text-primary" /> Chennai, India
           </span>
           <span className="flex items-center gap-1.5">
-            <Clock size={16} className="text-primary" /> 1.8+ Years Experience
+            <Clock size={16} className="text-primary" /> 1.10+ Years Experience
           </span>
         </div>
 
