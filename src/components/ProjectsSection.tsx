@@ -382,7 +382,16 @@ const SeoCard = ({ p, i }: { p: SeoProject; i: number }) => (
 const WebCard = ({ p, i }: { p: WebProject; i: number }) => (
   <CardShell title={p.title} url={p.url} i={i}>
     <div className="space-y-4 lg:pr-6">
-      <Banner src={p.bannerImage} alt={`${p.title} banner`} />
+      <div className="rounded-lg overflow-hidden border border-border w-full lg:w-[90%]">
+        <img
+          src={p.bannerImage}
+          alt={`${p.title} banner`}
+          width={1024}
+          height={768}
+          loading="lazy"
+          className="w-full h-44 sm:h-52 lg:h-44 object-cover"
+        />
+      </div>
       <div>
         <SeoHeading>Goal</SeoHeading>
         <p className="text-[14px] text-muted-foreground leading-snug">{p.goal}</p>
