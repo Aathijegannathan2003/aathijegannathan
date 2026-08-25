@@ -1,6 +1,6 @@
 import {
   Search, Globe, Users, Palette,
-  LineChart, TrendingUp, Megaphone, BarChart3, Wrench, Mail,
+  LineChart, TrendingUp, Megaphone, BarChart3, Wrench,
   Layers,
 } from "lucide-react";
 
@@ -41,13 +41,6 @@ const coreSkills = [
     textColor: "text-cyan-400",
   },
   {
-    icon: Mail,
-    title: "Email Marketing",
-    desc: "Create and optimize basic email campaigns using Mailchimp to communicate with customers and support engagement and conversions.",
-    gradient: "from-violet-500 to-purple-500",
-    textColor: "text-violet-400",
-  },
-  {
     icon: LineChart,
     title: "Google Analytics & Search Console",
     desc: "Analyze website performance, traffic, user behavior, clicks, impressions, keywords, indexing, and other important SEO metrics.",
@@ -71,7 +64,6 @@ const tools = [
   { icon: TrendingUp, label: "Google Analytics", color: "text-amber-400 bg-amber-500/10" },
   { icon: LineChart, label: "Google Search Console", color: "text-sky-400 bg-sky-500/10" },
   { icon: Search, label: "Google Business Profile", color: "text-emerald-400 bg-emerald-500/10" },
-  { icon: Mail, label: "Mailchimp", color: "text-violet-400 bg-violet-500/10" },
   { icon: Palette, label: "Canva Pro", color: "text-cyan-400 bg-cyan-500/10" },
   { icon: Users, label: "Synergy CRM", color: "text-teal-400 bg-teal-500/10" },
 ];
