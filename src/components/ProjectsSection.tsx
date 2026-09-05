@@ -89,7 +89,6 @@ const webProjects: WebProject[] = [
     niche: "Life Science & Pharma Distribution",
     region: "India",
     url: "https://labmateasia.com",
-    bannerImage: webLabmateImg,
     goal: "Build a professional business website that positions Labmate Asia as a leading lab equipment distributor in India, showcasing their supply of lab and medical equipment for pharma and life science labs.",
     problem: [
       "No structured or modern website presence",
