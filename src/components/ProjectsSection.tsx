@@ -328,7 +328,6 @@ const MetaRow = ({ label, value }: { label: string; value: string }) => (
 const SeoCard = ({ p, i }: { p: SeoProject; i: number }) => (
   <CardShell title={p.title} url={p.url} i={i}>
     <div className="space-y-4 lg:pr-6">
-      <Banner src={p.bannerImage} alt={`${p.title} banner`} />
       <div>
         <SeoHeading>Goal</SeoHeading>
         <p className="text-[14px] text-muted-foreground leading-snug">{p.goal}</p>
