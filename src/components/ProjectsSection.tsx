@@ -308,11 +308,6 @@ const CardShell = ({
   </div>
 );
 
-const Banner = ({ src, alt }: { src: string; alt: string }) => (
-  <div className="rounded-lg overflow-hidden border border-border w-full lg:w-[90%]">
-    <img src={src} alt={alt} width={1024} height={768} loading="lazy" className="w-full h-40 sm:h-48 lg:h-36 object-cover" />
-  </div>
-);
 
 const MetaRow = ({ label, value }: { label: string; value: string }) => (
   <div className="flex flex-wrap items-baseline gap-1">
