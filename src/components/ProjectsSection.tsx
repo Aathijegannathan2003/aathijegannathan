@@ -1,12 +1,6 @@
 import { Search, Globe, Megaphone, ExternalLink, Users, Eye, TrendingUp, MousePointerClick, IndianRupee, Target } from "lucide-react";
 import { useState } from "react";
 import { Button } from "./ui/button";
-import adsBg1 from "@/assets/ads-bg-1.jpg";
-import adsBg2 from "@/assets/ads-bg-2.jpg";
-import adsBg3 from "@/assets/ads-bg-3.jpg";
-import seoProjectImg from "@/assets/seo-project-landing.jpg";
-import webLabmateImg from "@/assets/web-labmate.jpg";
-import webDigitalsiddeshImg from "@/assets/web-digitalsiddesh.jpg";
 
 type Category = "seo" | "web" | "ads" | "googleAds";
 
@@ -24,7 +18,6 @@ type SeoProject = {
   niche: string;
   region: string;
   goal: string;
-  bannerImage: string;
   status: string;
   contributions: string[];
   keywords: string[];
@@ -36,7 +29,6 @@ type WebProject = {
   niche: string;
   region: string;
   goal: string;
-  bannerImage: string;
   url?: string;
   problem: string[];
   whatIDid: string[];
@@ -48,7 +40,6 @@ type AdProject = {
   industry: string;
   type: string;
   goal: string;
-  bannerImage: string;
   metrics: { label: string; value: string; icon: React.ElementType }[];
   challenge: string[];
   whatIDid: string[];
@@ -60,7 +51,6 @@ type GoogleAdsProject = {
   type: string;
   goal: string;
   product?: string;
-  bannerImage: string;
   metrics: { label: string; value: string; icon: React.ElementType }[];
   campaignDetails: { label: string; value: string }[];
   whatIDid: string[];
@@ -75,7 +65,6 @@ const seoProjects: SeoProject[] = [
     niche: "Cleaning Service",
     region: "Belfast, UK",
     goal: "Design and optimize an SEO-focused landing page for a cleaning service business targeting local customers in Belfast, UK.",
-    bannerImage: seoProjectImg,
     url: "https://cleanwithdb.co.uk/",
     status:
       "Completed SEO implementation. Client website is currently inactive, so the live project is unavailable for public viewing.",
@@ -100,7 +89,6 @@ const webProjects: WebProject[] = [
     niche: "Life Science & Pharma Distribution",
     region: "India",
     url: "https://labmateasia.com",
-    bannerImage: webLabmateImg,
     goal: "Build a professional business website that positions Labmate Asia as a leading lab equipment distributor in India, showcasing their supply of lab and medical equipment for pharma and life science labs.",
     problem: [
       "No structured or modern website presence",
@@ -132,7 +120,6 @@ const webProjects: WebProject[] = [
     niche: "Digital Marketing Agency",
     region: "Chennai, India",
     url: "https://digitalsiddesh.com/wordpress-developer-chennai/",
-    bannerImage: webDigitalsiddeshImg,
     goal: "Build a WordPress developer landing page optimized for SEO and lead generation.",
     problem: [
       "Missing dedicated service landing page",
@@ -159,7 +146,6 @@ const adProjects: AdProject[] = [
     industry: "Health & Wellness Industry",
     type: "Lead Generation",
     goal: "Generate high-quality leads for free demo classes at minimal cost.",
-    bannerImage: adsBg1,
     metrics: [
       { label: "Leads", value: "65+", icon: Users },
       { label: "Cost Per Lead", value: "₹6", icon: IndianRupee },
@@ -184,7 +170,6 @@ const adProjects: AdProject[] = [
     industry: "Health & Wellness Industry",
     type: "Lead Generation",
     goal: "Generate consistent and quality leads in a competitive niche.",
-    bannerImage: adsBg2,
     metrics: [
       { label: "Leads", value: "32+", icon: Users },
       { label: "Cost Per Lead", value: "₹45", icon: IndianRupee },
@@ -209,7 +194,6 @@ const adProjects: AdProject[] = [
     industry: "Health & Wellness Industry",
     type: "Lead Generation",
     goal: "Generate high-quality leads at a lower cost while improving reach, engagement, and conversion performance.",
-    bannerImage: adsBg3,
     metrics: [
       { label: "Leads", value: "42", icon: Users },
       { label: "Cost Per Lead", value: "₹5.55", icon: IndianRupee },
@@ -238,7 +222,6 @@ const googleAdsProjects: GoogleAdsProject[] = [
     type: "Google Search Campaign",
     goal: "Generate qualified clicks and leads for laboratory products.",
     product: "Colony counting machine",
-    bannerImage: adsBg1,
     metrics: [
       { label: "Clicks", value: "80", icon: MousePointerClick },
       { label: "Impressions", value: "1,000+", icon: Eye },
@@ -325,11 +308,6 @@ const CardShell = ({
   </div>
 );
 
-const Banner = ({ src, alt }: { src: string; alt: string }) => (
-  <div className="rounded-lg overflow-hidden border border-border w-full lg:w-[90%]">
-    <img src={src} alt={alt} width={1024} height={768} loading="lazy" className="w-full h-40 sm:h-48 lg:h-36 object-cover" />
-  </div>
-);
 
 const MetaRow = ({ label, value }: { label: string; value: string }) => (
   <div className="flex flex-wrap items-baseline gap-1">
@@ -345,7 +323,6 @@ const MetaRow = ({ label, value }: { label: string; value: string }) => (
 const SeoCard = ({ p, i }: { p: SeoProject; i: number }) => (
   <CardShell title={p.title} url={p.url} i={i}>
     <div className="space-y-4 lg:pr-6">
-      <Banner src={p.bannerImage} alt={`${p.title} banner`} />
       <div>
         <SeoHeading>Goal</SeoHeading>
         <p className="text-[14px] text-muted-foreground leading-snug">{p.goal}</p>
@@ -382,16 +359,6 @@ const SeoCard = ({ p, i }: { p: SeoProject; i: number }) => (
 const WebCard = ({ p, i }: { p: WebProject; i: number }) => (
   <CardShell title={p.title} url={p.url} i={i}>
     <div className="space-y-4 lg:pr-6">
-      <div className="rounded-lg overflow-hidden border border-border w-full lg:w-[90%]">
-        <img
-          src={p.bannerImage}
-          alt={`${p.title} banner`}
-          width={1024}
-          height={768}
-          loading="lazy"
-          className="w-full h-44 sm:h-52 lg:h-44 object-cover"
-        />
-      </div>
       <div>
         <SeoHeading>Goal</SeoHeading>
         <p className="text-[14px] text-muted-foreground leading-snug">{p.goal}</p>
@@ -421,7 +388,6 @@ const WebCard = ({ p, i }: { p: WebProject; i: number }) => (
 const AdCard = ({ p, i }: { p: AdProject; i: number }) => (
   <CardShell title={p.title} i={i}>
     <div className="space-y-4 lg:pr-6">
-      <Banner src={p.bannerImage} alt={`${p.title} banner`} />
       <div>
         <SeoHeading>Goal</SeoHeading>
         <p className="text-[14px] text-muted-foreground leading-snug">{p.goal}</p>
@@ -459,7 +425,6 @@ const AdCard = ({ p, i }: { p: AdProject; i: number }) => (
 const GoogleAdsCard = ({ p, i }: { p: GoogleAdsProject; i: number }) => (
   <CardShell title={p.title} i={i}>
     <div className="space-y-4 lg:pr-6">
-      <Banner src={p.bannerImage} alt={`${p.title} banner`} />
       <div>
         <SeoHeading>Goal</SeoHeading>
         <p className="text-[14px] text-muted-foreground leading-snug">{p.goal}</p>
