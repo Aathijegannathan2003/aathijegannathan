@@ -29,7 +29,6 @@ type WebProject = {
   niche: string;
   region: string;
   goal: string;
-  bannerImage: string;
   url?: string;
   problem: string[];
   whatIDid: string[];
