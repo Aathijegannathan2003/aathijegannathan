@@ -393,7 +393,6 @@ const WebCard = ({ p, i }: { p: WebProject; i: number }) => (
 const AdCard = ({ p, i }: { p: AdProject; i: number }) => (
   <CardShell title={p.title} i={i}>
     <div className="space-y-4 lg:pr-6">
-      <Banner src={p.bannerImage} alt={`${p.title} banner`} />
       <div>
         <SeoHeading>Goal</SeoHeading>
         <p className="text-[14px] text-muted-foreground leading-snug">{p.goal}</p>
