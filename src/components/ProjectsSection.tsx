@@ -18,7 +18,6 @@ type SeoProject = {
   niche: string;
   region: string;
   goal: string;
-  bannerImage: string;
   status: string;
   contributions: string[];
   keywords: string[];
