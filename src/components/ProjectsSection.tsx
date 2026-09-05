@@ -51,7 +51,6 @@ type GoogleAdsProject = {
   type: string;
   goal: string;
   product?: string;
-  bannerImage: string;
   metrics: { label: string; value: string; icon: React.ElementType }[];
   campaignDetails: { label: string; value: string }[];
   whatIDid: string[];
