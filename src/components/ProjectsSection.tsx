@@ -170,7 +170,6 @@ const adProjects: AdProject[] = [
     industry: "Health & Wellness Industry",
     type: "Lead Generation",
     goal: "Generate consistent and quality leads in a competitive niche.",
-    bannerImage: adsBg2,
     metrics: [
       { label: "Leads", value: "32+", icon: Users },
       { label: "Cost Per Lead", value: "₹45", icon: IndianRupee },
