@@ -120,7 +120,6 @@ const webProjects: WebProject[] = [
     niche: "Digital Marketing Agency",
     region: "Chennai, India",
     url: "https://digitalsiddesh.com/wordpress-developer-chennai/",
-    bannerImage: webDigitalsiddeshImg,
     goal: "Build a WordPress developer landing page optimized for SEO and lead generation.",
     problem: [
       "Missing dedicated service landing page",
