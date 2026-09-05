@@ -222,7 +222,6 @@ const googleAdsProjects: GoogleAdsProject[] = [
     type: "Google Search Campaign",
     goal: "Generate qualified clicks and leads for laboratory products.",
     product: "Colony counting machine",
-    bannerImage: adsBg1,
     metrics: [
       { label: "Clicks", value: "80", icon: MousePointerClick },
       { label: "Impressions", value: "1,000+", icon: Eye },
