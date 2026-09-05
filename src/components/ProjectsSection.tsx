@@ -40,7 +40,6 @@ type AdProject = {
   industry: string;
   type: string;
   goal: string;
-  bannerImage: string;
   metrics: { label: string; value: string; icon: React.ElementType }[];
   challenge: string[];
   whatIDid: string[];
