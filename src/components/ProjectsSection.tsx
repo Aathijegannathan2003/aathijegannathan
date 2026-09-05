@@ -1,12 +1,6 @@
 import { Search, Globe, Megaphone, ExternalLink, Users, Eye, TrendingUp, MousePointerClick, IndianRupee, Target } from "lucide-react";
 import { useState } from "react";
 import { Button } from "./ui/button";
-import adsBg1 from "@/assets/ads-bg-1.jpg";
-import adsBg2 from "@/assets/ads-bg-2.jpg";
-import adsBg3 from "@/assets/ads-bg-3.jpg";
-import seoProjectImg from "@/assets/seo-project-landing.jpg";
-import webLabmateImg from "@/assets/web-labmate.jpg";
-import webDigitalsiddeshImg from "@/assets/web-digitalsiddesh.jpg";
 
 type Category = "seo" | "web" | "ads" | "googleAds";
 
