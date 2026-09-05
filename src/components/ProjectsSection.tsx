@@ -430,7 +430,6 @@ const AdCard = ({ p, i }: { p: AdProject; i: number }) => (
 const GoogleAdsCard = ({ p, i }: { p: GoogleAdsProject; i: number }) => (
   <CardShell title={p.title} i={i}>
     <div className="space-y-4 lg:pr-6">
-      <Banner src={p.bannerImage} alt={`${p.title} banner`} />
       <div>
         <SeoHeading>Goal</SeoHeading>
         <p className="text-[14px] text-muted-foreground leading-snug">{p.goal}</p>
