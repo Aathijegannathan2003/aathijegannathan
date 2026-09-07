@@ -5,7 +5,6 @@ type Experience = {
   company: string;
   duration: string;
   type: "Full-time" | "Internship";
-  description: string;
   responsibilities: string[];
   icon: "briefcase" | "grad";
   accent: "primary" | "success";
@@ -19,14 +18,11 @@ const experiences: Experience[] = [
     type: "Full-time",
     icon: "briefcase",
     accent: "primary",
-    description:
-      "Created and managed company websites using WordPress with SEO optimization to improve organic traffic. Managed Google Ads campaigns to generate clicks and leads, maintained CRM data, and handled email marketing activities.",
     responsibilities: [
       "Built and optimized a WordPress website from scratch with SEO best practices",
       "Created SEO-friendly content and performed on-page SEO optimization",
       "Planned and optimized Google Search Ads campaigns to generate clicks and leads for product pages",
       "Handled the company's LinkedIn page and content reposting activities",
-      "Executed email marketing campaigns and customer communication using Mailchimp",
       "Designed creatives, PDFs, and brochures using Canva Pro",
       "Maintained CRM activities, created accounts, and updated customer data regularly",
       "Monitored website traffic and performance using Google Search Console and Analytics",
@@ -39,8 +35,6 @@ const experiences: Experience[] = [
     type: "Full-time",
     icon: "grad",
     accent: "success",
-    description:
-      "Learned and implemented SEO strategies to improve organic visibility, optimized website content using WordPress, and supported Google Search Ads campaigns.",
     responsibilities: [
       "Managed 10+ course web pages with SEO best practices",
       "Performed on-page SEO (meta titles, descriptions & alt tags)",
@@ -98,11 +92,10 @@ const ExperienceSection = () => (
                         </span>
                       </div>
                       <p className={`${accentText} font-medium mb-2`}>{exp.company}</p>
-                      <div className="flex items-center gap-2 text-muted-foreground text-sm mb-4">
+                      <div className="flex items-center gap-2 text-muted-foreground text-sm">
                         <Calendar size={14} className={accentText} />
                         <span>{exp.duration}</span>
                       </div>
-                      <p className="text-muted-foreground text-sm leading-relaxed">{exp.description}</p>
                     </div>
 
                     <div className="relative">
