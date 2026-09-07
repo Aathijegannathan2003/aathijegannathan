@@ -35,8 +35,6 @@ const experiences: Experience[] = [
     type: "Full-time",
     icon: "grad",
     accent: "success",
-    description:
-      "Learned and implemented SEO strategies to improve organic visibility, optimized website content using WordPress, and supported Google Search Ads campaigns.",
     responsibilities: [
       "Managed 10+ course web pages with SEO best practices",
       "Performed on-page SEO (meta titles, descriptions & alt tags)",
