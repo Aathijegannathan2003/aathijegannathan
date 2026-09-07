@@ -19,6 +19,8 @@ const experiences: Experience[] = [
     type: "Full-time",
     icon: "briefcase",
     accent: "primary",
+    description:
+      "Managed and maintained company websites using WordPress, implementing SEO best practices to improve organic search visibility and website performance. Planned, executed, and optimized Google Ads campaigns to drive qualified traffic and generate leads. Maintained CRM data with regular updates and managed the company's LinkedIn presence through content reposting and engagement.",
     responsibilities: [
       "Built and optimized a WordPress website from scratch with SEO best practices",
       "Created SEO-friendly content and performed on-page SEO optimization",
@@ -36,6 +38,8 @@ const experiences: Experience[] = [
     type: "Full-time",
     icon: "grad",
     accent: "success",
+    description:
+      "Managed and optimized 10+ course web pages with SEO best practices, including on-page SEO elements such as meta titles, descriptions, and alt tags. Optimized blog content to improve organic visibility, conducted keyword research using Google Keyword Planner, and analyzed website performance and SEO insights using Ubersuggest. Reviewed and updated web pages using WordPress, and created and optimized Google Search Ads campaigns and ad copies.",
     responsibilities: [
       "Managed 10+ course web pages with SEO best practices",
       "Performed on-page SEO (meta titles, descriptions & alt tags)",
