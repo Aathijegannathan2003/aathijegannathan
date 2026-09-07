@@ -109,6 +109,9 @@ const ExperienceSection = () => (
                       >
                         {exp.type}
                       </span>
+                      <p className="text-sm text-muted-foreground leading-relaxed mb-5">
+                        {exp.description}
+                      </p>
                       <p className={`text-xs font-semibold uppercase tracking-wider mb-4 ${accentText}`}>
                         Key Responsibilities
                       </p>
