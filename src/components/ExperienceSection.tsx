@@ -5,7 +5,6 @@ type Experience = {
   company: string;
   duration: string;
   type: "Full-time" | "Internship";
-  description: string;
   responsibilities: string[];
   icon: "briefcase" | "grad";
   accent: "primary" | "success";
