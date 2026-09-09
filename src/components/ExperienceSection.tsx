@@ -20,7 +20,7 @@ const experiences: Experience[] = [
     icon: "briefcase",
     accent: "primary",
     description:
-      "Managed and maintained company websites using WordPress, implementing SEO best practices to improve organic search visibility and website performance. Planned, executed, and optimized Google Ads campaigns to drive qualified traffic and generate leads. Maintained CRM data with regular updates and managed the company's LinkedIn presence through content reposting and engagement.",
+      "Develop and manage responsive WordPress websites using Elementor, including website development, on-page SEO, and technical SEO implementation. Run Google Search Ads campaigns focused on lead generation and monitor website performance using Google Search Console and GA4. Create and manage CRM accounts and update customer data using Synergy CRM. Create marketing creatives using Canva and manage LinkedIn activities, including content creation, posting, engagement, and building professional connections.",
     responsibilities: [
       "Built and optimized a WordPress website from scratch with SEO best practices",
       "Created SEO-friendly content and performed on-page SEO optimization",
