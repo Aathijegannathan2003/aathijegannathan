@@ -62,7 +62,7 @@ const ExperienceSection = () => (
 
       </div>
 
-      <div className="relative max-w-[1120px] mx-auto">
+      <div className="relative max-w-[1400px] mx-auto">
         <div className="absolute left-6 top-2 bottom-2 w-px bg-border hidden md:block" aria-hidden />
 
         <div className="space-y-8">
@@ -87,7 +87,7 @@ const ExperienceSection = () => (
                 </div>
 
                 <div className="bg-card border border-border rounded-xl p-4 sm:p-6 md:p-8 card-hover">
-                  <div className="grid md:grid-cols-[35fr_65fr] gap-6 md:gap-10">
+                  <div className="grid md:grid-cols-[42fr_58fr] gap-8 md:gap-12 items-start">
                     <div>
                       <div className="flex items-start justify-between gap-3 mb-2">
                         <h3 className="font-heading font-bold text-lg sm:text-xl md:text-2xl">{exp.role}</h3>
