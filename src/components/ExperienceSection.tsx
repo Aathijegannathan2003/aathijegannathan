@@ -101,6 +101,9 @@ const ExperienceSection = () => (
                         <Calendar size={14} className={accentText} />
                         <span>{exp.duration}</span>
                       </div>
+                      <p className="mt-5 text-sm text-muted-foreground leading-relaxed">
+                        {exp.description}
+                      </p>
                     </div>
 
                     <div className="relative">
@@ -109,10 +112,7 @@ const ExperienceSection = () => (
                       >
                         {exp.type}
                       </span>
-                      <p className="text-sm text-muted-foreground leading-relaxed mb-5">
-                        {exp.description}
-                      </p>
-                      <p className={`text-xs font-semibold uppercase tracking-wider mb-4 ${accentText}`}>
+                      <p className={`text-xs font-semibold uppercase tracking-wider mb-4 md:pt-8 ${accentText}`}>
                         Key Responsibilities
                       </p>
                       <ul className="space-y-2.5">
