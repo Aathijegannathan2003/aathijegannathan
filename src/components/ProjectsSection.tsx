@@ -406,10 +406,6 @@ const AdCard = ({ p, i }: { p: AdProject; i: number }) => (
           ))}
         </div>
       </div>
-      <div>
-        <SeoHeading>Challenge</SeoHeading>
-        <BulletList items={p.challenge} />
-      </div>
     </div>
     <div className="space-y-3 lg:pl-6">
       <div className="space-y-1.5">
@@ -419,6 +415,10 @@ const AdCard = ({ p, i }: { p: AdProject; i: number }) => (
       <div>
         <SeoHeading>What I Did</SeoHeading>
         <BulletList items={p.whatIDid} />
+      </div>
+      <div>
+        <SeoHeading>Challenge</SeoHeading>
+        <BulletList items={p.challenge} />
       </div>
     </div>
   </CardShell>
