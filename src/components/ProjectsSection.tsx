@@ -441,13 +441,6 @@ const GoogleAdsCard = ({ p, i }: { p: GoogleAdsProject; i: number }) => (
           ))}
         </div>
       </div>
-    </div>
-    <div className="space-y-4 lg:pl-6">
-      <div className="space-y-1.5">
-        <MetaRow label="Industry" value={p.industry} />
-        <MetaRow label="Type" value={p.type} />
-        {p.product && <MetaRow label="Product" value={p.product} />}
-      </div>
       <div>
         <SeoHeading>Campaign Details</SeoHeading>
         <div className="space-y-1.5">
@@ -455,6 +448,13 @@ const GoogleAdsCard = ({ p, i }: { p: GoogleAdsProject; i: number }) => (
             <MetaRow key={d.label} label={d.label} value={d.value} />
           ))}
         </div>
+      </div>
+    </div>
+    <div className="space-y-4 lg:pl-6">
+      <div className="space-y-1.5">
+        <MetaRow label="Industry" value={p.industry} />
+        <MetaRow label="Type" value={p.type} />
+        {p.product && <MetaRow label="Product" value={p.product} />}
       </div>
       <div>
         <SeoHeading>What I Did</SeoHeading>
