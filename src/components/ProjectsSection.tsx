@@ -338,6 +338,10 @@ const SeoCard = ({ p, i }: { p: SeoProject; i: number }) => (
           ))}
         </ul>
       </div>
+      <div>
+        <SeoHeading>Project Status</SeoHeading>
+        <p className="text-[14px] text-muted-foreground leading-snug">{p.status}</p>
+      </div>
     </div>
     <div className="space-y-3 lg:pl-6">
       <div className="space-y-1.5">
@@ -347,10 +351,6 @@ const SeoCard = ({ p, i }: { p: SeoProject; i: number }) => (
       <div>
         <SeoHeading>My Contribution</SeoHeading>
         <BulletList items={p.contributions} />
-      </div>
-      <div>
-        <SeoHeading>Project Status</SeoHeading>
-        <p className="text-[14px] text-muted-foreground leading-snug">{p.status}</p>
       </div>
     </div>
   </CardShell>
@@ -367,6 +367,10 @@ const WebCard = ({ p, i }: { p: WebProject; i: number }) => (
         <SeoHeading>Problem</SeoHeading>
         <BulletList items={p.problem} />
       </div>
+      <div>
+        <SeoHeading>Result</SeoHeading>
+        <BulletList items={p.result} />
+      </div>
     </div>
     <div className="space-y-3 lg:pl-6">
       <div className="space-y-1.5">
@@ -376,10 +380,6 @@ const WebCard = ({ p, i }: { p: WebProject; i: number }) => (
       <div>
         <SeoHeading>What I Did</SeoHeading>
         <BulletList items={p.whatIDid} />
-      </div>
-      <div>
-        <SeoHeading>Result</SeoHeading>
-        <BulletList items={p.result} />
       </div>
     </div>
   </CardShell>
@@ -404,6 +404,10 @@ const AdCard = ({ p, i }: { p: AdProject; i: number }) => (
           ))}
         </div>
       </div>
+      <div>
+        <SeoHeading>Challenge</SeoHeading>
+        <BulletList items={p.challenge} />
+      </div>
     </div>
     <div className="space-y-3 lg:pl-6">
       <div className="space-y-1.5">
@@ -413,10 +417,6 @@ const AdCard = ({ p, i }: { p: AdProject; i: number }) => (
       <div>
         <SeoHeading>What I Did</SeoHeading>
         <BulletList items={p.whatIDid} />
-      </div>
-      <div>
-        <SeoHeading>Challenge</SeoHeading>
-        <BulletList items={p.challenge} />
       </div>
     </div>
   </CardShell>
