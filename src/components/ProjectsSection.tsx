@@ -223,11 +223,11 @@ const googleAdsProjects: GoogleAdsProject[] = [
     goal: "Generate qualified clicks and leads for laboratory products.",
     product: "Colony counting machine",
     metrics: [
-      { label: "Clicks", value: "80", icon: MousePointerClick },
-      { label: "Impressions", value: "1,000+", icon: Eye },
-      { label: "Avg. CPC", value: "₹64.77", icon: IndianRupee },
-      { label: "Total Spend", value: "₹5.18K", icon: IndianRupee },
-      { label: "Qualified Leads", value: "2", icon: Users },
+      { label: "Clicks", value: "145", icon: MousePointerClick },
+      { label: "Impressions", value: "1.5K", icon: Eye },
+      { label: "Avg. CPC", value: "₹87", icon: IndianRupee },
+      { label: "Budget", value: "₹15", icon: IndianRupee },
+      { label: "Leads", value: "4", icon: Users },
     ],
     campaignDetails: [
       { label: "Budget", value: "₹5,000" },
@@ -241,7 +241,7 @@ const googleAdsProjects: GoogleAdsProject[] = [
       "Optimized bidding strategy and campaign settings.",
       "Continuously monitored and improved campaign performance.",
     ],
-    note: "Improved campaign performance through continuous optimization and keyword refinement.",
+    note: "Improved campaign performance through continuous monitoring and added negative keywords.",
   },
 ];
 
