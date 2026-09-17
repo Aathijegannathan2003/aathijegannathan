@@ -322,7 +322,7 @@ const MetaRow = ({ label, value }: { label: string; value: string }) => (
 
 const SeoCard = ({ p, i }: { p: SeoProject; i: number }) => (
   <CardShell title={p.title} url={p.url} i={i}>
-    <div className="space-y-4 lg:pr-6">
+    <div className="space-y-3 lg:pr-6">
       <div>
         <SeoHeading>Goal</SeoHeading>
         <p className="text-[14px] text-muted-foreground leading-snug">{p.goal}</p>
@@ -339,7 +339,7 @@ const SeoCard = ({ p, i }: { p: SeoProject; i: number }) => (
         </ul>
       </div>
     </div>
-    <div className="space-y-4 lg:pl-6">
+    <div className="space-y-3 lg:pl-6">
       <div className="space-y-1.5">
         <MetaRow label="Niche" value={p.niche} />
         <MetaRow label="Region" value={p.region} />
@@ -358,7 +358,7 @@ const SeoCard = ({ p, i }: { p: SeoProject; i: number }) => (
 
 const WebCard = ({ p, i }: { p: WebProject; i: number }) => (
   <CardShell title={p.title} url={p.url} i={i}>
-    <div className="space-y-4 lg:pr-6">
+    <div className="space-y-3 lg:pr-6">
       <div>
         <SeoHeading>Goal</SeoHeading>
         <p className="text-[14px] text-muted-foreground leading-snug">{p.goal}</p>
@@ -368,7 +368,7 @@ const WebCard = ({ p, i }: { p: WebProject; i: number }) => (
         <BulletList items={p.problem} />
       </div>
     </div>
-    <div className="space-y-4 lg:pl-6">
+    <div className="space-y-3 lg:pl-6">
       <div className="space-y-1.5">
         <MetaRow label="Niche" value={p.niche} />
         <MetaRow label="Region" value={p.region} />
@@ -387,7 +387,7 @@ const WebCard = ({ p, i }: { p: WebProject; i: number }) => (
 
 const AdCard = ({ p, i }: { p: AdProject; i: number }) => (
   <CardShell title={p.title} i={i}>
-    <div className="space-y-4 lg:pr-6">
+    <div className="space-y-3 lg:pr-6">
       <div>
         <SeoHeading>Goal</SeoHeading>
         <p className="text-[14px] text-muted-foreground leading-snug">{p.goal}</p>
@@ -405,7 +405,7 @@ const AdCard = ({ p, i }: { p: AdProject; i: number }) => (
         </div>
       </div>
     </div>
-    <div className="space-y-4 lg:pl-6">
+    <div className="space-y-3 lg:pl-6">
       <div className="space-y-1.5">
         <MetaRow label="Industry" value={p.industry} />
         <MetaRow label="Type" value={p.type} />
@@ -424,7 +424,7 @@ const AdCard = ({ p, i }: { p: AdProject; i: number }) => (
 
 const GoogleAdsCard = ({ p, i }: { p: GoogleAdsProject; i: number }) => (
   <CardShell title={p.title} i={i}>
-    <div className="space-y-4 lg:pr-6">
+    <div className="space-y-3 lg:pr-6">
       <div>
         <SeoHeading>Goal</SeoHeading>
         <p className="text-[14px] text-muted-foreground leading-snug">{p.goal}</p>
@@ -441,13 +441,6 @@ const GoogleAdsCard = ({ p, i }: { p: GoogleAdsProject; i: number }) => (
           ))}
         </div>
       </div>
-    </div>
-    <div className="space-y-4 lg:pl-6">
-      <div className="space-y-1.5">
-        <MetaRow label="Industry" value={p.industry} />
-        <MetaRow label="Type" value={p.type} />
-        {p.product && <MetaRow label="Product" value={p.product} />}
-      </div>
       <div>
         <SeoHeading>Campaign Details</SeoHeading>
         <div className="space-y-1.5">
@@ -455,6 +448,13 @@ const GoogleAdsCard = ({ p, i }: { p: GoogleAdsProject; i: number }) => (
             <MetaRow key={d.label} label={d.label} value={d.value} />
           ))}
         </div>
+      </div>
+    </div>
+    <div className="space-y-3 lg:pl-6">
+      <div className="space-y-1.5">
+        <MetaRow label="Industry" value={p.industry} />
+        <MetaRow label="Type" value={p.type} />
+        {p.product && <MetaRow label="Product" value={p.product} />}
       </div>
       <div>
         <SeoHeading>What I Did</SeoHeading>
