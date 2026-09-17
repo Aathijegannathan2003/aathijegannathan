@@ -369,6 +369,10 @@ const WebCard = ({ p, i }: { p: WebProject; i: number }) => (
         <SeoHeading>Problem</SeoHeading>
         <BulletList items={p.problem} />
       </div>
+      <div>
+        <SeoHeading>Result</SeoHeading>
+        <BulletList items={p.result} />
+      </div>
     </div>
     <div className="space-y-3 lg:pl-6">
       <div className="space-y-1.5">
@@ -378,10 +382,6 @@ const WebCard = ({ p, i }: { p: WebProject; i: number }) => (
       <div>
         <SeoHeading>What I Did</SeoHeading>
         <BulletList items={p.whatIDid} />
-      </div>
-      <div>
-        <SeoHeading>Result</SeoHeading>
-        <BulletList items={p.result} />
       </div>
     </div>
   </CardShell>
