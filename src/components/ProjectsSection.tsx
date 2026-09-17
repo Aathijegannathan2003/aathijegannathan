@@ -271,11 +271,13 @@ const CardShell = ({
   title,
   url,
   i,
+  split = "lg:grid-cols-[2fr_3fr]",
   children,
 }: {
   title: string;
   url?: string;
   i: number;
+  split?: string;
   children: React.ReactNode;
 }) => (
   <div
@@ -302,7 +304,7 @@ const CardShell = ({
         </a>
       )}
     </div>
-    <div className="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-4 lg:gap-6 lg:divide-x lg:divide-border">
+    <div className={`grid grid-cols-1 gap-4 lg:gap-6 lg:divide-x lg:divide-border ${split}`}>
       {children}
     </div>
   </div>
@@ -338,6 +340,10 @@ const SeoCard = ({ p, i }: { p: SeoProject; i: number }) => (
           ))}
         </ul>
       </div>
+      <div>
+        <SeoHeading>Project Status</SeoHeading>
+        <p className="text-[14px] text-muted-foreground leading-snug">{p.status}</p>
+      </div>
     </div>
     <div className="space-y-3 lg:pl-6">
       <div className="space-y-1.5">
@@ -348,16 +354,12 @@ const SeoCard = ({ p, i }: { p: SeoProject; i: number }) => (
         <SeoHeading>My Contribution</SeoHeading>
         <BulletList items={p.contributions} />
       </div>
-      <div>
-        <SeoHeading>Project Status</SeoHeading>
-        <p className="text-[14px] text-muted-foreground leading-snug">{p.status}</p>
-      </div>
     </div>
   </CardShell>
 );
 
 const WebCard = ({ p, i }: { p: WebProject; i: number }) => (
-  <CardShell title={p.title} url={p.url} i={i}>
+  <CardShell title={p.title} url={p.url} i={i} split="lg:grid-cols-2">
     <div className="space-y-3 lg:pr-6">
       <div>
         <SeoHeading>Goal</SeoHeading>
@@ -366,6 +368,10 @@ const WebCard = ({ p, i }: { p: WebProject; i: number }) => (
       <div>
         <SeoHeading>Problem</SeoHeading>
         <BulletList items={p.problem} />
+      </div>
+      <div>
+        <SeoHeading>Result</SeoHeading>
+        <BulletList items={p.result} />
       </div>
     </div>
     <div className="space-y-3 lg:pl-6">
@@ -376,10 +382,6 @@ const WebCard = ({ p, i }: { p: WebProject; i: number }) => (
       <div>
         <SeoHeading>What I Did</SeoHeading>
         <BulletList items={p.whatIDid} />
-      </div>
-      <div>
-        <SeoHeading>Result</SeoHeading>
-        <BulletList items={p.result} />
       </div>
     </div>
   </CardShell>
