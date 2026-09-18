@@ -226,11 +226,10 @@ const googleAdsProjects: GoogleAdsProject[] = [
       { label: "Clicks", value: "145", icon: MousePointerClick },
       { label: "Impressions", value: "1.5K", icon: Eye },
       { label: "Avg. CPC", value: "₹87", icon: IndianRupee },
-      { label: "Budget", value: "₹15", icon: IndianRupee },
       { label: "Leads", value: "4", icon: Users },
     ],
     campaignDetails: [
-      { label: "Budget", value: "₹5,000" },
+      { label: "Budget", value: "₹15,000" },
       { label: "Duration", value: "June – July 2026" },
     ],
     whatIDid: [
