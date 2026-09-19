@@ -20,7 +20,7 @@ const experiences: Experience[] = [
     icon: "briefcase",
     accent: "primary",
     description:
-      "Develop and manage responsive WordPress websites using Elementor, including website development, on-page SEO, and technical SEO implementation. Run Google Search Ads campaigns focused on lead generation and monitor website performance using Google Search Console and GA4. Create and manage CRM accounts and update customer data using Synergy CRM. Create marketing creatives using Canva and manage LinkedIn activities, including content creation, posting, engagement, and building professional connections.",
+      "Develop and manage responsive WordPress websites using Elementor with on-page and technical SEO. Run Google Search Ads for lead generation and monitor performance using GSC and GA4. Manage CRM accounts and customer data using Synergy CRM. Create Canva creatives and manage LinkedIn content, posting, engagement, and connections.",
     responsibilities: [
       "Built and optimized a WordPress website from scratch with SEO best practices",
       "Created SEO-friendly content and performed on-page SEO optimization",
@@ -39,7 +39,7 @@ const experiences: Experience[] = [
     icon: "grad",
     accent: "success",
     description:
-      "Managed and optimized 10+ course web pages with SEO best practices, including on-page SEO elements such as meta titles, descriptions, and alt tags. Optimized blog content to improve organic visibility, conducted keyword research using Google Keyword Planner, and analyzed website performance and SEO insights using Ubersuggest. Reviewed and updated web pages using WordPress, and created and optimized Google Search Ads campaigns and ad copies.",
+      "Managed and optimized 10+ course web pages with SEO best practices, including meta titles, descriptions, and alt tags. Optimized blog content and conducted keyword research using Google Keyword Planner and Ubersuggest. Updated WordPress pages and worked on Google Search Ads campaigns and ad copy optimization.",
     responsibilities: [
       "Managed 10+ course web pages with SEO best practices",
       "Performed on-page SEO (meta titles, descriptions & alt tags)",
