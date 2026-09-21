@@ -40,6 +40,7 @@ type AdProject = {
   industry: string;
   type: string;
   goal: string;
+  targetAudience?: string;
   metrics: { label: string; value: string; icon: React.ElementType }[];
   challenge: string[];
   whatIDid: string[];
@@ -190,27 +191,25 @@ const adProjects: AdProject[] = [
     ],
   },
   {
-    title: "Meta Ads Lead Campaign",
+    title: "Lead Generation Campaign",
     industry: "Health & Wellness Industry",
     type: "Lead Generation",
-    goal: "Generate high-quality leads at a lower cost while improving reach, engagement, and conversion performance.",
+    goal: "Generate enquiries through Facebook/Instagram Lead Ads.",
+    targetAudience:
+      "People in India interested in Yoga, Meditation, Ayurveda, Spirituality, Alternative Medicine, and Holistic Health, with additional targeting based on relevant professions, interests, purchasing behaviour, and household income segments.",
     metrics: [
       { label: "Leads", value: "42", icon: Users },
-      { label: "Cost Per Lead", value: "₹5.55", icon: IndianRupee },
+      { label: "Ad Spend", value: "₹235.00", icon: IndianRupee },
+      { label: "Cost per Lead", value: "₹5.55", icon: IndianRupee },
       { label: "Impressions", value: "4,049", icon: Eye },
       { label: "Reach", value: "2,911", icon: MousePointerClick },
     ],
-    challenge: [
-      "Better audience refinement needed",
-      "Reduce cost per lead",
-      "Maintain steady lead volume",
-    ],
     whatIDid: [
-      "Built & managed campaign structure",
-      "Optimized budget allocation",
-      "Refined demographics & interests",
-      "Improved delivery settings",
-      "Continuous performance tracking",
+      "Audience and detailed targeting",
+      "Campaign setup and lead form creation",
+      "Ad copy and creative setup",
+      "Budget and campaign monitoring",
+      "Performance analysis and optimization",
     ],
   },
 ];
