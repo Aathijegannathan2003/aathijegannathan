@@ -40,8 +40,9 @@ type AdProject = {
   industry: string;
   type: string;
   goal: string;
+  targetAudience?: string;
   metrics: { label: string; value: string; icon: React.ElementType }[];
-  challenge: string[];
+  challenge?: string[];
   whatIDid: string[];
 };
 
@@ -190,27 +191,25 @@ const adProjects: AdProject[] = [
     ],
   },
   {
-    title: "Meta Ads Lead Campaign",
+    title: "Lead Generation Campaign",
     industry: "Health & Wellness Industry",
     type: "Lead Generation",
-    goal: "Generate high-quality leads at a lower cost while improving reach, engagement, and conversion performance.",
+    goal: "Generate enquiries through Facebook/Instagram Lead Ads.",
+    targetAudience:
+      "People in India interested in Yoga, Meditation, Ayurveda, Spirituality, Alternative Medicine, and Holistic Health, with additional targeting based on relevant professions, interests, purchasing behaviour, and household income segments.",
     metrics: [
       { label: "Leads", value: "42", icon: Users },
-      { label: "Cost Per Lead", value: "₹5.55", icon: IndianRupee },
+      { label: "Ad Spend", value: "₹235.00", icon: IndianRupee },
+      { label: "Cost per Lead", value: "₹5.55", icon: IndianRupee },
       { label: "Impressions", value: "4,049", icon: Eye },
       { label: "Reach", value: "2,911", icon: MousePointerClick },
     ],
-    challenge: [
-      "Better audience refinement needed",
-      "Reduce cost per lead",
-      "Maintain steady lead volume",
-    ],
     whatIDid: [
-      "Built & managed campaign structure",
-      "Optimized budget allocation",
-      "Refined demographics & interests",
-      "Improved delivery settings",
-      "Continuous performance tracking",
+      "Audience and detailed targeting",
+      "Campaign setup and lead form creation",
+      "Ad copy and creative setup",
+      "Budget and campaign monitoring",
+      "Performance analysis and optimization",
     ],
   },
 ];
@@ -405,6 +404,12 @@ const AdCard = ({ p, i }: { p: AdProject; i: number }) => (
           ))}
         </div>
       </div>
+      {p.targetAudience && (
+        <div>
+          <SeoHeading>Target Audience</SeoHeading>
+          <p className="text-[14px] text-muted-foreground leading-snug">{p.targetAudience}</p>
+        </div>
+      )}
     </div>
     <div className="space-y-3 lg:pl-6">
       <div className="space-y-1.5">
@@ -415,10 +420,12 @@ const AdCard = ({ p, i }: { p: AdProject; i: number }) => (
         <SeoHeading>What I Did</SeoHeading>
         <BulletList items={p.whatIDid} />
       </div>
-      <div>
-        <SeoHeading>Challenge</SeoHeading>
-        <BulletList items={p.challenge} />
-      </div>
+      {p.challenge && (
+        <div>
+          <SeoHeading>Challenge</SeoHeading>
+          <BulletList items={p.challenge} />
+        </div>
+      )}
     </div>
   </CardShell>
 );
@@ -506,7 +513,7 @@ const ProjectsSection = () => {
         <div className="w-full lg:w-[83%] lg:mx-auto space-y-6">
           {active === "seo" && seoProjects.map((p, i) => <SeoCard key={p.title} p={p} i={i} />)}
           {active === "web" && webProjects.map((p, i) => <WebCard key={p.title} p={p} i={i} />)}
-          {active === "ads" && adProjects.map((p, i) => <AdCard key={p.title} p={p} i={i} />)}
+          {active === "ads" && adProjects.map((p, i) => <AdCard key={`${p.title}-${i}`} p={p} i={i} />)}
           {active === "googleAds" && googleAdsProjects.map((p, i) => <GoogleAdsCard key={p.title} p={p} i={i} />)}
         </div>
       </div>
