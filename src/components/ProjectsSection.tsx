@@ -42,7 +42,7 @@ type AdProject = {
   goal: string;
   targetAudience?: string;
   metrics: { label: string; value: string; icon: React.ElementType }[];
-  challenge: string[];
+  challenge?: string[];
   whatIDid: string[];
 };
 
@@ -404,6 +404,12 @@ const AdCard = ({ p, i }: { p: AdProject; i: number }) => (
           ))}
         </div>
       </div>
+      {p.targetAudience && (
+        <div>
+          <SeoHeading>Target Audience</SeoHeading>
+          <p className="text-[14px] text-muted-foreground leading-snug">{p.targetAudience}</p>
+        </div>
+      )}
     </div>
     <div className="space-y-3 lg:pl-6">
       <div className="space-y-1.5">
@@ -414,10 +420,12 @@ const AdCard = ({ p, i }: { p: AdProject; i: number }) => (
         <SeoHeading>What I Did</SeoHeading>
         <BulletList items={p.whatIDid} />
       </div>
-      <div>
-        <SeoHeading>Challenge</SeoHeading>
-        <BulletList items={p.challenge} />
-      </div>
+      {p.challenge && (
+        <div>
+          <SeoHeading>Challenge</SeoHeading>
+          <BulletList items={p.challenge} />
+        </div>
+      )}
     </div>
   </CardShell>
 );
@@ -505,7 +513,7 @@ const ProjectsSection = () => {
         <div className="w-full lg:w-[83%] lg:mx-auto space-y-6">
           {active === "seo" && seoProjects.map((p, i) => <SeoCard key={p.title} p={p} i={i} />)}
           {active === "web" && webProjects.map((p, i) => <WebCard key={p.title} p={p} i={i} />)}
-          {active === "ads" && adProjects.map((p, i) => <AdCard key={p.title} p={p} i={i} />)}
+          {active === "ads" && adProjects.map((p, i) => <AdCard key={`${p.title}-${i}`} p={p} i={i} />)}
           {active === "googleAds" && googleAdsProjects.map((p, i) => <GoogleAdsCard key={p.title} p={p} i={i} />)}
         </div>
       </div>
