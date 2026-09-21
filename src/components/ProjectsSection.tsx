@@ -143,6 +143,28 @@ const webProjects: WebProject[] = [
 
 const adProjects: AdProject[] = [
   {
+    title: "Lead Generation Campaign",
+    industry: "Health & Wellness Industry",
+    type: "Lead Generation",
+    goal: "Generate enquiries through Facebook/Instagram Lead Ads.",
+    targetAudience:
+      "People in India interested in Yoga, Meditation, Ayurveda, Spirituality, Alternative Medicine, and Holistic Health, with additional targeting based on relevant professions, interests, purchasing behaviour, and household income segments.",
+    metrics: [
+      { label: "Leads", value: "42", icon: Users },
+      { label: "Ad Spend", value: "₹235.00", icon: IndianRupee },
+      { label: "Cost per Lead", value: "₹5.55", icon: IndianRupee },
+      { label: "Impressions", value: "4,049", icon: Eye },
+      { label: "Reach", value: "2,911", icon: MousePointerClick },
+    ],
+    whatIDid: [
+      "Audience and detailed targeting",
+      "Campaign setup and lead form creation",
+      "Ad copy and creative setup",
+      "Budget and campaign monitoring",
+      "Performance analysis and optimization",
+    ],
+  },
+  {
     title: "Free Class Lead Campaign",
     industry: "Health & Wellness Industry",
     type: "Lead Generation",
@@ -188,28 +210,6 @@ const adProjects: AdProject[] = [
       "Funnel-based lead generation",
       "Optimized placements & bidding",
       "Monitored & refined targeting",
-    ],
-  },
-  {
-    title: "Lead Generation Campaign",
-    industry: "Health & Wellness Industry",
-    type: "Lead Generation",
-    goal: "Generate enquiries through Facebook/Instagram Lead Ads.",
-    targetAudience:
-      "People in India interested in Yoga, Meditation, Ayurveda, Spirituality, Alternative Medicine, and Holistic Health, with additional targeting based on relevant professions, interests, purchasing behaviour, and household income segments.",
-    metrics: [
-      { label: "Leads", value: "42", icon: Users },
-      { label: "Ad Spend", value: "₹235.00", icon: IndianRupee },
-      { label: "Cost per Lead", value: "₹5.55", icon: IndianRupee },
-      { label: "Impressions", value: "4,049", icon: Eye },
-      { label: "Reach", value: "2,911", icon: MousePointerClick },
-    ],
-    whatIDid: [
-      "Audience and detailed targeting",
-      "Campaign setup and lead form creation",
-      "Ad copy and creative setup",
-      "Budget and campaign monitoring",
-      "Performance analysis and optimization",
     ],
   },
 ];
@@ -404,12 +404,6 @@ const AdCard = ({ p, i }: { p: AdProject; i: number }) => (
           ))}
         </div>
       </div>
-      {p.targetAudience && (
-        <div>
-          <SeoHeading>Target Audience</SeoHeading>
-          <p className="text-[14px] text-muted-foreground leading-snug">{p.targetAudience}</p>
-        </div>
-      )}
     </div>
     <div className="space-y-3 lg:pl-6">
       <div className="space-y-1.5">
@@ -420,6 +414,12 @@ const AdCard = ({ p, i }: { p: AdProject; i: number }) => (
         <SeoHeading>What I Did</SeoHeading>
         <BulletList items={p.whatIDid} />
       </div>
+      {p.targetAudience && (
+        <div>
+          <SeoHeading>Target Audience</SeoHeading>
+          <p className="text-[14px] text-muted-foreground leading-snug">{p.targetAudience}</p>
+        </div>
+      )}
       {p.challenge && (
         <div>
           <SeoHeading>Challenge</SeoHeading>
