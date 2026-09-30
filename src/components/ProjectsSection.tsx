@@ -188,30 +188,6 @@ const adProjects: AdProject[] = [
       "Reduced CPL with performance tracking",
     ],
   },
-  {
-    title: "Lead Generation Campaign",
-    industry: "Health & Wellness Industry",
-    type: "Lead Generation",
-    goal: "Generate consistent and quality leads in a competitive niche.",
-    metrics: [
-      { label: "Leads", value: "32+", icon: Users },
-      { label: "Cost Per Lead", value: "₹45", icon: IndianRupee },
-      { label: "Impressions", value: "25,309", icon: Eye },
-      { label: "CTR", value: "1.49%", icon: TrendingUp },
-    ],
-    challenge: [
-      "Highly competitive market",
-      "Need to maintain lead quality",
-      "Higher expected CPL due to niche targeting",
-    ],
-    whatIDid: [
-      "Defined precise target audience",
-      "High-converting ad creatives",
-      "Funnel-based lead generation",
-      "Optimized placements & bidding",
-      "Monitored & refined targeting",
-    ],
-  },
 ];
 
 const googleAdsProjects: GoogleAdsProject[] = [
