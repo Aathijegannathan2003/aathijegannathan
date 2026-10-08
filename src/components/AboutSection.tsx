@@ -29,7 +29,7 @@ const AboutSection = () => (
       <div className="grid md:grid-cols-2 gap-8 items-stretch max-w-6xl mx-auto">
         <div className="animate-on-scroll flex flex-col justify-between h-full gap-6">
           <p className="text-muted-foreground leading-relaxed text-base md:text-lg">
-            I am a results-driven <span className="text-primary font-medium">Digital Marketing Specialist</span> based in Chennai, specializing in SEO and performance marketing. I focus on improving online visibility and driving targeted traffic to generate leads and support business growth.
+            I am a results-driven <span className="text-primary font-medium">Digital Marketing Specialist</span> based in Chennai, specializing in SEO, Google Ads, Meta Ads, WordPress and CRM management. I focus on improving online visibility, driving targeted traffic, generating leads, and supporting business growth through effective digital marketing strategies.
           </p>
 
 
