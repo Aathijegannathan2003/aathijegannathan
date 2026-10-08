@@ -21,7 +21,7 @@ const coreSkills = [
   },
   {
     icon: Megaphone,
-    title: "Social Media Marketing (SMM)",
+    title: "Meta Ads",
     desc: "Create and optimize Meta Ads campaigns to generate leads through audience targeting, budget management, ad copy, and performance analysis.",
     gradient: "from-emerald-500 to-teal-500",
     textColor: "text-emerald-400",
