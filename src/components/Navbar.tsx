@@ -46,7 +46,7 @@ const Navbar = () => {
               <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full" />
             </a>
           ))}
-          <a href={resumeAsset.url} download="Aathi-Jegannathan-Resume.pdf" target="_blank" rel="noopener noreferrer">
+          <a href={resumeAsset.url} download="Aathijegannathan-VN-Resume-Oct-2026.pdf" target="_blank" rel="noopener noreferrer">
             <Button size="sm" className="bg-primary text-primary-foreground hover:bg-primary/80">
               Download CV
             </Button>
@@ -74,7 +74,7 @@ const Navbar = () => {
           ))}
           <a
             href={resumeAsset.url}
-            download="Aathi-Jegannathan-Resume.pdf"
+            download="Aathijegannathan-VN-Resume-Oct-2026.pdf"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setOpen(false)}
